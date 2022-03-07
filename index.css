@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=IBM+Plex+Sans&family=Inconsolata&family=Noto+Sans&family=Roboto+Serif&display=swap");
+/* 
+    font-family: 'Courier Prime', monospace;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto Serif', serif;
+*/
+/* reset styles */
+* {
+  color: inherit;
+}
+
+body {
+  font-family: "Inconsolata", "Courier Prime", Courier, monospace;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+
+.highlight {
+  background-color: #ffe69a;
+}
+
+a[target="_blank"]::after {
+  display: inline-block;
+  content: "";
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background-color: currentColor;
+  -webkit-mask: url(images/right-up-arrow.svg) no-repeat 50% 50%;
+          mask: url(images/right-up-arrow.svg) no-repeat 50% 50%;
+  margin: -0.3em -0.2em -0.25em 0.05em;
+  width: 1.1em;
+  height: 1.1em;
+}
+/*# sourceMappingURL=index.css.map */
