@@ -34,6 +34,7 @@ img {
   background-color: #ffe69a;
 }
 
+// Add arrow after external links
 a[target="_blank"]::after {
   display: inline-block;
   content: "";
@@ -43,4 +44,8 @@ a[target="_blank"]::after {
   margin: -0.3em -0.2em -0.25em 0.05em;
   width: 1.1em;
   height: 1.1em;
+}
+
+.hidden {
+  display: none;
 }

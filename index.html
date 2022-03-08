@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ash Turner</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="images/star.png" />
   </head>
   <body>
     <p>Hi, stranger. My name is <span class="highlight">Ash Turner</span>.</p>
@@ -22,11 +23,16 @@
   </body>
 
   <nav class="filters-list">
-    <a href="javascript:alert('Hello');" class="selected" data-filter="code"
-      >Code</a
-    >
-    <a href="#" data-filter="games">Games + Play</a>
-    <a href="#" data-filter="art">Visual Art</a>
+    <a href="#" class="selected" data-filter="code">
+      <!--       onclick="filterProjects(event)"
+ -->
+      Code
+    </a>
+    <a href="#" data-filter="game">
+      <!-- onclick="filterProjects(event)" -->
+      Games + Play
+    </a>
+    <a href="#" data-filter="art">Art</a>
   </nav>
 
   <div class="projects">
@@ -41,7 +47,7 @@
         <span class="project-subtitle">(Board Game)</span>
       </h2>
     </div>
-    <div class="filter-option" data-filter="code">
+    <div class="filter-option" data-filter="code art">
       <img
         src="./images/hello.png"
         alt="Screenshot of website page showing abstract graphics"
@@ -52,7 +58,7 @@
         <span class="project-subtitle">(Net Art)</span>
       </h2>
     </div>
-    <div class="filter-option code">
+    <div class="filter-option" data-filter="code">
       <img
         src="./images/wander.png"
         alt="Screenshot of website page showing ASCII art of a flower growing"
@@ -63,7 +69,7 @@
         <span class="project-subtitle">(Net Art)</span>
       </h2>
     </div>
-    <div class="filter-option">
+    <div class="filter-option" data-filter="code game">
       <img
         src="./images/unmasked.png"
         alt="Screenshot of a character in a black robe and wolf mask speaking to another robed figure. A dialog box takes up the bottom half of the screen"
@@ -74,7 +80,7 @@
         <span class="project-subtitle">(Video Game)</span>
       </h2>
     </div>
-    <div class="filter-option">
+    <div class="filter-option" data-filter="code game">
       <img
         src="./images/debug.png"
         alt="Red pixelated text states 'Warning: Data Corruption Found' in all-capital letters"
@@ -85,7 +91,7 @@
         <span class="project-subtitle">(Video Game)</span>
       </h2>
     </div>
-    <div class="filter-option">
+    <div class="filter-option" data-filter="game art">
       <img
         src="./images/david.jpg"
         alt="A light illuminates a desk in a dark room. A laptop sits open on the desk"

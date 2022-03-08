@@ -44,4 +44,8 @@ a[target="_blank"]::after {
   width: 1.1em;
   height: 1.1em;
 }
+
+.hidden {
+  display: none;
+}
 /*# sourceMappingURL=index.css.map */
