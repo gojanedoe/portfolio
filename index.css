@@ -1,18 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=IBM+Plex+Sans&family=Inconsolata&family=Noto+Sans&family=Roboto+Serif&display=swap");
-/* 
-    font-family: 'Courier Prime', monospace;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Roboto Serif', serif;
-*/
-/* reset styles */
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Source+Code+Pro:wght@300;400&display=swap");
+@import url("https://use.typekit.net/fcy2fbm.css");
 * {
   color: inherit;
+  margin: 0;
 }
 
 body {
-  font-family: "Inconsolata", "Courier Prime", Courier, monospace;
+  font-family: courier-std, Courier, monospace;
+  /* Alternative: "Inconsolata" */
+  background-color: #0b0b0b;
+  color: #ffffff;
+  font-size: 18px;
 }
 
 ul {
@@ -22,14 +20,6 @@ ul {
 
 a {
   text-decoration: underline;
-}
-
-img {
-  max-width: 100%;
-}
-
-.highlight {
-  background-color: #ffe69a;
 }
 
 a[target="_blank"]::after {
@@ -43,6 +33,38 @@ a[target="_blank"]::after {
   margin: -0.3em -0.2em -0.25em 0.05em;
   width: 1.1em;
   height: 1.1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.large-block-space {
+  margin-bottom: 63px;
+}
+
+.small-block-space {
+  margin-bottom: 18px;
+}
+
+.pink {
+  color: #e225e5;
+}
+
+.red {
+  color: #c90d0d;
+}
+
+.yellow {
+  color: #ffd84d;
+}
+
+.green {
+  color: #0dc941;
+}
+
+.blue {
+  color: #57a4ff;
 }
 
 .hidden {

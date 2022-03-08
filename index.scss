@@ -1,20 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=IBM+Plex+Sans&family=Inconsolata&family=Noto+Sans&family=Roboto+Serif&display=swap");
-/* 
-    font-family: 'Courier Prime', monospace;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Roboto Serif', serif;
-*/
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Source+Code+Pro:wght@300;400&display=swap");
+@import url("https://use.typekit.net/fcy2fbm.css");
 
-/* reset styles */
+// font-family: 'Courier Prime', monospace;
+// font-family: 'Inconsolata', monospace;
+// font-family: 'Source Code Pro', monospace; --> + lighter 300 weight
+
+// font-family: courier-std, monospace;
+// font-weight: 400;
+// font-style: normal;
+
+// OPTIONS:
+// font-style: normal; -> normal
+// font-style: italic; -> italic
+// font-weight: 700; -> bold
+
+$main-font-size: 18px;
+
+$background-color: #0b0b0b;
+$text-color: #ffffff;
+$pink: #e225e5;
+$red: #c90d0d;
+$yellow: #ffd84d;
+$blue: #57a4ff;
+$green: #0dc941;
+
 * {
   color: inherit;
-  // margin: 0;
+  margin: 0;
 }
 
 body {
-  font-family: "Inconsolata", "Courier Prime", Courier, monospace;
+  font-family: courier-std, Courier, monospace; /* Alternative: "Inconsolata" */
+  background-color: $background-color;
+  color: $text-color;
+  font-size: $main-font-size;
 }
 
 ul {
@@ -24,26 +43,57 @@ ul {
 
 a {
   text-decoration: underline;
+
+  // Add arrow after external links
+  &[target="_blank"]::after {
+    display: inline-block;
+    content: "";
+    mask-size: contain;
+    background-color: currentColor;
+    mask: url(images/right-up-arrow.svg) no-repeat 50% 50%;
+    margin: -0.3em -0.2em -0.25em 0.05em;
+    width: 1.1em;
+    height: 1.1em;
+  }
 }
 
 img {
   max-width: 100%;
 }
 
-.highlight {
-  background-color: #ffe69a;
+.large-block-space {
+  margin-bottom: 63px;
 }
 
-// Add arrow after external links
-a[target="_blank"]::after {
-  display: inline-block;
-  content: "";
-  mask-size: contain;
-  background-color: currentColor;
-  mask: url(images/right-up-arrow.svg) no-repeat 50% 50%;
-  margin: -0.3em -0.2em -0.25em 0.05em;
-  width: 1.1em;
-  height: 1.1em;
+.small-block-space {
+  margin-bottom: 18px;
+}
+
+.pink {
+  color: $pink;
+}
+
+.red {
+  color: $red;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}
+
+.highlight {
+  // Dark mode:
+  // background-color: #ffe69a;
+  // Light mode:
+  // background-color: red;
 }
 
 .hidden {
