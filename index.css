@@ -3,14 +3,28 @@
 * {
   color: inherit;
   margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font-family: courier-std, Courier, monospace;
+  font-family: "Inconsolata", courier-std, Courier, monospace;
   /* Alternative: "Inconsolata" */
-  background-color: #0b0b0b;
-  color: #ffffff;
+  background-color: #080808;
+  color: #f0efef;
   font-size: 18px;
+  margin-left: 280px;
+  margin-right: 280px;
+  margin-top: 200px;
+  margin-bottom: 40px;
+}
+
+.projects h2 {
+  padding-top: 18px;
 }
 
 ul {
@@ -18,8 +32,20 @@ ul {
   list-style-type: none;
 }
 
+p {
+  max-width: 723px;
+}
+
+nav a {
+  margin-right: 77px;
+}
+
 a {
+  text-decoration: none;
   text-decoration: underline;
+  -webkit-text-decoration-style: wavy;
+          text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
 }
 
 a[target="_blank"]::after {
@@ -40,7 +66,11 @@ img {
 }
 
 .large-block-space {
-  margin-bottom: 63px;
+  margin-bottom: 62px;
+}
+
+.medium-block-space {
+  margin-bottom: 40px;
 }
 
 .small-block-space {

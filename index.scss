@@ -15,9 +15,10 @@
 // font-weight: 700; -> bold
 
 $main-font-size: 18px;
+$main-text-width: 723px;
 
-$background-color: #0b0b0b;
-$text-color: #ffffff;
+$background-color: #080808;
+$text-color: #f0efef;
 $pink: #e225e5;
 $red: #c90d0d;
 $yellow: #ffd84d;
@@ -27,13 +28,32 @@ $green: #0dc941;
 * {
   color: inherit;
   margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-size: $main-font-size;
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font-family: courier-std, Courier, monospace; /* Alternative: "Inconsolata" */
+  font-family: "Inconsolata", courier-std, Courier, monospace; /* Alternative: "Inconsolata" */
   background-color: $background-color;
   color: $text-color;
   font-size: $main-font-size;
+
+  margin: {
+    left: 280px;
+    right: 280px;
+    top: 200px;
+    bottom: 40px;
+  }
+}
+
+.projects {
+  h2 {
+    padding-top: 18px;
+  }
 }
 
 ul {
@@ -41,8 +61,19 @@ ul {
   list-style-type: none;
 }
 
+p {
+  max-width: $main-text-width;
+}
+
+nav a {
+  margin-right: 77px;
+}
+
 a {
+  text-decoration: none;
   text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
 
   // Add arrow after external links
   &[target="_blank"]::after {
@@ -62,7 +93,11 @@ img {
 }
 
 .large-block-space {
-  margin-bottom: 63px;
+  margin-bottom: 62px;
+}
+
+.medium-block-space {
+  margin-bottom: 40px;
 }
 
 .small-block-space {
