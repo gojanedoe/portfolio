@@ -17,6 +17,10 @@
 $main-font-size: 18px;
 $main-text-width: 723px;
 
+$large-space: 62px;
+$medium-space: 40px;
+$small-space: 18px;
+
 $background-color: #080808;
 $text-color: #f0efef;
 $pink: #e225e5;
@@ -37,7 +41,7 @@ $green: #0dc941;
 }
 
 body {
-  font-family: "Inconsolata", courier-std, Courier, monospace; /* Alternative: "Inconsolata" */
+  font-family: "Inconsolata", courier-std, Courier, monospace; // Alternative: "Inconsolata"
   background-color: $background-color;
   color: $text-color;
   font-size: $main-font-size;
@@ -46,31 +50,48 @@ body {
     left: 280px;
     right: 280px;
     top: 200px;
-    bottom: 40px;
+    bottom: $medium-space;
   }
 }
 
 .projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 22px;
+  row-gap: $medium-space;
+  align-items: end;
+
   h2 {
     padding-top: 18px;
   }
+
+  img {
+    width: 100%;
+  }
 }
 
-ul {
-  padding: 0;
-  list-style-type: none;
-}
+// For reset (if needed)
+// ul {
+//   padding: 0;
+//   list-style-type: none;
+// }
 
 p {
   max-width: $main-text-width;
+  line-height: 1.2em;
 }
 
+img {
+  max-width: 100%;
+}
+
+/* LINKS */
 nav a {
   margin-right: 77px;
 }
 
 a {
-  text-decoration: none;
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
@@ -88,20 +109,33 @@ a {
   }
 }
 
-img {
-  max-width: 100%;
+footer a {
+  display: inline-block;
+  margin-bottom: $small-space;
+  text-decoration: none;
+
+  // alternative (doesn't work for IE):
+  // display: block;
+  // width: max-content;
 }
 
+footer a:hover {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
+}
+
+/* SPACING & ACCENTS */
 .large-block-space {
-  margin-bottom: 62px;
+  margin-bottom: $large-space;
 }
 
 .medium-block-space {
-  margin-bottom: 40px;
+  margin-bottom: $medium-space;
 }
 
 .small-block-space {
-  margin-bottom: 18px;
+  margin-bottom: $small-space;
 }
 
 .pink {
@@ -131,6 +165,7 @@ img {
   // background-color: red;
 }
 
+/* PROJECT SORTING */
 .hidden {
   display: none;
 }
