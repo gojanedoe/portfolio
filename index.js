@@ -18,8 +18,15 @@ filterOptions.forEach((filterOption) => {
 });
 
 // Add stars
-const createStars = () => {
-  for (let i = 0; i < 30; i++) {
+const placeStars = () => {
+  createStars("top");
+  createStars("bottom");
+  createStars("left");
+  createStars("right");
+};
+
+const createStars = (placement) => {
+  for (let i = 0; i < 9; i++) {
     /*
     left: 280px;
     right: 280px;
@@ -36,20 +43,42 @@ const createStars = () => {
     // get random color
     let randomNum = Math.floor(Math.random() * colors.length);
     let color = colors[randomNum];
-    console.log("color chosen: ", color);
     star.setAttribute("class", `${color} star`);
 
     // make position random
     let browserWidth = document.documentElement.clientWidth;
     let browserHeight = document.documentElement.scrollHeight;
-    let xPos = Math.floor(Math.random() * (browserWidth - 10) + 10);
-    let yPos = Math.floor(Math.random() * (browserHeight - 10) + 10);
+    // let xPos = Math.floor(Math.random() * (browserWidth - 10) + 10);
+    // let yPos = Math.floor(Math.random() * (browserHeight - 10) + 10);
 
-    star.style.left = `${xPos}px`;
-    star.style.top = `${yPos}px`;
+    if (placement == "left") {
+      let xPos = Math.floor(Math.random() * (280 - 10) + 10);
+      let yPos = Math.floor(Math.random() * (browserHeight - 10) + 10);
+
+      star.style.left = `${xPos}px`;
+      star.style.top = `${yPos}px`;
+    } else if (placement == "right") {
+      let xPos = Math.floor(Math.random() * (280 - 10) + 10);
+      let yPos = Math.floor(Math.random() * (browserHeight - 10) + 10);
+
+      star.style.right = `${xPos}px`; // this changed
+      star.style.top = `${yPos}px`;
+    } else if (placement == "top") {
+      let xPos = Math.floor(Math.random() * (browserWidth - 10) + 10);
+      let yPos = Math.floor(Math.random() * (200 - 10) + 10);
+
+      star.style.left = `${xPos}px`;
+      star.style.top = `${yPos}px`;
+    } else if (placement == "bottom") {
+      let xPos = Math.floor(Math.random() * (browserWidth - 10) + 10);
+      let yPos = Math.floor(Math.random() * (40 - 10) + 10);
+
+      star.style.left = `${xPos}px`;
+      star.style.bottom = `${yPos}px`;
+    }
 
     document.body.appendChild(star);
   }
 };
 
-window.onload = createStars;
+window.onload = placeStars;
