@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Source+Code+Pro:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Prosto+One&family=Source+Code+Pro:wght@300;400&display=swap");
 @import url("https://use.typekit.net/fcy2fbm.css");
 
 // font-family: 'Courier Prime', monospace;
@@ -123,6 +123,15 @@ footer a:hover {
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
+}
+
+.star {
+  // position: fixed;
+  position: absolute;
+
+  z-index: -1;
+  font-family: "Prosto One", "Inconsolata", courier-std, Courier;
+  font-size: 32px;
 }
 
 /* SPACING & ACCENTS */
