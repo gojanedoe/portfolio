@@ -92,9 +92,7 @@ nav a {
 }
 
 a {
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 2px;
+  text-decoration: none;
 
   // Add arrow after external links
   &[target="_blank"]::after {
@@ -119,7 +117,8 @@ footer a {
   // width: max-content;
 }
 
-footer a:hover {
+a:hover,
+.selected {
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;

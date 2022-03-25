@@ -8,6 +8,14 @@ let filterProjects = (event) => {
       ? project.classList.remove("hidden")
       : project.classList.add("hidden");
   }
+
+  // Highlight selected option
+  let selectedOption = document.getElementsByClassName("selected");
+  selectedOption[0].className = selectedOption[0].className.replace(
+    " selected",
+    ""
+  );
+  event.target.className += " selected";
 };
 
 // Add filterProjects event to each option
@@ -36,7 +44,6 @@ const createStars = () => {
     // get random color
     let randomNum = Math.floor(Math.random() * colors.length);
     let color = colors[randomNum];
-    console.log("color chosen: ", color);
     star.setAttribute("class", `${color} star`);
 
     // make position random
