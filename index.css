@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Inconsolata", courier-std, Courier, monospace;
+  font-family: courier-std, Courier, monospace;
   background-color: #080808;
   color: #f0efef;
   font-size: 18px;
@@ -43,6 +43,11 @@ body {
 
 .projects img {
   width: 100%;
+}
+
+.project-subtitle {
+  font-family: courier-std, Courier, monospace;
+  font-style: italic;
 }
 
 p {

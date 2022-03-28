@@ -41,7 +41,7 @@ $green: #0dc941;
 }
 
 body {
-  font-family: "Inconsolata", courier-std, Courier, monospace; // Alternative: "Inconsolata"
+  font-family: courier-std, Courier, monospace; // Alternative: "Inconsolata"
   background-color: $background-color;
   color: $text-color;
   font-size: $main-font-size;
@@ -69,6 +69,12 @@ body {
   img {
     width: 100%;
   }
+}
+
+.project-subtitle {
+  font-family: courier-std, Courier, monospace;
+  font-style: italic;
+  // font-size: 17px;
 }
 
 // For reset (if needed)
