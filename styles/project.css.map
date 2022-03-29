@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,CAAC;EACD,UAAU,ECCE,IAAI;EDAhB,SAAS,ECHO,IAAI;CDIrB;;AAED,AAAA,EAAE,CAAC;EACD,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,IAAI;EAChB,aAAa,ECND,IAAI;CDOjB",
+    "sources": [
+        "project.scss",
+        "_library.scss"
+    ],
+    "names": [],
+    "file": "project.css"
+}

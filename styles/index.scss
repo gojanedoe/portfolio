@@ -1,3 +1,4 @@
+@import "library";
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Prosto+One&family=Source+Code+Pro:wght@300;400&display=swap");
 @import url("https://use.typekit.net/fcy2fbm.css");
 
@@ -14,20 +15,21 @@
 // font-style: italic; -> italic
 // font-weight: 700; -> bold
 
-$main-font-size: 18px;
-$main-text-width: 723px;
+// $main-font-size: 18px;
+// $large-font-size: 24px;
+// $main-text-width: 723px;
 
-$large-space: 62px;
-$medium-space: 40px;
-$small-space: 18px;
+// $large-space: 62px;
+// $medium-space: 40px;
+// $small-space: 18px;
 
-$background-color: #080808;
-$text-color: #f0efef;
-$pink: #e225e5;
-$red: #c90d0d;
-$yellow: #ffd84d;
-$blue: #57a4ff;
-$green: #0dc941;
+// $background-color: #080808;
+// $text-color: #f0efef;
+// $pink: #e225e5;
+// $red: #c90d0d;
+// $yellow: #ffd84d;
+// $blue: #57a4ff;
+// $green: #0dc941;
 
 * {
   color: inherit;
@@ -64,17 +66,17 @@ body {
 
   h2 {
     padding-top: 18px;
+
+    .project-subtitle {
+      // font-family: courier-std, Courier, monospace;
+      font-style: italic;
+      // font-size: 17px;
+    }
   }
 
   img {
     width: 100%;
   }
-}
-
-.project-subtitle {
-  font-family: courier-std, Courier, monospace;
-  font-style: italic;
-  // font-size: 17px;
 }
 
 // For reset (if needed)
@@ -106,7 +108,7 @@ a {
     content: "";
     mask-size: contain;
     background-color: currentColor;
-    mask: url(images/right-up-arrow.svg) no-repeat 50% 50%;
+    mask: url(../images/right-up-arrow.svg) no-repeat 50% 50%;
     margin: -0.3em -0.2em -0.25em 0.05em;
     width: 1.1em;
     height: 1.1em;
@@ -124,7 +126,8 @@ footer a {
 }
 
 a:hover,
-.selected {
+.selected,
+.back {
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-thickness: 2px;
@@ -172,14 +175,21 @@ a:hover,
   color: $blue;
 }
 
-.highlight {
-  // Dark mode:
-  // background-color: #ffe69a;
-  // Light mode:
-  // background-color: red;
-}
+//.highlight {
+// Dark mode:
+// background-color: #ffe69a;
+// Light mode:
+// background-color: red;
+//}
 
 /* PROJECT SORTING */
 .hidden {
   display: none;
 }
+
+
+// .back {
+//   color: $pink;
+//   text-decoration: underline;
+//   text-decoration-style: wavy;
+// }

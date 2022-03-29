@@ -41,13 +41,12 @@ body {
   padding-top: 18px;
 }
 
-.projects img {
-  width: 100%;
+.projects h2 .project-subtitle {
+  font-style: italic;
 }
 
-.project-subtitle {
-  font-family: courier-std, Courier, monospace;
-  font-style: italic;
+.projects img {
+  width: 100%;
 }
 
 p {
@@ -74,8 +73,8 @@ a[target="_blank"]::after {
   -webkit-mask-size: contain;
           mask-size: contain;
   background-color: currentColor;
-  -webkit-mask: url(images/right-up-arrow.svg) no-repeat 50% 50%;
-          mask: url(images/right-up-arrow.svg) no-repeat 50% 50%;
+  -webkit-mask: url(../images/right-up-arrow.svg) no-repeat 50% 50%;
+          mask: url(../images/right-up-arrow.svg) no-repeat 50% 50%;
   margin: -0.3em -0.2em -0.25em 0.05em;
   width: 1.1em;
   height: 1.1em;
@@ -88,7 +87,8 @@ footer a {
 }
 
 a:hover,
-.selected {
+.selected,
+.back {
   text-decoration: underline;
   -webkit-text-decoration-style: wavy;
           text-decoration-style: wavy;
