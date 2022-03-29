@@ -22,7 +22,7 @@ body {
   margin-bottom: 40px;
 }
 
-.projects {
+.projects-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -37,15 +37,15 @@ body {
           align-items: end;
 }
 
-.projects h2 {
+.projects-container h2 {
   padding-top: 18px;
 }
 
-.projects h2 .project-subtitle {
+.projects-container h2 .project-subtitle {
   font-style: italic;
 }
 
-.projects img {
+.projects-container img {
   width: 100%;
 }
 

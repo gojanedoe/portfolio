@@ -1,12 +1,46 @@
 @import "library";
 
-h1 {
+h1,
+h2 {
   margin-top: $large-space;
   font-size: $large-font-size;
 }
 
 h2 {
+  margin-bottom: $medium-space;
+}
+
+.project-subtitle {
   font-style: italic;
   margin-top: 10px;
   margin-bottom: $large-space;
+}
+
+.main-image {
+  max-width: 724px; // 872px; or //724px
+  width: 100%;
+  margin-bottom: $large-space;
+}
+
+.project-link {
+  font-size: 24px;
+}
+
+body {
+  margin-top: 118px; //180 - large space (62) = 118px -> if I want the back button higher, but the heading to be at same height
+  padding-bottom: $medium-space;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 22px;
+  row-gap: 22px;
+  align-items: end;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

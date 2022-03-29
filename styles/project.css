@@ -1,11 +1,51 @@
-h1 {
+h1,
+h2 {
   margin-top: 62px;
   font-size: 24px;
 }
 
 h2 {
+  margin-bottom: 40px;
+}
+
+.project-subtitle {
   font-style: italic;
   margin-top: 10px;
   margin-bottom: 62px;
+}
+
+.main-image {
+  max-width: 724px;
+  width: 100%;
+  margin-bottom: 62px;
+}
+
+.project-link {
+  font-size: 24px;
+}
+
+body {
+  margin-top: 118px;
+  padding-bottom: 40px;
+}
+
+.gallery-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-column-gap: 22px;
+          column-gap: 22px;
+  row-gap: 22px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=project.css.map */
