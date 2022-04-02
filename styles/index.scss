@@ -35,6 +35,7 @@ body {
   background-color: $background-color;
   color: $text-color;
   font-size: $main-font-size;
+  // margin: 280px 5% 4% 5%;
 
   margin: {
     left: 280px;
@@ -42,6 +43,11 @@ body {
     top: 200px;
     bottom: $medium-space;
   }
+}
+
+.container {
+  max-width: 1120px; //TODO --> container
+  margin: auto;
 }
 
 .projects-container {
@@ -180,3 +186,62 @@ a:hover,
 //   text-decoration: underline;
 //   text-decoration-style: wavy;
 // }
+
+@media only screen and (max-width: 1280px) {
+  * {
+    font-size: 16px;
+  }
+
+  p {
+    line-height: 1.4em;
+  }
+
+  body {
+    margin: {
+      left: 22%;
+      right: 22%;
+      top: 16%;
+      // left: 160px;
+      // right: 160px;
+      // top: 180px;
+      // bottom: $medium-space;
+    }
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+    row-gap: 52px;
+  }
+
+  //TODO
+  // Add filters in vertical row
+  // Temp fix:
+  nav a {
+    margin-right: 42px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  body {
+    margin: {
+      left: 45px;
+      right: 45px;
+      top: 64px;
+      bottom: $medium-space;
+    }
+  }
+
+  .star {
+    display: none;
+  }
+
+  .large-block-space {
+    margin-bottom: 46px;
+  }
+}

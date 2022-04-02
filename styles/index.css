@@ -26,6 +26,11 @@ body {
   margin-bottom: 40px;
 }
 
+.container {
+  max-width: 1120px;
+  margin: auto;
+}
+
 .projects-container {
   display: -ms-grid;
   display: grid;
@@ -142,5 +147,49 @@ a:hover,
 /* PROJECT SORTING */
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  * {
+    font-size: 16px;
+  }
+  p {
+    line-height: 1.4em;
+  }
+  body {
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 16%;
+  }
+  .projects-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .projects-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 52px;
+  }
+  nav a {
+    margin-right: 42px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  body {
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 64px;
+    margin-bottom: 40px;
+  }
+  .star {
+    display: none;
+  }
+  .large-block-space {
+    margin-bottom: 46px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
