@@ -24,6 +24,9 @@ h2 {
 
 .project-link {
   font-size: 24px;
+  a {
+    white-space: nowrap; // Fix ::after arrow wrapping to new line
+  }
 }
 
 body {
