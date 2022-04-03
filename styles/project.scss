@@ -81,3 +81,17 @@ body {
 .zoomable {
   cursor: zoom-in;
 }
+
+.left-arrow {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  font-size: 40px;
+}
+
+.right-arrow {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  font-size: 40px;
+}
