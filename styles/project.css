@@ -52,4 +52,33 @@ body {
   width: 100%;
   height: auto;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: black;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.close:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.zoomable {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
 /*# sourceMappingURL=project.css.map */

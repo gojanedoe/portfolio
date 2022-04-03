@@ -47,3 +47,37 @@ body {
     height: auto;
   }
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: black;
+  // overflow: auto;
+}
+
+//TODO: Replace text "x" with svg
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  // Medium size:
+  // top: 30px;
+  // right: 46px;
+
+  font-weight: bold;
+  font-size: 60px;
+
+  &:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.zoomable {
+  cursor: zoom-in;
+}
