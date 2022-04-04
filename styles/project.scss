@@ -10,6 +10,12 @@ h2 {
   margin-bottom: $medium-space;
 }
 
+*:focus {
+  border: 2px dashed $text-color;
+  padding: 2px 4px;
+  text-decoration: none !important;
+}
+
 .project-subtitle {
   font-style: italic;
   margin-top: 10px;
@@ -102,7 +108,6 @@ body {
   height: 100%;
   align-self: stretch;
   padding: 20px;
-  font-size: 40px;
   background-color: rgba(0, 0, 0, 0.25);
 
   * {
@@ -122,4 +127,8 @@ body {
 
 .right-arrow {
   right: 0px;
+}
+
+button {
+  background-color: transparent;
 }

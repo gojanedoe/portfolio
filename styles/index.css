@@ -11,6 +11,9 @@
   font-style: normal;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: courier-std, Courier, monospace;
+  color: #f0efef;
+  font-size: 18px;
 }
 
 html {
@@ -18,10 +21,7 @@ html {
 }
 
 body {
-  font-family: courier-std, Courier, monospace;
   background-color: #080808;
-  color: #f0efef;
-  font-size: 18px;
   margin-left: 280px;
   margin-right: 280px;
   margin-top: 200px;
@@ -98,6 +98,7 @@ footer a {
 }
 
 a:hover,
+a:focus,
 .selected,
 .back {
   text-decoration: underline;
