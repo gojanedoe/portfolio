@@ -10,7 +10,7 @@ const scrollToTop = () => {
 //When image is clicked, open modal
 const openModal = () => {
   document.body.style.overflow = "hidden";
-  modal.style.display = "initial"; // initial is block
+  modal.style.display = "flex"; //"initial"; // initial is block
 };
 
 //When x is clicked, close modal

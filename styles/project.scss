@@ -53,28 +53,38 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 1;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.75);
   // overflow: auto;
-}
 
-//TODO: Replace text "x" with svg
-.close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  // Medium size:
-  // top: 30px;
-  // right: 46px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3% 70px;
 
-  font-weight: bold;
-  font-size: 60px;
+  img {
+    max-height: 100%;
+  }
 
-  &:hover {
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.5);
+  //TODO: Replace text "x" with svg
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    // Medium size:
+    // top: 30px;
+    // right: 46px;
+
+    font-weight: bold;
+    font-size: 60px;
+    z-index: 2;
+
+    &:hover {
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
 }
 
@@ -82,16 +92,34 @@ body {
   cursor: zoom-in;
 }
 
-.left-arrow {
+.left-arrow,
+.right-arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   position: fixed;
-  top: 50%;
-  left: 20px;
+  height: 100%;
+  align-self: stretch;
+  padding: 20px;
   font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.25);
+
+  * {
+    font-size: 40px;
+  }
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.left-arrow {
+  left: 0px;
 }
 
 .right-arrow {
-  position: fixed;
-  top: 50%;
-  right: 20px;
-  font-size: 40px;
+  right: 0px;
 }

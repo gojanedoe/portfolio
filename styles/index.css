@@ -9,6 +9,8 @@
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
