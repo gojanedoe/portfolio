@@ -98,7 +98,6 @@ footer a {
 }
 
 a:hover,
-a:focus,
 .selected,
 .back {
   text-decoration: underline;

@@ -8,12 +8,6 @@ h2 {
   margin-bottom: 40px;
 }
 
-*:focus {
-  border: 2px dashed #f0efef;
-  padding: 2px 4px;
-  text-decoration: none !important;
-}
-
 .project-subtitle {
   font-style: italic;
   margin-top: 10px;
