@@ -15,6 +15,8 @@
 
 // Popup/warning if JS not available
 
+let currentSlide = 0;
+
 const scrollToTop = () => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -35,9 +37,18 @@ const keyboardHandler = (event) => {
   }
 };
 
-const openModal = () => {
+const openModal = (e) => {
+  console.log("open modal");
   document.body.style.overflow = "hidden"; // prevents from background scrolling
   // overscroll-behavior: contain may be another option
+
+  // Find index of image
+  currentSlide = zoomableImages.indexOf(e.target);
+  console.log("Slide index", zoomableImages.indexOf(e.target));
+
+  // Show correct image
+  modalImages[currentSlide].style.display = "inline";
+
   modal.style.display = "flex";
 
   // For accessibility & keyboard access
@@ -47,20 +58,30 @@ const openModal = () => {
 const closeModal = () => {
   document.body.style.overflow = "auto";
   modal.style.display = "none";
+  modalImages[currentSlide].style.display = "none";
 
   //TODO: remove/move focus
 };
 
 // let mainPage = document.getElementById("main-page");
 
+// Change slides
+const changeSlides = (n) => {
+  // if it's negative, go to last slide
+  // if it's positive, go to next slide
+};
+
 // Event Listeners
+
+let zoomableImages = Object.values(document.getElementsByClassName("zoomable")); // Make into an array
+zoomableImages.forEach((image) => {
+  image.addEventListener("click", openModal);
+});
+
 let modal = document.getElementsByClassName("modal")[0];
 modal.addEventListener("keydown", keyboardHandler);
 
-let zoomableImages = document.getElementsByClassName("zoomable");
-Object.values(zoomableImages).forEach((image) => {
-  image.addEventListener("click", openModal);
-});
+let modalImages = document.getElementsByClassName("slide");
 
 let close = document.getElementsByClassName("close");
 close[0].addEventListener("click", closeModal);

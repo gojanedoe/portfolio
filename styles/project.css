@@ -53,6 +53,7 @@ body {
   height: auto;
 }
 
+/*========== MODAL ==========*/
 .modal {
   display: none;
   position: fixed;
@@ -91,6 +92,10 @@ body {
 .modal .close:hover {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.slide {
+  display: none;
 }
 
 .zoomable {
