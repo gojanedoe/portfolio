@@ -68,11 +68,24 @@ body {
 
   align-items: center;
   justify-content: center;
+  // justify-content: space-between;
+
   flex-direction: column;
-  padding: 3% 70px;
+
+  .slide {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    max-height: 100vh;
+  }
 
   img {
+    display: block; // Remove gap below image (for descenders)
     max-height: 100%;
+    // max-height: auto;
+
+    padding: 3% 70px;
   }
 
   //TODO: Replace text "x" with svg
