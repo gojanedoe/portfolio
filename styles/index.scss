@@ -105,6 +105,15 @@ a {
   }
 }
 
+.screenreader-text {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 footer a {
   display: inline-block;
   margin-bottom: $small-space;
