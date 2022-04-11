@@ -40,6 +40,7 @@ const createStars = () => {
 
     let star = document.createElement("div");
     star.innerHTML = "*";
+    star.ariaHidden = "true";
 
     // get random color
     let randomNum = Math.floor(Math.random() * colors.length);
