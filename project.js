@@ -17,18 +17,17 @@
 // Popup/warning if JS not available
 
 let currentSlide = 0;
+let currentFocus = -1; // Default is modal focus
+// let lastModalFocus = document.getElementById();
 
 const scrollToTop = () => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
 
-const keyboardHandler = (event) => {
-  event = event || window.event; // if e is undefined, set to window.event
-  // console.log("keyboard triggered");
-  // console.log(event.key);
+const modalKeyHandler = (event) => {
+  event = event || window.event; // if event is undefined, set to window.event
 
-  // only if modal is open
   if (event.key == "Escape") {
     closeModal();
   } else if (event.key == "ArrowRight") {
@@ -36,37 +35,57 @@ const keyboardHandler = (event) => {
   } else if (event.key == "ArrowLeft") {
     changeSlide(-1);
   } else if (event.key == "Tab" && event.shiftKey) {
-    console.log("Shift tab");
+    event.preventDefault();
+    changeFocus(-1);
   } else if (event.key == "Tab") {
-    console.log("Just tab");
+    event.preventDefault();
+    changeFocus(1);
   }
 };
 
 const openModal = (e) => {
-  document.body.style.overflow = "hidden"; // prevents from background scrolling
+  document.body.style.overflow = "hidden"; // prevents background scrolling
   // overscroll-behavior: contain may be another option
 
   // Find index of image
   currentSlide = zoomableImages.indexOf(e.target);
-  console.log("Current slide: ", currentSlide);
-  console.log("Slide index", zoomableImages.indexOf(e.target));
 
   // Show correct image
   modalImages[currentSlide].style.display = "flex";
 
+  // Change slide to flex
   modal.style.display = "flex";
-  // change slide to flex
 
-  trapFocus();
+  // Setup focus on whole modal
+  changeFocus(0);
 };
 
-const trapFocus = () => {
-  // For accessibility & keyboard access
-  modal.tabIndex = -1; // also: setAttribute("tabindex", "-1");
-  modal.focus();
+// For accessibility & keyboard access
+const changeFocus = (n) => {
+  if (n === 0) {
+    currentFocus = -1;
+    modal.tabIndex = -1; // also: setAttribute("tabindex", "-1");
+    modal.focus();
+    return;
+  } else if (n === 1) {
+    // Go to next focusable element
+    if (currentFocus === focusableElements.length - 1) {
+      currentFocus = 0;
+    } else {
+      currentFocus++;
+    }
+  } else if (n === -1) {
+    // Go to last focusable element
+    if (currentFocus <= 0) {
+      currentFocus = focusableElements.length - 1;
+    } else {
+      currentFocus--;
+    }
+  }
+  focusableElements[currentFocus].focus();
 };
 
-const releaseFocus = () => {};
+const releaseModalFocus = () => {};
 
 const closeModal = () => {
   document.body.style.overflow = "auto";
@@ -108,7 +127,7 @@ zoomableImages.forEach((image) => {
 });
 
 let modal = document.getElementsByClassName("modal")[0];
-modal.addEventListener("keydown", keyboardHandler);
+modal.addEventListener("keydown", modalKeyHandler);
 
 let modalImages = document.getElementsByClassName("slide");
 
@@ -119,3 +138,6 @@ rightArrow.addEventListener("click", () => changeSlide(1));
 
 let close = document.getElementsByClassName("close")[0];
 close.addEventListener("click", closeModal);
+
+// Elements that can be tabbed through
+let focusableElements = [close, leftArrow, rightArrow];
