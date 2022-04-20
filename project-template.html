@@ -15,11 +15,12 @@
       <a href="index.html" class="back pink">Back to home</a>
       <h1>Title</h1>
       <div class="project-subtitle">Made with: HTML, CSS, JavaScript</div>
-      <img
-        class="main-image zoomable"
-        src="images/wander.png"
-        alt="Brightly colored game board with cards and game money fanned around it"
-      />
+      <button class="main-image zoomable">
+        <img
+          src="images/wander.png"
+          alt="Brightly colored game board with cards and game money fanned around it"
+        />
+      </button>
       <div class="project-link">
         Live project:
         <a
@@ -46,117 +47,112 @@
       </p>
       <h2>Web Pages</h2>
       <div class="gallery-container large-block-space">
-        <button>
+        <!-- <button
+          type="button"
+          onkeydown="event.keyCode != 13 || openModal(event)"
+          onkeydown="openModal(event)"
+        > -->
+        <button class="zoomable">
           <img
             src="images/wander1.png"
-            class="zoomable"
             alt="View full size version of a screenshot of ASCII flowers growing"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander2.png"
-            class="zoomable"
             alt="View full size version of a screenshot of ASCII landscape, with hills underneath a sun"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander3.png"
-            class="zoomable"
             alt="View full size version of a screenshot of poetic text on webpage"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander4.png"
-            class="zoomable"
             alt="View full size version of a screenshot of ASCII tree and text input on webpage"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander5.png"
-            class="zoomable"
             alt="View full size version of a screenshot of ASCII clouds"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander6.png"
-            class="zoomable"
             alt="View full size version of a screenshot of a square of ASCII grass"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander7.png"
-            class="zoomable"
             alt="View full size version of screenshot of white stars on black background"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander8.png"
-            class="zoomable"
             alt="View full size version of screenshot of three ASCII trees growing out of the ground"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander9.png"
-            class="zoomable"
             alt="View full size version of screenshot of white ASCII flowers growing on a black background"
           />
         </button>
       </div>
       <h2>Process and Development</h2>
       <div class="gallery-container large-block-space">
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander10.png"
-            class="zoomable"
             alt="View full size version of screenshot of two lines of text"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander11.png"
-            class="zoomable"
             alt="View full size version of screenshot of two lines of text"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander12.png"
-            class="zoomable"
             alt="View full size version of screenshot of text document that contains ASCII sketches of stars and clouds"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander13.png"
-            class="zoomable"
             alt="View full size version of screenshot of text document that contains ASCII sketches of hills"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander14.png"
-            class="zoomable"
             alt="View full size version of screenshot of text document that contains ASCII sketches of growing flowers and clouds"
           />
         </button>
-        <button>
+        <button class="zoomable">
           <img
             src="images/wander15.png"
-            class="zoomable"
             alt="View full size version of screenshot of text document that contains ASCII sketches of treetops"
           />
         </button>
       </div>
 
-      <a href="#" class="back pink small-block-space" onclick="scrollToTop()">
+      <a
+        href="#"
+        class="back pink small-block-space"
+        onclick="scrollToTop()"
+        tabindex="0"
+      >
         Back to top
       </a>
     </div>

@@ -18,6 +18,7 @@
 
 let currentSlide = 0;
 let currentFocus = -1; // Default is modal focus
+let previousFocus = document.body;
 // let lastModalFocus = document.getElementById();
 
 const scrollToTop = () => {
@@ -25,7 +26,7 @@ const scrollToTop = () => {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
 
-const modalKeyHandler = (event) => {
+const handleModalKeys = (event) => {
   event = event || window.event; // if event is undefined, set to window.event
 
   if (event.key == "Escape") {
@@ -47,8 +48,18 @@ const openModal = (e) => {
   document.body.style.overflow = "hidden"; // prevents background scrolling
   // overscroll-behavior: contain may be another option
 
+  // let target =
+  //   e.target.tagName == "BUTTON" ? e.target.firstElementChild : e.target;
+  // parentElement
+
+  let target = e.target.tagName == "BUTTON" ? e.target : e.target.parentElement;
+  console.log("target: ", target);
+
   // Find index of image
-  currentSlide = zoomableImages.indexOf(e.target);
+  // currentSlide = zoomableImages.indexOf(target);
+  currentSlide = thumbnailButtons.indexOf(target);
+  console.log("current slide: ", currentSlide);
+  console.log("modal images: ", modalImages);
 
   // Show correct image
   modalImages[currentSlide].style.display = "flex";
@@ -58,6 +69,15 @@ const openModal = (e) => {
 
   // Setup focus on whole modal
   changeFocus(0);
+};
+
+const closeModal = () => {
+  document.body.style.overflow = "auto";
+  modal.style.display = "none";
+  modalImages[currentSlide].style.display = "none";
+
+  //TODO: remove/move focus
+  releaseModalFocus();
 };
 
 // For accessibility & keyboard access
@@ -85,14 +105,8 @@ const changeFocus = (n) => {
   focusableElements[currentFocus].focus();
 };
 
-const releaseModalFocus = () => {};
-
-const closeModal = () => {
-  document.body.style.overflow = "auto";
-  modal.style.display = "none";
-  modalImages[currentSlide].style.display = "none";
-
-  //TODO: remove/move focus
+const releaseModalFocus = () => {
+  console.log("releasing modal focus");
 };
 
 // let mainPage = document.getElementById("main-page");
@@ -121,13 +135,15 @@ const changeSlide = (n) => {
 };
 
 // Event Listeners
-let zoomableImages = Object.values(document.getElementsByClassName("zoomable")); // Make into an array
-zoomableImages.forEach((image) => {
-  image.addEventListener("click", openModal);
+let thumbnailButtons = Object.values(
+  document.getElementsByClassName("zoomable")
+);
+thumbnailButtons.forEach((button) => {
+  button.addEventListener("click", openModal);
 });
 
 let modal = document.getElementsByClassName("modal")[0];
-modal.addEventListener("keydown", modalKeyHandler);
+modal.addEventListener("keydown", handleModalKeys);
 
 let modalImages = document.getElementsByClassName("slide");
 
