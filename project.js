@@ -1,16 +1,9 @@
 // TODO
 // Accessibility
-// Save last focused item (button clicked that opened modal? event in openmodal?)
-// Toggle focus on close
 // -1 tab index for all previous focusable elements
-// restrain focus
-// Check keyboard focus for all lightbox event triggers (thumbnails)
 // Add aria types to all images
 // Add screen-reader/off-screen note about controlling the lightbox (arrow keys and escape)
 // Add labels to all images
-
-// ***
-// Thumbnail Alt = View full size version of my screenshot of _____
 // Lightbox Alt = Fuller description of image
 // Meaningful link text / alt for arrow buttons
 
@@ -18,7 +11,7 @@
 
 let currentSlide = 0;
 let currentFocus = -1; // Default is modal focus
-let previousFocus = document.body;
+let preModalFocus = document.body;
 // let lastModalFocus = document.getElementById();
 
 const scrollToTop = () => {
@@ -45,18 +38,14 @@ const handleModalKeys = (event) => {
 };
 
 const openModal = (e) => {
+  preModalFocus = e.target;
   document.body.style.overflow = "hidden"; // prevents background scrolling
   // overscroll-behavior: contain may be another option
-
-  // let target =
-  //   e.target.tagName == "BUTTON" ? e.target.firstElementChild : e.target;
-  // parentElement
 
   let target = e.target.tagName == "BUTTON" ? e.target : e.target.parentElement;
   console.log("target: ", target);
 
   // Find index of image
-  // currentSlide = zoomableImages.indexOf(target);
   currentSlide = thumbnailButtons.indexOf(target);
   console.log("current slide: ", currentSlide);
   console.log("modal images: ", modalImages);
@@ -106,10 +95,9 @@ const changeFocus = (n) => {
 };
 
 const releaseModalFocus = () => {
-  console.log("releasing modal focus");
+  console.log("releasing modal focus back to: ", preModalFocus);
+  preModalFocus.focus();
 };
-
-// let mainPage = document.getElementById("main-page");
 
 // Change slides
 const changeSlide = (n) => {
@@ -127,11 +115,7 @@ const changeSlide = (n) => {
     currentSlide += n;
   }
 
-  // TODO
-  // Change display according to slide number
   modalImages[currentSlide].style.display = "flex";
-
-  // show current slide image
 };
 
 // Event Listeners
