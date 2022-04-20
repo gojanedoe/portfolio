@@ -1,4 +1,5 @@
 const projects = document.getElementsByClassName("filter-option");
+let colorIndex = 0;
 
 // Show/hide projects based on current filter
 let filterProjects = (event) => {
@@ -59,5 +60,36 @@ const createStars = () => {
     document.body.appendChild(star);
   }
 };
+
+const hoverEffect = (event) => {
+  // hover effect
+  // const colors = ["pink", "red", "yellow", "green", "blue"];
+  const colors = ["#e225e5", "#c90d0d", "#ffd84d", "#57a4ff", "#0dc941"];
+
+  if (colorIndex == colors.length - 1) {
+    colorIndex = 0;
+  } else {
+    colorIndex++;
+  }
+
+  // console.log(event.target);
+
+  // get random color
+  // let randomNum = Math.floor(Math.random() * colors.length);
+  // let color = colors[randomNum];
+  // console.log("color: ", color);
+  // event.target.style.borderColor = color;
+  let color = colors[colorIndex];
+  event.target.style.borderColor = color;
+};
+
+const removeHoverEffect = (event) => {
+  event.target.style.borderColor = "#080808";
+};
+
+for (const project of projects) {
+  project.addEventListener("mouseover", hoverEffect);
+  project.addEventListener("mouseout", removeHoverEffect);
+}
 
 window.onload = createStars;

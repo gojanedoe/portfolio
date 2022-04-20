@@ -58,15 +58,15 @@ body {
 
 .projects-container img {
   width: 100%;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 3px solid #080808;
 }
 
 .projects-container img:hover {
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
-  -webkit-transition: 1s;
-  transition: 1s;
+  border: 3px solid #ffd84d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 p {
@@ -146,22 +146,27 @@ a:hover,
 
 .pink {
   color: #e225e5;
+  border-color: #e225e5;
 }
 
 .red {
   color: #c90d0d;
+  border-color: #c90d0d;
 }
 
 .yellow {
   color: #ffd84d;
+  border-color: #ffd84d;
 }
 
 .green {
   color: #0dc941;
+  border-color: #0dc941;
 }
 
 .blue {
   color: #57a4ff;
+  border-color: #57a4ff;
 }
 
 /* PROJECT SORTING */

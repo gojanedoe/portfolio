@@ -72,12 +72,14 @@ body {
 
   img {
     width: 100%;
-    transition: 1s;
+    transition: 0.5s;
+    border: 3px solid $background-color;
 
     &:hover {
-      filter: invert(100%);
-      -webkit-filter: invert(100%);
-      transition: 1s;
+      border: 3px solid $yellow;
+      // filter: invert(100%);
+      // -webkit-filter: invert(100%);
+      transition: 0.5s;
     }
   }
 }
@@ -164,22 +166,27 @@ a:hover,
 
 .pink {
   color: $pink;
+  border-color: $pink;
 }
 
 .red {
   color: $red;
+  border-color: $red;
 }
 
 .yellow {
   color: $yellow;
+  border-color: $yellow;
 }
 
 .green {
   color: $green;
+  border-color: $green;
 }
 
 .blue {
   color: $blue;
+  border-color: $blue;
 }
 
 //.highlight {
