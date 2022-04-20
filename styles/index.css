@@ -58,6 +58,15 @@ body {
 
 .projects-container img {
   width: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.projects-container img:hover {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 p {
