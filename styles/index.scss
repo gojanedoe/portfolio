@@ -39,6 +39,9 @@ body {
   background-color: $background-color;
   // margin: 280px 5% 4% 5%;
 
+  text-decoration-skip-ink: none;
+  text-underline-position: under;
+
   margin: {
     left: 280px;
     right: 280px;
@@ -100,6 +103,7 @@ nav a {
 
 a {
   text-decoration: none;
+  line-height: 1.5em;
 
   // Add arrow after external links
   &[target="_blank"]::after {

@@ -22,6 +22,8 @@ html {
 
 body {
   background-color: #080808;
+  text-decoration-skip-ink: none;
+  text-underline-position: under;
   margin-left: 280px;
   margin-right: 280px;
   margin-top: 200px;
@@ -85,6 +87,7 @@ nav a {
 
 a {
   text-decoration: none;
+  line-height: 1.5em;
 }
 
 a[target="_blank"]::after {
