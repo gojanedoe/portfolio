@@ -9,6 +9,8 @@
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: courier-std, Courier, monospace;
   color: #f0efef;
   font-size: 18px;
@@ -136,18 +138,18 @@ footer a {
 }
 
 .short-animation {
-  -webkit-transition: background-size 0.5s ease;
-  transition: background-size 0.5s ease;
+  -webkit-transition: background-size 0.25s ease;
+  transition: background-size 0.25s ease;
 }
 
 .med-animation {
-  -webkit-transition: background-size 1s ease;
-  transition: background-size 1s ease;
+  -webkit-transition: background-size 0.7s ease;
+  transition: background-size 0.7s ease;
 }
 
 .long-animation {
-  -webkit-transition: background-size 1.5s ease;
-  transition: background-size 1.5s ease;
+  -webkit-transition: background-size 1.2s ease;
+  transition: background-size 1.2s ease;
 }
 
 .underline-mask:hover,
