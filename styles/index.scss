@@ -15,6 +15,8 @@
 // font-style: italic; -> italic
 // font-weight: 700; -> bold
 
+$rainbow-duration: 6s;
+
 * {
   color: inherit;
   margin: 0;
@@ -84,7 +86,8 @@ img {
   max-width: 100%;
 }
 
-/* LINKS */
+/*========== LINKS ==========*/
+
 nav a {
   margin-right: 77px;
 }
@@ -200,59 +203,8 @@ a:focus .underline-mask,
   background-size: 0 100%;
 }
 
-.star {
-  // position: fixed;
-  position: absolute;
+/*========== SPACING & ACCENTS ==========*/
 
-  z-index: -1;
-  font-family: "Prosto One", "Inconsolata", courier-std, Courier;
-  font-size: 32px;
-
-  cursor: pointer;
-}
-
-// .paused {
-//   -webkit-animation-play-state: paused;
-//   -moz-animation-play-state: paused;
-//   -o-animation-play-state: paused;
-//   animation-play-state: paused;
-// }
-
-.rainbow {
-  // Rainbow animation
-  animation: changeColor ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: 10s;
-  animation-fill-mode: both;
-}
-
-@keyframes changeColor {
-  0% {
-    color: $pink;
-  }
-
-  20% {
-    color: $red;
-  }
-
-  40% {
-    color: $yellow;
-  }
-
-  60% {
-    color: $green;
-  }
-
-  80% {
-    color: $blue;
-  }
-
-  100% {
-    color: $pink;
-  }
-}
-
-/* SPACING & ACCENTS */
 .large-block-space {
   margin-bottom: $large-space;
 }
@@ -292,9 +244,254 @@ a:focus .underline-mask,
 // background-color: red;
 //}
 
-/* PROJECT SORTING */
+/*========== PROJECT SORTING ==========*/
+
 .hidden {
   display: none;
+}
+
+/*========== STARS ==========*/
+
+.star {
+  position: absolute;
+
+  z-index: -1;
+  font-family: "Prosto One", "Inconsolata", courier-std, Courier;
+  font-size: 32px;
+
+  cursor: pointer;
+
+  // Default rainbow animation
+  animation: changeColor ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: $rainbow-duration;
+  animation-fill-mode: both;
+
+  &.pink {
+    animation: changeColorFromPink ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: $rainbow-duration;
+    animation-fill-mode: both;
+  }
+
+  &.red {
+    animation: changeColorFromRed ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: $rainbow-duration;
+    animation-fill-mode: both;
+  }
+
+  &.yellow {
+    animation: changeColorFromYellow ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: $rainbow-duration;
+    animation-fill-mode: both;
+  }
+
+  &.green {
+    animation: changeColorFromGreen ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: $rainbow-duration;
+    animation-fill-mode: both;
+  }
+
+  &.blue {
+    animation: changeColorFromBlue ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: $rainbow-duration;
+    animation-fill-mode: both;
+  }
+}
+
+.paused {
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  -o-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+@keyframes changeColor {
+  0% {
+    color: inherit;
+    // color: inherit;
+  }
+
+  20% {
+    color: $red;
+  }
+
+  40% {
+    color: $yellow;
+  }
+
+  60% {
+    color: $green;
+  }
+
+  80% {
+    color: $blue;
+  }
+
+  100% {
+    color: inherit;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: inherit;
+  }
+
+  20% {
+    color: $red;
+  }
+
+  40% {
+    color: $yellow;
+  }
+
+  60% {
+    color: $green;
+  }
+
+  80% {
+    color: $blue;
+  }
+
+  100% {
+    color: inherit;
+  }
+}
+
+@keyframes changeColorFromPink {
+  0% {
+    color: $pink;
+    // color: inherit;
+  }
+
+  20% {
+    color: $red;
+  }
+
+  40% {
+    color: $yellow;
+  }
+
+  60% {
+    color: $green;
+  }
+
+  80% {
+    color: $blue;
+  }
+
+  100% {
+    color: $pink;
+  }
+}
+
+@keyframes changeColorFromRed {
+  0% {
+    color: $red;
+  }
+
+  20% {
+    color: $yellow;
+  }
+
+  40% {
+    color: $green;
+  }
+
+  60% {
+    color: $blue;
+  }
+
+  80% {
+    color: $pink;
+  }
+
+  100% {
+    color: $red;
+  }
+}
+
+@keyframes changeColorFromYellow {
+  0% {
+    color: $yellow;
+  }
+
+  20% {
+    color: $green;
+  }
+
+  40% {
+    color: $blue;
+  }
+
+  60% {
+    color: $pink;
+  }
+
+  80% {
+    color: $red;
+  }
+
+  100% {
+    color: $yellow;
+  }
+}
+
+@keyframes changeColorFromGreen {
+  0% {
+    color: $green;
+  }
+
+  20% {
+    color: $blue;
+  }
+
+  40% {
+    color: $pink;
+  }
+
+  60% {
+    color: $red;
+  }
+
+  80% {
+    color: $yellow;
+  }
+
+  100% {
+    color: $green;
+  }
+}
+
+@keyframes changeColorFromBlue {
+  0% {
+    color: $blue;
+  }
+
+  20% {
+    color: $pink;
+  }
+
+  40% {
+    color: $red;
+  }
+
+  60% {
+    color: $yellow;
+  }
+
+  80% {
+    color: $green;
+  }
+
+  100% {
+    color: $blue;
+  }
 }
 
 @media only screen and (max-width: 1280px) {

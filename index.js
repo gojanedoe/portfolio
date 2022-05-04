@@ -46,7 +46,7 @@ const createStars = () => {
     // get random color
     let randomNum = Math.floor(Math.random() * colors.length);
     let color = colors[randomNum];
-    star.setAttribute("class", `${color} star`);
+    star.setAttribute("class", `${color} star paused`);
 
     // make position random
     let browserWidth = document.documentElement.clientWidth;
@@ -62,33 +62,9 @@ const createStars = () => {
 };
 
 const toggleRainbow = (event) => {
-  console.log("event.target class: ", event.target.className);
-
-  // Toggle rainbow
-  // if rainbow class exists, remove
-  // if rainbow class doesn't, add
-  if (event.target.className.includes("rainbow")) {
-    // remove rainbow
-    console.log("Removing rainbow!");
-
-    event.target.classList.remove("rainbow");
-  } else {
-    console.log("Adding rainbow!");
-
-    // add rainbow
-    event.target.classList.add("rainbow");
-  }
-
-  /* 
-  project.dataset.filter.includes(chosenFilter)
-      ? project.classList.remove("hidden")
-      : project.classList.add("hidden");
-
-  selectedOption[0].className = selectedOption[0].className.replace(
-    " selected",
-    ""
-  );
-  */
+  event.target.className.includes("paused")
+    ? event.target.classList.remove("paused")
+    : event.target.classList.add("paused");
 };
 
 window.onload = createStars;
