@@ -2,7 +2,7 @@ const projects = document.getElementsByClassName("filter-option");
 
 // Show/hide projects based on current filter
 let filterProjects = (event) => {
-  let chosenFilter = event.target.parentElement.dataset.filter; //original: event.target.dataset.filter
+  let chosenFilter = event.target.parentElement.parentElement.dataset.filter; // clickable element is nested twice == reason for the two parentElement props
   for (const project of projects) {
     project.dataset.filter.includes(chosenFilter)
       ? project.classList.remove("hidden")
