@@ -96,6 +96,8 @@ a[target="_blank"]::after {
   background-repeat: repeat-x;
   background-position: 2px 1.3em;
   background-size: 13px 7px;
+  -webkit-transition: background-position 0.3s ease;
+  transition: background-position 0.3s ease;
 }
 
 .underline.pink,
@@ -165,7 +167,13 @@ footer a {
   margin-bottom: 18px;
 }
 
+.underline-perm:hover, .underline-perm:active, .underline-perm:focus {
+  background-position: 2px 1.5em;
+}
+
 a:hover .underline-mask,
+a:active .underline-mask,
+a:focus .underline-mask,
 .underline:active .underline-mask,
 .underline:focus .underline-mask,
 .selected .underline-mask {
