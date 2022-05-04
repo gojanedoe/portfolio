@@ -15,7 +15,7 @@
 // font-style: italic; -> italic
 // font-weight: 700; -> bold
 
-$rainbow-duration: 6s;
+$rainbow-duration: 4s;
 
 * {
   color: inherit;
@@ -258,8 +258,16 @@ a:focus .underline-mask,
   z-index: -1;
   font-family: "Prosto One", "Inconsolata", courier-std, Courier;
   font-size: 32px;
+  line-height: 0.2em;
 
   cursor: pointer;
+
+  transition: font-size 0.3s ease;
+
+  &:hover {
+    font-size: 35px;
+    line-height: 0.2em;
+  }
 
   // Default rainbow animation
   animation: changeColor ease-in-out;
@@ -267,6 +275,7 @@ a:focus .underline-mask,
   animation-duration: $rainbow-duration;
   animation-fill-mode: both;
 
+  // Other rainbow animations
   &.pink {
     animation: changeColorFromPink ease-in-out;
     animation-iteration-count: infinite;

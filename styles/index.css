@@ -224,15 +224,23 @@ a:focus .underline-mask,
   z-index: -1;
   font-family: "Prosto One", "Inconsolata", courier-std, Courier;
   font-size: 32px;
+  line-height: 0.2em;
   cursor: pointer;
+  -webkit-transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease;
   -webkit-animation: changeColor ease-in-out;
           animation: changeColor ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+}
+
+.star:hover {
+  font-size: 35px;
+  line-height: 0.2em;
 }
 
 .star.pink {
@@ -240,8 +248,8 @@ a:focus .underline-mask,
           animation: changeColorFromPink ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -251,8 +259,8 @@ a:focus .underline-mask,
           animation: changeColorFromRed ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -262,8 +270,8 @@ a:focus .underline-mask,
           animation: changeColorFromYellow ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -273,8 +281,8 @@ a:focus .underline-mask,
           animation: changeColorFromGreen ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -284,8 +292,8 @@ a:focus .underline-mask,
           animation: changeColorFromBlue ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
