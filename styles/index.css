@@ -43,18 +43,21 @@ body {
   -webkit-column-gap: 22px;
           column-gap: 22px;
   row-gap: 40px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
 }
 
 .projects-container h2 {
   padding-top: 18px;
 }
 
-.projects-container img {
-  width: 100%;
+.projects-container h2 .project-subtitle {
+  font-style: italic;
 }
 
-.project-subtitle {
-  font-style: italic;
+.projects-container img {
+  width: 100%;
 }
 
 p {
@@ -88,71 +91,6 @@ a[target="_blank"]::after {
   height: 1.1em;
 }
 
-.underline {
-  line-height: 1.8;
-  padding-bottom: 1em;
-  color: inherit;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23f0efef;stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-position: 2px 1.3em;
-  background-size: 13px 7px;
-  -webkit-transition: background-position 0.3s ease;
-  transition: background-position 0.3s ease;
-}
-
-.underline.pink,
-.pink .underline {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23e225e5;stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
-}
-
-.underline.red,
-.red .underline {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23c90d0d;stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
-}
-
-.underline.yellow,
-.yellow .underline {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23ffd84d;stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
-}
-
-.underline.green,
-.green .underline {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%230dc941;stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
-}
-
-.underline.blue,
-.blue .underline {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%2357a4ff;stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
-}
-
-.underline-mask {
-  text-decoration: none;
-  padding-bottom: 1em;
-  color: inherit;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#080808), to(#080808));
-  background-image: linear-gradient(#080808, #080808);
-  background-repeat: repeat-x;
-  background-repeat: no-repeat;
-  background-position: 100% 1.2em;
-  background-size: 100% 100%;
-  z-index: 1;
-}
-
-.short-animation {
-  -webkit-transition: background-size 0.3s ease;
-  transition: background-size 0.3s ease;
-}
-
-.med-animation {
-  -webkit-transition: background-size 0.6s ease;
-  transition: background-size 0.6s ease;
-}
-
-.long-animation {
-  -webkit-transition: background-size 1.2s ease;
-  transition: background-size 1.2s ease;
-}
-
 .screenreader-text {
   position: absolute;
   left: -10000px;
@@ -165,19 +103,16 @@ a[target="_blank"]::after {
 footer a {
   display: inline-block;
   margin-bottom: 18px;
+  text-decoration: none;
 }
 
-.underline-perm:hover, .underline-perm:active, .underline-perm:focus {
-  background-position: 2px 1.5em;
-}
-
-a:hover .underline-mask,
-a:active .underline-mask,
-a:focus .underline-mask,
-.underline:active .underline-mask,
-.underline:focus .underline-mask,
-.selected .underline-mask {
-  background-size: 0 100%;
+a:hover,
+.selected,
+.back {
+  text-decoration: underline;
+  -webkit-text-decoration-style: wavy;
+          text-decoration-style: wavy;
+  text-decoration-thickness: 2px;
 }
 
 .star {
