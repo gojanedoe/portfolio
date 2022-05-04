@@ -6,13 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scrap Yard - Ash Turner</title>
     <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/project.css" />
+
     <link rel="icon" type="image/png" href="images/star.png" />
   </head>
   <body>
-    <a href="index.html" class="back pink">Back to home</a>
-    <h1>Scrap Yard</h1>
-    <h2 class="project-subtitle">Made with: Adobe Photoshop</h2>
+    <div id="main-page">
+      <a href="index.html" class="back yellow underline underline-perm"
+        >Back to home</a
+      >
+      <h1>Scrap Yard</h1>
+      <div class="project-subtitle">Made with: Adobe InDesign</div>
+      <button class="main-image zoomable">
+        <img
+          src="images/scrapyard-hero.jpg"
+          alt="Brightly colored game board with cards and game money fanned around it"
+        />
+      </button>
+      <p class="small-block-space">Lorem Ipsum</p>
+      <p>Lorem ipsum.</p>
+      <h2>Gallery</h2>
+      <div class="gallery-container large-block-space">
+        <button class="zoomable">
+          <img
+            src="images/scrapyard-1.png"
+            alt="View full size version of a screenshot of ASCII flowers growing"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/scrapyard-2.png"
+            alt="View full size version of a screenshot of ASCII landscape, with hills underneath a sun"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/scrapyard-3.png"
+            alt="View full size version of a screenshot of poetic text on webpage"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/scrapyard-4.jpg"
+            alt="View full size version of a screenshot of ASCII tree and text input on webpage"
+          />
+        </button>
+      </div>
+
+      <a
+        href="#"
+        class="back yellow underline underline-perm small-block-space"
+        onclick="scrollToTop()"
+        tabindex="0"
+      >
+        Back to top
+      </a>
+    </div>
+
+    <div class="modal" role="dialog">
+      <!--Do I need tabindex="0" for modal accessibility?-->
+      <button class="close">&times;</button>
+      <div class="slide">
+        <img src="images/scrapyard-hero.jpg" />
+      </div>
+      <div class="slide">
+        <img src="images/scrapyard-1.png" />
+      </div>
+      <div class="slide">
+        <img src="images/scrapyard-2.png" />
+      </div>
+      <div class="slide">
+        <img src="images/scrapyard-3.png" />
+      </div>
+      <div class="slide">
+        <img src="images/scrapyard-4.jpg" />
+      </div>
+      <button class="left-arrow"><span>❮</span></button>
+      <button class="right-arrow"><span>❯</span></button>
+    </div>
   </body>
 
-  <!-- <script src="index.js"></script> -->
+  <script src="project.js"></script>
 </html>

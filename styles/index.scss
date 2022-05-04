@@ -58,21 +58,21 @@ body {
   grid-template-rows: auto;
   column-gap: 22px;
   row-gap: $medium-space;
-  align-items: end;
+  // align-items: end;
 
   h2 {
     padding-top: 18px;
-
-    .project-subtitle {
-      // font-family: courier-std, Courier, monospace;
-      font-style: italic;
-      // font-size: 17px;
-    }
   }
 
   img {
     width: 100%;
   }
+}
+
+.project-subtitle {
+  // font-family: courier-std, Courier, monospace;
+  font-style: italic;
+  // font-size: 17px;
 }
 
 p {
@@ -105,6 +105,68 @@ a {
   }
 }
 
+.underline {
+  line-height: 1.8;
+  padding-bottom: 1em;
+  color: inherit; // allows span/link's text to inherit color
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23f0efef;stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 2px 1.3em;
+  // background-position: 2px 1.6em; // use this amount for .underline when not on a span
+  background-size: 13px 7px;
+
+  transition: background-position 0.3s ease;
+}
+
+.underline.pink,
+.pink .underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23#{$pink-no-hash};stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
+}
+
+.underline.red,
+.red .underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23#{$red-no-hash};stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
+}
+
+.underline.yellow,
+.yellow .underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23#{$yellow-no-hash};stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
+}
+.underline.green,
+.green .underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23#{$green-no-hash};stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
+}
+.underline.blue,
+.blue .underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 29.18 15'%3E%3Cdefs%3E%3Cstyle%3E.b%7Bfill:none;stroke:%23#{$blue-no-hash};stroke-miterlimit:10;stroke-width:5px;%7D%3C/style%3E%3C/defs%3E%3Cpath class='b' d='M0,2.5c7.3,0,7.3,10,14.59,10S21.89,2.5,29.18,2.5'/%3E%3C/svg%3E");
+}
+
+.underline-mask {
+  text-decoration: none;
+  padding-bottom: 1em;
+
+  color: inherit; // allows span/link's text to inherit color
+
+  background-image: linear-gradient($background-color, $background-color);
+  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-position: 100% 1.2em;
+  background-size: 100% 100%;
+
+  z-index: 1;
+}
+
+.short-animation {
+  transition: background-size 0.3s ease;
+}
+.med-animation {
+  transition: background-size 0.6s ease;
+}
+.long-animation {
+  transition: background-size 1.2s ease;
+}
+
 .screenreader-text {
   position: absolute;
   left: -10000px;
@@ -114,23 +176,28 @@ a {
   overflow: hidden;
 }
 
-footer a {
-  display: inline-block;
-  margin-bottom: $small-space;
-  text-decoration: none;
-
-  // alternative (doesn't work for IE):
-  // display: block;
-  // width: max-content;
+footer {
+  a {
+    display: inline-block;
+    margin-bottom: $small-space;
+  }
 }
 
-a:hover,
-// a:focus,
-.selected,
-.back {
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 2px;
+.underline-perm {
+  &:hover,
+  &:active,
+  &:focus {
+    background-position: 2px 1.5em;
+  }
+}
+
+a:hover .underline-mask,
+a:active .underline-mask,
+a:focus .underline-mask,
+.underline:active .underline-mask,
+.underline:focus .underline-mask,
+.selected .underline-mask {
+  background-size: 0 100%;
 }
 
 .star {
@@ -186,12 +253,6 @@ a:hover,
 .hidden {
   display: none;
 }
-
-// .back {
-//   color: $pink;
-//   text-decoration: underline;
-//   text-decoration-style: wavy;
-// }
 
 @media only screen and (max-width: 1280px) {
   * {

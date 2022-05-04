@@ -32,6 +32,7 @@ h2 {
   font-size: 24px;
   a {
     white-space: nowrap; // Fix ::after arrow wrapping to new line
+    font-size: 20px; // inherit if want same size
   }
 }
 
