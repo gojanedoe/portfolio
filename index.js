@@ -2,7 +2,7 @@ const projects = document.getElementsByClassName("filter-option");
 
 // Show/hide projects based on current filter
 let filterProjects = (event) => {
-  let chosenFilter = event.target.dataset.filter;
+  let chosenFilter = event.target.parentElement.dataset.filter; //original: event.target.dataset.filter
   for (const project of projects) {
     project.dataset.filter.includes(chosenFilter)
       ? project.classList.remove("hidden")
@@ -15,7 +15,7 @@ let filterProjects = (event) => {
     " selected",
     ""
   );
-  event.target.className += " selected";
+  event.target.parentElement.className += " selected";
 };
 
 // Add filterProjects event to each option

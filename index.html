@@ -35,7 +35,9 @@
           data-filter="code"
           role="button"
           aria-label="Filter projects by: Code"
-          >Code</a
+          ><span class="underline"
+            ><span class="underline-mask short-animation">Code</span></span
+          ></a
         >
         <a
           href="#/"
@@ -43,7 +45,11 @@
           data-filter="game"
           role="button"
           aria-label="Filter projects by: Games and Play"
-          >Games + Play</a
+          ><span class="underline"
+            ><span class="underline-mask med-animation"
+              >Games + Play</span
+            ></span
+          ></a
         >
         <a
           href="#/"
@@ -51,78 +57,171 @@
           data-filter="art"
           role="button"
           aria-label="Filter projects by: Art"
-          >Art</a
+          ><span class="underline"
+            ><span class="underline-mask short-animation">Art</span></span
+          ></a
         >
       </nav>
 
       <div class="projects-container large-block-space">
         <div class="filter-option" data-filter="game">
-          <a href="project-template.html">
+          <a href="scrap-yard.html">
             <img
-              src="./images/scrapyard.png"
-              alt="Brightly colored game board with cards and game money fanned around it"
+              src="./images/landing-scrapyard.jpg"
+              alt="Text stating 'Scrap Yard: Innovators of Recycling' above graphics for a fake five-dollar bill and single game die"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Scrap Yard
+                <span class="project-subtitle">(Board Game)</span></span
+              >
+            </span>
+            <!-- <img
+              src="./images/landing-scrapyard.jpg"
+              alt="Text stating 'Scrap Yard: Innovators of Recycling' above graphics for a fake five-dollar bill and single game die"
               width="250px"
             />
             <h2 class="project-title">
               Scrap Yard
               <span class="project-subtitle">(Board Game)</span>
-            </h2>
+            </h2> -->
           </a>
         </div>
         <div class="filter-option" data-filter="code art">
-          <img
-            src="./images/hello.png"
-            alt="Screenshot of website page showing abstract graphics"
-            width="250px"
-          />
-          <h2 class="project-title">
-            Hello
-            <span class="project-subtitle">(Net Art)</span>
-          </h2>
+          <a href="hello.html">
+            <img
+              src="./images/landing-helloworld.jpg"
+              alt="Abstract speckled graphics"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Hello
+                <span class="project-subtitle">(Net Art)</span></span
+              ></span
+            >
+          </a>
         </div>
-        <div class="filter-option" data-filter="code">
-          <img
-            src="./images/wander.png"
-            alt="Screenshot of website page showing ASCII art of a flower growing"
-            width="250px"
-          />
-          <h2 class="project-title">
-            Wander
-            <span class="project-subtitle">(Net Art)</span>
-          </h2>
-        </div>
-        <div class="filter-option" data-filter="code game">
-          <img
-            src="./images/unmasked.png"
-            alt="Screenshot of a character in a black robe and wolf mask speaking to another robed figure. A dialog box takes up the bottom half of the screen"
-            width="250px"
-          />
-          <h2 class="project-title">
-            The Unmasked
-            <span class="project-subtitle">(Video Game)</span>
-          </h2>
+        <div class="filter-option" data-filter="code art">
+          <a href="wander.html">
+            <img
+              src="./images/landing-wander.jpg"
+              alt="ASCII art of flowers growing"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Wander
+                <span class="project-subtitle">(Net Art)</span></span
+              ></span
+            >
+          </a>
         </div>
         <div class="filter-option" data-filter="code game">
-          <img
-            src="./images/debug.png"
-            alt="Red pixelated text states 'Warning: Data Corruption Found' in all-capital letters"
-            width="250px"
-          />
-          <h2 class="project-title">
-            Debug.Log
-            <span class="project-subtitle">(Video Game)</span>
-          </h2>
+          <a href="#">
+            <img
+              src="./images/landing-unmasked.jpg"
+              alt="White animal masks in a horizontal row, including an otter, horse, wolf, reptile, rabbit, and owl"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                The Unmasked
+                <span class="project-subtitle">(Video Game)</span>
+              </span></span
+            >
+          </a>
+        </div>
+        <div class="filter-option" data-filter="code game">
+          <a href="#">
+            <img
+              src="./images/landing-debug.jpg"
+              alt="Text states 'debug.Log_' in bold above the text 'Press A to execute method'"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Debug.Log
+                <span class="project-subtitle">(Video Game)</span></span
+              ></span
+            >
+          </a>
         </div>
         <div class="filter-option" data-filter="game art">
-          <img
-            src="./images/david.jpg"
-            alt="A light illuminates a desk in a dark room. A laptop sits open on the desk"
-            width="250px"
-          />
-          <h2 class="project-title">
-            In David's Absence
-            <span class="project-subtitle">(Installation)</span>
-          </h2>
+          <a href="#">
+            <img
+              src="./images/landing-david.jpg"
+              alt="Postcard with a heart and 'David' written on the front, layered on top of graph paper with illegible writing"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                In David's Absence
+                <span class="project-subtitle">(Installation)</span>
+              </span></span
+            >
+          </a>
+        </div>
+        <div class="filter-option" data-filter="art">
+          <a href="#">
+            <img
+              src="./images/landing-home.jpg"
+              alt="Graphic outline of an open laptop with the world 'HOME' on the screen. Below the laptop is the text, 'Press any key to continue _'"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Home
+                <span class="project-subtitle">(Layout Design)</span></span
+              ></span
+            >
+          </a>
+        </div>
+        <div class="filter-option" data-filter="code game">
+          <a href="#">
+            <img
+              src="./images/landing-interplay.jpg"
+              alt="White circle with abstract shape cut out of the middle"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Interplay
+                <span class="project-subtitle">(Installation)</span></span
+              ></span
+            >
+          </a>
+        </div>
+        <div class="filter-option" data-filter="code game">
+          <a href="#">
+            <img
+              src="./images/landing-return.jpg"
+              alt="The word Return in all capital letters"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Return
+                <span class="project-subtitle">(Video Game)</span></span
+              ></span
+            >
+          </a>
+        </div>
+        <div class="filter-option" data-filter="game">
+          <a href="#">
+            <img
+              src="./images/landing-storylines.jpg"
+              alt="Design of bird on a mountaintop, with the word 'Storylines' on the right-hand side"
+              width="250px"
+            />
+            <span class="underline">
+              <span class="underline-mask med-animation">
+                Storylines
+                <span class="project-subtitle">(Mobile Game)</span></span
+              ></span
+            >
+          </a>
         </div>
       </div>
 
@@ -137,7 +236,8 @@
             class="red"
             rel="noreferrer"
             target="_blank"
-            >GitHub<span class="screenreader-text">
+            ><span class="underline underline-perm">GitHub</span
+            ><span class="screenreader-text">
               (Link opens in a new tab)</span
             ></a
           >
@@ -148,12 +248,17 @@
             class="yellow"
             rel="noreferrer"
             target="_blank"
-            >itch.io<span class="screenreader-text">
+            ><span class="underline underline-perm">itch.io</span
+            ><span class="screenreader-text">
               (Link opens in a new tab)</span
             ></a
           >
         </div>
-        <div><a href="#" class="green">Contact Me</a></div>
+        <div>
+          <a href="#" class="green"
+            ><span class="underline underline-perm">Contact Me</span></a
+          >
+        </div>
       </footer>
     </div>
   </body>
