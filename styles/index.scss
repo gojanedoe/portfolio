@@ -207,6 +207,49 @@ a:focus .underline-mask,
   z-index: -1;
   font-family: "Prosto One", "Inconsolata", courier-std, Courier;
   font-size: 32px;
+
+  cursor: pointer;
+}
+
+// .paused {
+//   -webkit-animation-play-state: paused;
+//   -moz-animation-play-state: paused;
+//   -o-animation-play-state: paused;
+//   animation-play-state: paused;
+// }
+
+.rainbow {
+  // Rainbow animation
+  animation: changeColor ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+
+@keyframes changeColor {
+  0% {
+    color: $pink;
+  }
+
+  20% {
+    color: $red;
+  }
+
+  40% {
+    color: $yellow;
+  }
+
+  60% {
+    color: $green;
+  }
+
+  80% {
+    color: $blue;
+  }
+
+  100% {
+    color: $pink;
+  }
 }
 
 /* SPACING & ACCENTS */

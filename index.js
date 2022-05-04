@@ -41,6 +41,7 @@ const createStars = () => {
     let star = document.createElement("div");
     star.innerHTML = "*";
     star.ariaHidden = "true";
+    star.onclick = toggleRainbow;
 
     // get random color
     let randomNum = Math.floor(Math.random() * colors.length);
@@ -58,6 +59,36 @@ const createStars = () => {
 
     document.body.appendChild(star);
   }
+};
+
+const toggleRainbow = (event) => {
+  console.log("event.target class: ", event.target.className);
+
+  // Toggle rainbow
+  // if rainbow class exists, remove
+  // if rainbow class doesn't, add
+  if (event.target.className.includes("rainbow")) {
+    // remove rainbow
+    console.log("Removing rainbow!");
+
+    event.target.classList.remove("rainbow");
+  } else {
+    console.log("Adding rainbow!");
+
+    // add rainbow
+    event.target.classList.add("rainbow");
+  }
+
+  /* 
+  project.dataset.filter.includes(chosenFilter)
+      ? project.classList.remove("hidden")
+      : project.classList.add("hidden");
+
+  selectedOption[0].className = selectedOption[0].className.replace(
+    " selected",
+    ""
+  );
+  */
 };
 
 window.onload = createStars;
