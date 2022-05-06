@@ -82,11 +82,13 @@ body {
   }
 
   img {
-    display: block; // Remove gap below image (for descenders)
+    display: block; // Removes gap below image (for descenders)
     max-height: 100%;
     // max-height: auto;
 
     padding: 3% 70px;
+
+    transition: padding 1s ease-in-out;
   }
 
   //TODO: Replace text "x" with svg
@@ -101,6 +103,8 @@ body {
     font-weight: bold;
     font-size: 60px;
     z-index: 2;
+
+    transition: top 1s ease-in-out, right 1s ease-in-out;
 
     &:hover {
       cursor: pointer;
@@ -127,17 +131,19 @@ body {
   height: 100%;
   align-self: stretch;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.25);
+  // background-color: rgba(0, 0, 0, 0.25);
 
   * {
     font-size: 40px;
   }
-}
 
-.left-arrow:hover,
-.right-arrow:hover {
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.5);
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover span {
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
 .left-arrow {
@@ -150,4 +156,42 @@ body {
 
 button {
   background-color: transparent;
+}
+
+@media only screen and (max-width: 1400px) {
+  .modal {
+    .close {
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .gallery-container {
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+}
+
+@media only screen and (max-width: 580px) {
+  .gallery-container {
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+
+  .modal {
+    img {
+      display: block; // Removes gap below image (for descenders)
+      // max-height: 100%;
+      max-height: auto;
+      max-width: 100%;
+      // max-height: auto;
+
+      padding: 0;
+    }
+  }
 }

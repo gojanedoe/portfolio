@@ -91,6 +91,8 @@ body {
   display: block;
   max-height: 100%;
   padding: 3% 70px;
+  -webkit-transition: padding 1s ease-in-out;
+  transition: padding 1s ease-in-out;
 }
 
 .modal .close {
@@ -100,6 +102,8 @@ body {
   font-weight: bold;
   font-size: 60px;
   z-index: 2;
+  -webkit-transition: top 1s ease-in-out, right 1s ease-in-out;
+  transition: top 1s ease-in-out, right 1s ease-in-out;
 }
 
 .modal .close:hover {
@@ -133,7 +137,6 @@ body {
   -ms-flex-item-align: stretch;
       align-self: stretch;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .left-arrow *,
@@ -144,6 +147,10 @@ body {
 .left-arrow:hover,
 .right-arrow:hover {
   cursor: pointer;
+}
+
+.left-arrow:hover span,
+.right-arrow:hover span {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -157,5 +164,34 @@ body {
 
 button {
   background-color: transparent;
+}
+
+@media only screen and (max-width: 1400px) {
+  .modal .close {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .gallery-container {
+    -webkit-column-gap: 16px;
+            column-gap: 16px;
+    row-gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .gallery-container {
+    -webkit-column-gap: 12px;
+            column-gap: 12px;
+    row-gap: 12px;
+  }
+  .modal img {
+    display: block;
+    max-height: auto;
+    max-width: 100%;
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=project.css.map */
