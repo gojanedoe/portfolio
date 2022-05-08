@@ -151,8 +151,8 @@ a[target="_blank"]::after {
 }
 
 .long-animation {
-  -webkit-transition: background-size 1.2s ease;
-  transition: background-size 1.2s ease;
+  -webkit-transition: background-size 0.8s ease;
+  transition: background-size 0.8s ease;
 }
 
 .screenreader-text {
@@ -167,6 +167,10 @@ a[target="_blank"]::after {
 footer a {
   display: inline-block;
   margin-bottom: 18px;
+}
+
+a:focus .underline-perm {
+  background-position: 2px 1.5em;
 }
 
 .underline-perm:hover, .underline-perm:active, .underline-perm:focus {
