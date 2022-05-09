@@ -67,4 +67,4 @@ const toggleRainbow = (event) => {
     : event.target.classList.add("paused");
 };
 
-window.onload = createStars;
+// window.onload = createStars;

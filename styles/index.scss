@@ -169,7 +169,7 @@ a {
   transition: background-size 0.6s ease;
 }
 .long-animation {
-  transition: background-size 0.8s ease;
+  transition: background-size 1s ease;
 }
 
 .screenreader-text {
@@ -261,10 +261,13 @@ a:focus .underline-mask,
 .star {
   position: absolute;
 
-  z-index: -1;
+  z-index: 1;
   font-family: "Prosto One", "Inconsolata", courier-std, Courier;
   font-size: 32px;
   line-height: 0.2em;
+
+  // TEST
+  // color: $text-color !important;
 
   cursor: pointer;
 
@@ -316,6 +319,126 @@ a:focus .underline-mask,
     animation-duration: $rainbow-duration;
     animation-fill-mode: both;
   }
+}
+
+.star:nth-child(1) {
+  left: 160px;
+  left: 10%;
+
+  top: 108px;
+  top: 10%;
+}
+
+.star:nth-child(2) {
+  left: 523px;
+  left: 31%;
+
+  top: 142px;
+  top: 17%;
+}
+
+.star:nth-child(3) {
+  left: 878px;
+  left: 52%;
+
+  top: 122px;
+  top: 14.5%;
+}
+
+.star:nth-child(4) {
+  left: 1194px;
+  left: 69%;
+
+  top: 218px;
+  top: 26%;
+}
+
+.star:nth-child(5) {
+  left: 1564px;
+  left: 93%;
+
+  top: 126px;
+  top: 15%;
+}
+
+.star:nth-child(6) {
+  left: 744px;
+  left: 45%;
+
+  top: 418px;
+  top: 50%;
+}
+
+.star:nth-child(7) {
+  left: 1254px;
+  left: 75%;
+
+  top: 380px;
+  top: 46%;
+}
+
+.star:nth-child(8) {
+  left: 1495px;
+  left: 89%;
+
+  top: 310px;
+  top: 37%;
+}
+
+.star:nth-child(9) {
+  left: 60px;
+  left: 4%;
+
+  top: 508px;
+  top: 62%;
+}
+
+.star:nth-child(10) {
+  left: 171px;
+  left: 12%;
+
+  top: 681px;
+  top: 81%;
+}
+
+.star:nth-child(11) {
+  left: 1528px;
+  left: 91%;
+
+  top: 700px;
+  top: 72%;
+}
+
+.star:nth-child(12) {
+  left: 130px;
+  left: 7.5%;
+
+  top: 988px;
+  top: 117%;
+}
+
+.star:nth-child(13) {
+  left: 1436px;
+  left: 86%;
+
+  top: 1117px;
+  top: 132%;
+}
+
+.star:nth-child(14) {
+  left: 1536px;
+  left: 92%;
+
+  top: 1317px;
+  top: 157%;
+}
+
+.star:nth-child(15) {
+  left: 48px;
+  left: 3%;
+
+  top: 1437px;
+  top: 172%;
 }
 
 .paused {
@@ -378,10 +501,29 @@ a:focus .underline-mask,
   }
 }
 
+// TODO
+// Add highlight with click (below)
+// @keyframes pinkHighlightClick {
+//   0% {
+//     text-shadow: none;
+//   }
+//   .1% {
+//     text-shadow: 0 0 5px $pink, 0 0 10px $pink, 0 0 20px $pink,
+//       0 0 40px $text-color, 0 0 80px $text-color, 0 0 90px $text-color,
+//       0 0 100px $text-color, 0 0 150px $text-color;
+//   }
+
+//   100% {
+//     text-shadow: none;
+//   }
+// }
+
 @keyframes changeColorFromPink {
   0% {
     color: $pink;
-    // color: inherit;
+  }
+
+  1% {
   }
 
   20% {
@@ -535,10 +677,28 @@ a:focus .underline-mask,
   }
 }
 
+@media only screen and (max-width: 935px) {
+  // .star:nth-child(15) {
+  //   display: none;
+  // }
+
+  .star:nth-child(2) {
+    top: 6%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .projects-container {
     grid-template-columns: 1fr;
     row-gap: 52px;
+  }
+
+  .star:nth-child(3) {
+    top: 20%;
+  }
+
+  .star:nth-child(4) {
+    left: 83%;
   }
 
   //TODO

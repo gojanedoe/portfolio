@@ -151,8 +151,8 @@ a[target="_blank"]::after {
 }
 
 .long-animation {
-  -webkit-transition: background-size 0.8s ease;
-  transition: background-size 0.8s ease;
+  -webkit-transition: background-size 1s ease;
+  transition: background-size 1s ease;
 }
 
 .screenreader-text {
@@ -227,7 +227,7 @@ a:focus .underline-mask,
 /*========== STARS ==========*/
 .star {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   font-family: "Prosto One", "Inconsolata", courier-std, Courier;
   font-size: 32px;
   line-height: 0.2em;
@@ -304,6 +304,111 @@ a:focus .underline-mask,
           animation-fill-mode: both;
 }
 
+.star:nth-child(1) {
+  left: 160px;
+  left: 10%;
+  top: 108px;
+  top: 10%;
+}
+
+.star:nth-child(2) {
+  left: 523px;
+  left: 31%;
+  top: 142px;
+  top: 17%;
+}
+
+.star:nth-child(3) {
+  left: 878px;
+  left: 52%;
+  top: 122px;
+  top: 14.5%;
+}
+
+.star:nth-child(4) {
+  left: 1194px;
+  left: 69%;
+  top: 218px;
+  top: 26%;
+}
+
+.star:nth-child(5) {
+  left: 1564px;
+  left: 93%;
+  top: 126px;
+  top: 15%;
+}
+
+.star:nth-child(6) {
+  left: 744px;
+  left: 45%;
+  top: 418px;
+  top: 50%;
+}
+
+.star:nth-child(7) {
+  left: 1254px;
+  left: 75%;
+  top: 380px;
+  top: 46%;
+}
+
+.star:nth-child(8) {
+  left: 1495px;
+  left: 89%;
+  top: 310px;
+  top: 37%;
+}
+
+.star:nth-child(9) {
+  left: 60px;
+  left: 4%;
+  top: 508px;
+  top: 62%;
+}
+
+.star:nth-child(10) {
+  left: 171px;
+  left: 12%;
+  top: 681px;
+  top: 81%;
+}
+
+.star:nth-child(11) {
+  left: 1528px;
+  left: 91%;
+  top: 700px;
+  top: 72%;
+}
+
+.star:nth-child(12) {
+  left: 130px;
+  left: 7.5%;
+  top: 988px;
+  top: 117%;
+}
+
+.star:nth-child(13) {
+  left: 1436px;
+  left: 86%;
+  top: 1117px;
+  top: 132%;
+}
+
+.star:nth-child(14) {
+  left: 1536px;
+  left: 92%;
+  top: 1317px;
+  top: 157%;
+}
+
+.star:nth-child(15) {
+  left: 48px;
+  left: 3%;
+  top: 1437px;
+  top: 172%;
+}
+
 .paused {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
@@ -376,6 +481,8 @@ a:focus .underline-mask,
   0% {
     color: #e225e5;
   }
+  1% {
+  }
   20% {
     color: #c90d0d;
   }
@@ -396,6 +503,8 @@ a:focus .underline-mask,
 @keyframes changeColorFromPink {
   0% {
     color: #e225e5;
+  }
+  1% {
   }
   20% {
     color: #c90d0d;
@@ -600,11 +709,23 @@ a:focus .underline-mask,
   }
 }
 
+@media only screen and (max-width: 935px) {
+  .star:nth-child(2) {
+    top: 6%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .projects-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     row-gap: 52px;
+  }
+  .star:nth-child(3) {
+    top: 20%;
+  }
+  .star:nth-child(4) {
+    left: 83%;
   }
   nav a {
     margin-right: 42px;
