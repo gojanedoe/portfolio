@@ -16,6 +16,16 @@
   font-size: 18px;
 }
 
+*::-moz-selection {
+  background-color: #f0efef;
+  color: #080808;
+}
+
+*::selection {
+  background-color: #f0efef;
+  color: #080808;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -232,16 +242,8 @@ a:focus .underline-mask,
   font-size: 32px;
   line-height: 0.2em;
   cursor: pointer;
-  -webkit-transition: font-size 0.3s ease;
-  transition: font-size 0.3s ease;
-  -webkit-animation: changeColor ease-in-out;
-          animation: changeColor ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  -webkit-transition: font-size 0.3s ease, top 1s ease, left 1s ease;
+  transition: font-size 0.3s ease, top 1s ease, left 1s ease;
 }
 
 .star:hover {
@@ -415,27 +417,6 @@ a:focus .underline-mask,
 }
 
 @-webkit-keyframes changeColor {
-  0% {
-    color: inherit;
-  }
-  20% {
-    color: #c90d0d;
-  }
-  40% {
-    color: #ffd84d;
-  }
-  60% {
-    color: #0dc941;
-  }
-  80% {
-    color: #57a4ff;
-  }
-  100% {
-    color: inherit;
-  }
-}
-
-@keyframes changeColor {
   0% {
     color: inherit;
   }
@@ -715,6 +696,12 @@ a:focus .underline-mask,
   }
 }
 
+@media only screen and (max-width: 854px) {
+  .star:nth-child(4) {
+    left: 83%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .projects-container {
     -ms-grid-columns: 1fr;
@@ -723,9 +710,6 @@ a:focus .underline-mask,
   }
   .star:nth-child(3) {
     top: 20%;
-  }
-  .star:nth-child(4) {
-    left: 83%;
   }
   nav a {
     margin-right: 42px;

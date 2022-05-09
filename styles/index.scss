@@ -33,6 +33,12 @@ $rainbow-duration: 4s;
   font-size: $main-font-size;
 }
 
+*::selection {
+  // background-color: #ffe69a; // alt
+  background-color: $text-color;
+  color: $background-color;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -243,13 +249,6 @@ a:focus .underline-mask,
   color: $blue;
 }
 
-//.highlight {
-// Dark mode:
-// background-color: #ffe69a;
-// Light mode:
-// background-color: red;
-//}
-
 /*========== PROJECT SORTING ==========*/
 
 .hidden {
@@ -266,23 +265,14 @@ a:focus .underline-mask,
   font-size: 32px;
   line-height: 0.2em;
 
-  // TEST
-  // color: $text-color !important;
-
   cursor: pointer;
 
-  transition: font-size 0.3s ease;
+  transition: font-size 0.3s ease, top 1s ease, left 1s ease;
 
   &:hover {
     font-size: 35px;
     line-height: 0.2em;
   }
-
-  // Default rainbow animation
-  animation: changeColor ease-in-out;
-  animation-iteration-count: infinite;
-  animation-duration: $rainbow-duration;
-  animation-fill-mode: both;
 
   // Other rainbow animations
   &.pink {
@@ -446,33 +436,6 @@ a:focus .underline-mask,
   -moz-animation-play-state: paused !important;
   -o-animation-play-state: paused !important;
   animation-play-state: paused !important;
-}
-
-@keyframes changeColor {
-  0% {
-    color: inherit;
-    // color: inherit;
-  }
-
-  20% {
-    color: $red;
-  }
-
-  40% {
-    color: $yellow;
-  }
-
-  60% {
-    color: $green;
-  }
-
-  80% {
-    color: $blue;
-  }
-
-  100% {
-    color: inherit;
-  }
 }
 
 @keyframes changeColor {
@@ -665,10 +628,6 @@ a:focus .underline-mask,
       left: 22%;
       right: 22%;
       top: 16%;
-      // left: 160px;
-      // right: 160px;
-      // top: 180px;
-      // bottom: $medium-space;
     }
   }
 
@@ -678,12 +637,14 @@ a:focus .underline-mask,
 }
 
 @media only screen and (max-width: 935px) {
-  // .star:nth-child(15) {
-  //   display: none;
-  // }
-
   .star:nth-child(2) {
     top: 6%;
+  }
+}
+
+@media only screen and (max-width: 854px) {
+  .star:nth-child(4) {
+    left: 83%;
   }
 }
 
@@ -697,13 +658,6 @@ a:focus .underline-mask,
     top: 20%;
   }
 
-  .star:nth-child(4) {
-    left: 83%;
-  }
-
-  //TODO
-  // Add filters in vertical row
-  // Temp fix:
   nav a {
     margin-right: 42px;
   }
