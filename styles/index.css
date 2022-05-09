@@ -247,8 +247,7 @@ a:focus .underline-mask,
 }
 
 .star:hover {
-  font-size: 35px;
-  line-height: 0.2em;
+  font-size: 38px;
 }
 
 .star.pink {
@@ -342,69 +341,62 @@ a:focus .underline-mask,
 }
 
 .star:nth-child(6) {
-  left: 744px;
-  left: 45%;
-  top: 418px;
-  top: 50%;
-}
-
-.star:nth-child(7) {
   left: 1254px;
   left: 75%;
   top: 380px;
   top: 46%;
 }
 
-.star:nth-child(8) {
+.star:nth-child(7) {
   left: 1495px;
   left: 89%;
   top: 310px;
   top: 37%;
 }
 
-.star:nth-child(9) {
+.star:nth-child(8) {
   left: 60px;
   left: 4%;
   top: 508px;
   top: 62%;
 }
 
-.star:nth-child(10) {
+.star:nth-child(9) {
   left: 171px;
   left: 12%;
   top: 681px;
   top: 81%;
 }
 
-.star:nth-child(11) {
+.star:nth-child(10) {
   left: 1528px;
   left: 91%;
   top: 700px;
   top: 72%;
 }
 
-.star:nth-child(12) {
+.star:nth-child(11) {
   left: 130px;
   left: 7.5%;
   top: 988px;
   top: 117%;
 }
 
-.star:nth-child(13) {
+.star:nth-child(12) {
   left: 1436px;
   left: 86%;
   top: 1117px;
   top: 132%;
 }
 
-.star:nth-child(14) {
+.star:nth-child(13) {
   left: 1536px;
   left: 92%;
   top: 1317px;
   top: 157%;
 }
 
-.star:nth-child(15) {
+.star:nth-child(14) {
   left: 48px;
   left: 3%;
   top: 1437px;
@@ -672,6 +664,7 @@ a:focus .underline-mask,
   }
 }
 
+/*========== RESPONSIVENESS ==========*/
 @media only screen and (max-width: 1280px) {
   * {
     font-size: 16px;
@@ -687,6 +680,13 @@ a:focus .underline-mask,
   .projects-container {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Stars off on tablet and lower */
+@media only screen and (max-width: 1024px) {
+  .star {
+    display: none;
   }
 }
 
@@ -722,9 +722,6 @@ a:focus .underline-mask,
     margin-right: 45px;
     margin-top: 64px;
     margin-bottom: 40px;
-  }
-  .star {
-    display: none;
   }
   .large-block-space {
     margin-bottom: 46px;

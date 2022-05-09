@@ -270,8 +270,7 @@ a:focus .underline-mask,
   transition: font-size 0.3s ease, top 1s ease, left 1s ease;
 
   &:hover {
-    font-size: 35px;
-    line-height: 0.2em;
+    font-size: 38px;
   }
 
   // Other rainbow animations
@@ -352,14 +351,6 @@ a:focus .underline-mask,
 }
 
 .star:nth-child(6) {
-  left: 744px;
-  left: 45%;
-
-  top: 418px;
-  top: 50%;
-}
-
-.star:nth-child(7) {
   left: 1254px;
   left: 75%;
 
@@ -367,7 +358,7 @@ a:focus .underline-mask,
   top: 46%;
 }
 
-.star:nth-child(8) {
+.star:nth-child(7) {
   left: 1495px;
   left: 89%;
 
@@ -375,7 +366,7 @@ a:focus .underline-mask,
   top: 37%;
 }
 
-.star:nth-child(9) {
+.star:nth-child(8) {
   left: 60px;
   left: 4%;
 
@@ -383,7 +374,7 @@ a:focus .underline-mask,
   top: 62%;
 }
 
-.star:nth-child(10) {
+.star:nth-child(9) {
   left: 171px;
   left: 12%;
 
@@ -391,7 +382,7 @@ a:focus .underline-mask,
   top: 81%;
 }
 
-.star:nth-child(11) {
+.star:nth-child(10) {
   left: 1528px;
   left: 91%;
 
@@ -399,7 +390,7 @@ a:focus .underline-mask,
   top: 72%;
 }
 
-.star:nth-child(12) {
+.star:nth-child(11) {
   left: 130px;
   left: 7.5%;
 
@@ -407,7 +398,7 @@ a:focus .underline-mask,
   top: 117%;
 }
 
-.star:nth-child(13) {
+.star:nth-child(12) {
   left: 1436px;
   left: 86%;
 
@@ -415,7 +406,7 @@ a:focus .underline-mask,
   top: 132%;
 }
 
-.star:nth-child(14) {
+.star:nth-child(13) {
   left: 1536px;
   left: 92%;
 
@@ -423,7 +414,7 @@ a:focus .underline-mask,
   top: 157%;
 }
 
-.star:nth-child(15) {
+.star:nth-child(14) {
   left: 48px;
   left: 3%;
 
@@ -614,6 +605,8 @@ a:focus .underline-mask,
   }
 }
 
+/*========== RESPONSIVENESS ==========*/
+
 @media only screen and (max-width: 1280px) {
   * {
     font-size: 16px;
@@ -633,6 +626,13 @@ a:focus .underline-mask,
 
   .projects-container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Stars off on tablet and lower */
+@media only screen and (max-width: 1024px) {
+  .star {
+    display: none;
   }
 }
 
@@ -671,10 +671,6 @@ a:focus .underline-mask,
       top: 64px;
       bottom: $medium-space;
     }
-  }
-
-  .star {
-    display: none;
   }
 
   .large-block-space {
