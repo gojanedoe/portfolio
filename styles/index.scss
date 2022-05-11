@@ -206,6 +206,12 @@ a:focus .underline-perm {
   }
 }
 
+// .selected:hover
+//,a:focus .selected
+// {
+//   background-position: 2px 1.5em;
+// }
+
 a:hover .underline-mask,
 a:active .underline-mask,
 a:focus .underline-mask,
@@ -262,7 +268,8 @@ a:focus .underline-mask,
 
   z-index: 1;
   font-family: "Prosto One", "Inconsolata", courier-std, Courier;
-  font-size: 32px;
+  font-size: 28px;
+
   line-height: 0.2em;
 
   cursor: pointer;
@@ -629,13 +636,6 @@ a:focus .underline-mask,
   }
 }
 
-/* Stars off on tablet and lower */
-@media only screen and (max-width: 1024px) {
-  .star {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 935px) {
   .star:nth-child(2) {
     top: 6%;
@@ -675,5 +675,9 @@ a:focus .underline-mask,
 
   .large-block-space {
     margin-bottom: 46px;
+  }
+
+  .star {
+    display: none;
   }
 }
