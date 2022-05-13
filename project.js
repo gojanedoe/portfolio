@@ -1,18 +1,6 @@
-// TODO
-// Accessibility
-// -1 tab index for all previous focusable elements
-// Add aria types to all images
-// Add screen-reader/off-screen note about controlling the lightbox (arrow keys and escape)
-// Add labels to all images
-// Lightbox Alt = Fuller description of image
-// Meaningful link text / alt for arrow buttons
-
-// Popup/warning if JS not available
-
 let currentSlide = 0;
 let currentFocus = -1; // Default is modal focus
 let preModalFocus = document.body;
-// let lastModalFocus = document.getElementById();
 
 const scrollToTop = () => {
   document.body.scrollTop = 0; // For Safari
@@ -40,20 +28,16 @@ const handleModalKeys = (event) => {
 const openModal = (e) => {
   preModalFocus = e.target;
   document.body.style.overflow = "hidden"; // prevents background scrolling
-  // overscroll-behavior: contain may be another option
+  nonModalContent.setAttribute("aria-hidden", "true");
 
-  let target = e.target.tagName == "BUTTON" ? e.target : e.target.parentElement;
-  console.log("target: ", target);
+  let clickedThumbnail =
+    e.target.tagName == "BUTTON" ? e.target : e.target.parentElement;
 
   // Find index of image
-  currentSlide = thumbnailButtons.indexOf(target);
-  console.log("current slide: ", currentSlide);
-  console.log("modal images: ", modalImages);
+  currentSlide = thumbnailButtons.indexOf(clickedThumbnail);
 
   // Show correct image
   modalImages[currentSlide].style.display = "flex";
-
-  // Change slide to flex
   modal.style.display = "flex";
 
   // Setup focus on whole modal
@@ -64,8 +48,8 @@ const closeModal = () => {
   document.body.style.overflow = "auto";
   modal.style.display = "none";
   modalImages[currentSlide].style.display = "none";
+  nonModalContent.setAttribute("aria-hidden", "false");
 
-  //TODO: remove/move focus
   releaseModalFocus();
 };
 
@@ -95,7 +79,6 @@ const changeFocus = (n) => {
 };
 
 const releaseModalFocus = () => {
-  console.log("releasing modal focus back to: ", preModalFocus);
   preModalFocus.focus();
 };
 
@@ -119,25 +102,27 @@ const changeSlide = (n) => {
 };
 
 // Event Listeners
-let thumbnailButtons = Object.values(
+const thumbnailButtons = Object.values(
   document.getElementsByClassName("zoomable")
 );
 thumbnailButtons.forEach((button) => {
   button.addEventListener("click", openModal);
 });
 
-let modal = document.getElementsByClassName("modal")[0];
+const modal = document.getElementsByClassName("modal")[0];
 modal.addEventListener("keydown", handleModalKeys);
 
-let modalImages = document.getElementsByClassName("slide");
+const modalImages = document.getElementsByClassName("slide");
 
-let leftArrow = document.getElementsByClassName("left-arrow")[0];
-let rightArrow = document.getElementsByClassName("right-arrow")[0];
+const leftArrow = document.getElementsByClassName("left-arrow")[0];
+const rightArrow = document.getElementsByClassName("right-arrow")[0];
 leftArrow.addEventListener("click", () => changeSlide(-1));
 rightArrow.addEventListener("click", () => changeSlide(1));
 
-let close = document.getElementsByClassName("close")[0];
+const close = document.getElementsByClassName("close")[0];
 close.addEventListener("click", closeModal);
 
 // Elements that can be tabbed through
-let focusableElements = [close, leftArrow, rightArrow];
+const focusableElements = [close, leftArrow, rightArrow];
+
+const nonModalContent = document.getElementById("main-page");

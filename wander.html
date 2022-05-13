@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Scrap Yard - Ash Turner</title>
+    <title>Wander - Ash Turner</title>
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="styles/project.css" />
 
@@ -51,11 +51,6 @@
       </p>
       <h2>Web Pages</h2>
       <div class="gallery-container large-block-space">
-        <!-- <button
-          type="button"
-          onkeydown="event.keyCode != 13 || openModal(event)"
-          onkeydown="openModal(event)"
-        > -->
         <button class="zoomable">
           <img
             src="images/wander1.png"
@@ -161,9 +156,20 @@
       </a>
     </div>
 
-    <div class="modal" role="dialog">
-      <!--Do I need tabindex="0" for modal accessibility?-->
-      <button class="close">&times;</button>
+    <div
+      class="modal"
+      role="dialog"
+      aria-live="assertive"
+      aria-modal="true"
+      aria-label="Lightbox of project images"
+      aria-describedby="modal-description"
+    >
+      <p id="modal-description" class="screenreader-text">
+        Use arrow keys or the arrow buttons to proceed to the next or last image
+        in the lightbox. To exit the lightbox, press escape or click the close
+        button.
+      </p>
+      <button class="close" aria-label="Close">&times;</button>
       <div class="slide">
         <img src="images/wander.png" />
       </div>
@@ -212,8 +218,12 @@
       <div class="slide">
         <img src="images/wander15.png" />
       </div>
-      <button class="left-arrow"><span>❮</span></button>
-      <button class="right-arrow"><span>❯</span></button>
+      <button class="left-arrow" aria-label="Previous image">
+        <span>❮</span>
+      </button>
+      <button class="right-arrow" aria-label="Next image">
+        <span>❯</span>
+      </button>
     </div>
   </body>
 
