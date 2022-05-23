@@ -244,6 +244,8 @@ a:focus .underline-mask,
   cursor: pointer;
   -webkit-transition: font-size 0.3s ease, top 1s ease, left 1s ease;
   transition: font-size 0.3s ease, top 1s ease, left 1s ease;
+  text-align: center;
+  width: 28px;
 }
 
 .star:hover {

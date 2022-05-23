@@ -276,6 +276,9 @@ a:focus .underline-mask,
 
   transition: font-size 0.3s ease, top 1s ease, left 1s ease;
 
+  text-align: center;
+  width: 28px;
+
   &:hover {
     font-size: 38px;
   }
