@@ -14,6 +14,12 @@ h2 {
   margin-bottom: 62px;
 }
 
+.project-subtitle-no-space {
+  font-style: italic;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
 .main-image {
   max-width: 724px;
   width: 100%;
