@@ -683,6 +683,12 @@ a:focus .underline-mask,
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
+  .star {
+    font-size: 24px;
+  }
+  .star:hover {
+    font-size: 34px;
+  }
 }
 
 @media only screen and (max-width: 935px) {

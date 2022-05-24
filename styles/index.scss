@@ -637,6 +637,14 @@ a:focus .underline-mask,
   .projects-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .star {
+    font-size: 24px;
+
+    &:hover {
+      font-size: 34px;
+    }
+  }
 }
 
 @media only screen and (max-width: 935px) {
