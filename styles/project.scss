@@ -61,6 +61,15 @@ body {
   }
 }
 
+ul {
+  margin-left: 1em;
+  line-height: 1.4em;
+}
+
+li {
+  padding-left: 1em;
+}
+
 /*========== MODAL ==========*/
 .modal {
   display: none;
@@ -125,6 +134,13 @@ body {
 
 .zoomable {
   cursor: zoom-in;
+  transition: transform 0.2s ease-in-out;
+}
+
+.zoomable:hover,
+.zoomable:active,
+.zoomable:focus {
+  transform: scale(1.022);
 }
 
 .left-arrow,

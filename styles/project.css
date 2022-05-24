@@ -60,6 +60,15 @@ body {
   height: auto;
 }
 
+ul {
+  margin-left: 1em;
+  line-height: 1.4em;
+}
+
+li {
+  padding-left: 1em;
+}
+
 /*========== MODAL ==========*/
 .modal {
   display: none;
@@ -124,6 +133,17 @@ body {
 .zoomable {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.zoomable:hover,
+.zoomable:active,
+.zoomable:focus {
+  -webkit-transform: scale(1.022);
+          transform: scale(1.022);
 }
 
 .left-arrow,
