@@ -26,12 +26,13 @@ $rainbow-duration: 4s;
   border: 0;
   vertical-align: baseline;
   font-size: $main-font-size;
-  font-weight: normal;
-  font-style: normal;
+  // font-weight: normal;
+  // font-style: normal;
   box-sizing: border-box;
 
+  // Font options:
   // font-family: courier-std, Courier, monospace; // Alternative: "Inconsolata"
-  //font-family: "Incosolata", courier-std, Courier, monospace; // Alternative: "Inconsolata"
+  // font-family: "Incosolata", courier-std, Courier, monospace; // Alternative: "Inconsolata"
   // font-family: "Source Code Pro", courier-std, Courier, monospace;
   // font-family: "Readex Pro", sans-serif;
   // font-weight: 300;
