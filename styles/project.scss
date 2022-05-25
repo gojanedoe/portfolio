@@ -200,6 +200,15 @@ button {
 }
 
 @media only screen and (max-width: 580px) {
+  body {
+    margin: {
+      left: 45px;
+      right: 45px;
+      top: 64px;
+      bottom: $medium-space;
+    }
+  }
+
   .gallery-container {
     column-gap: 12px;
     row-gap: 12px;
