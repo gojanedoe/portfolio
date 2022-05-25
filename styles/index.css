@@ -67,7 +67,8 @@ body {
   font-style: italic;
 }
 
-p {
+p,
+ul {
   max-width: 723px;
   line-height: 1.2em;
 }
@@ -690,7 +691,8 @@ a:focus .underline-mask,
   * {
     font-size: 16px;
   }
-  p {
+  p,
+  ul {
     line-height: 1.4em;
   }
   body {

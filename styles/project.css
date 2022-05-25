@@ -62,11 +62,11 @@ body {
 
 ul {
   margin-left: 1em;
-  line-height: 1.4em;
 }
 
 li {
   padding-left: 1em;
+  margin-bottom: 1em;
 }
 
 /*========== MODAL ==========*/
