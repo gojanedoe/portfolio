@@ -59,6 +59,11 @@ body {
   height: auto;
 }
 
+.gallery-container.grid-2 {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
 .gallery-container.grid-4 {
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
