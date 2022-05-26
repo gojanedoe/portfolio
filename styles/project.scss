@@ -59,6 +59,10 @@ body {
     width: 100%;
     height: auto;
   }
+
+  &.grid-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 // Grid item with full width
@@ -72,7 +76,7 @@ ul {
 
 li {
   padding-left: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.6em;
 }
 
 /*========== MODAL ==========*/
@@ -202,6 +206,9 @@ button {
 }
 
 @media only screen and (max-width: 800px) {
+  .gallery-container.grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 580px) {
