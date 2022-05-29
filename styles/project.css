@@ -47,9 +47,9 @@ body {
   -webkit-column-gap: 22px;
           column-gap: 22px;
   row-gap: 22px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .gallery-container img {
@@ -131,6 +131,19 @@ video {
       -ms-flex-align: center;
           align-items: center;
   max-height: 100vh;
+}
+
+.modal .slide.vertical {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  overflow: scroll;
+}
+
+.modal .slide.vertical img {
+  max-height: none;
+  max-width: 100%;
+  padding: 0;
 }
 
 .modal img {

@@ -51,7 +51,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 22px;
   row-gap: 22px;
-  align-items: end;
+  align-items: start;
 
   img {
     width: 100%;
@@ -122,6 +122,17 @@ video {
     align-items: center;
 
     max-height: 100vh;
+  }
+
+  .slide.vertical {
+    align-items: start;
+    overflow: scroll;
+
+    img {
+      max-height: none;
+      max-width: 100%;
+      padding: 0;
+    }
   }
 
   img {
