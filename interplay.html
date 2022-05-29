@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interplay - Ash Turner</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/project.css" />
+
+    <link rel="icon" type="image/png" href="images/star.png" />
+  </head>
+  <body>
+    <div id="main-page">
+      <a href="index.html" class="back underline underline-perm yellow"
+        >Back to home</a
+      >
+      <h1>Interplay</h1>
+      <div class="project-subtitle">
+        Made with: Processing 3.0, Spacebrew, Kinect v1, and projector
+      </div>
+      <video class="main-image" poster="./images/interplay-poster.png" controls>
+        <source src="./videos/interplay.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <p class="small-block-space">
+        Interplay is an interactive installation that explores boundaries and
+        play within digital and physical spaces. Using a laptop that controls
+        the shape and movement of a projected circle, players may interact with
+        other participants remotely by changing their projected environment.
+      </p>
+      <p>
+        Participants under the projection must stay inside the circle for it to
+        stay green, creating incentive for them to expand their personal
+        boundaries.
+      </p>
+      <h2>Gallery</h2>
+      <div class="gallery-container grid-2 padded-row">
+        <button class="zoomable">
+          <img
+            src="images/interplay-1.jpg"
+            alt="View full size version of a bird's-eye view of two people standing in a projected circle"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/interplay-2.jpg"
+            alt="View full size version of two people's legs running"
+          />
+        </button>
+      </div>
+      <div class="gallery-container custom-grid-interplay large-block-space">
+        <button class="zoomable">
+          <img
+            src="images/interplay-4.jpg"
+            alt="View full size version of a laptop with a green circle on the screen"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/interplay-3.jpg"
+            alt="View full size version of a projector pointed downwards over a railing"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/interplay-5.jpg"
+            alt="View full size version of a person using a mouse to interact with a laptop that has a red circle and black blobs on the screen"
+          />
+        </button>
+      </div>
+
+      <a
+        href="#"
+        class="back yellow underline underline-perm small-block-space"
+        onclick="scrollToTop()"
+        tabindex="0"
+      >
+        Back to top
+      </a>
+    </div>
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-live="assertive"
+      aria-modal="true"
+      aria-label="Lightbox of project images"
+      aria-describedby="modal-description"
+    >
+      <p id="modal-description" class="screenreader-text">
+        Use arrow keys or the arrow buttons to proceed to the next or last image
+        in the lightbox. To exit the lightbox, press escape or click the close
+        button.
+      </p>
+      <button class="close" aria-label="Close">&times;</button>
+      <div class="slide">
+        <img
+          src="images/interplay-1.jpg"
+          alt="Bird's-eye view of two people standing under projected light, inside a red circle. A third person stands off to the side under the projection"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/interplay-2.jpg"
+          alt="Two people's legs blurred in a running motion. They are running around the projected circle on the floor"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/interplay-4.jpg"
+          alt="A person uses the trackpad of a laptop to control a large green circle on the screen. Inside the circle are two black sillhouettes of people from a bird's-eye view"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/interplay-3.jpg"
+          alt="A projector on a stand hangs over a railing, pointing downwards. Strings are attached to the rail, from which a kinect sensor hangs below the projector"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/interplay-5.jpg"
+          alt="A smiling guy uses a mouse to interact with a laptop. On the laptop's screen is a small red circle, with black silhouettes of people underneath the circle"
+        />
+      </div>
+
+      <button class="left-arrow" aria-label="Previous image">
+        <span>❮</span>
+      </button>
+      <button class="right-arrow" aria-label="Next image">
+        <span>❯</span>
+      </button>
+    </div>
+  </body>
+
+  <script src="project.js"></script>
+</html>

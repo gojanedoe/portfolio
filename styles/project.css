@@ -76,6 +76,15 @@ body {
   display: block;
 }
 
+.gallery-container.custom-grid-interplay {
+  -ms-grid-columns: 1.78021978022fr 0.56172839506fr 1.77777777778fr;
+      grid-template-columns: 1.78021978022fr 0.56172839506fr 1.77777777778fr;
+}
+
+.gallery-container.custom-grid-interplay img {
+  display: block;
+}
+
 .gi-full {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;

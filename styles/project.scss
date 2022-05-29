@@ -74,6 +74,14 @@ body {
       display: block; // Remove unnecessary white space at bottom
     }
   }
+
+  &.custom-grid-interplay {
+    grid-template-columns: 1.78021978022fr 0.56172839506fr 1.77777777778fr;
+
+    img {
+      display: block;
+    }
+  }
 }
 
 // Grid item with full width
