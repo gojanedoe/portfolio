@@ -49,7 +49,6 @@ body {
 .gallery-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
   column-gap: 22px;
   row-gap: 22px;
   align-items: end;
@@ -66,11 +65,24 @@ body {
   &.grid-4 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  &.custom-grid-storylines {
+    // Uses images' aspect ratios (width/height)
+    grid-template-columns: 1.33333333333fr 0.56443148688fr 0.62436868686fr 0.62672811059fr 1fr;
+
+    img {
+      display: block; // Remove unnecessary white space at bottom
+    }
+  }
 }
 
 // Grid item with full width
 .gi-full {
   grid-column: 1 / 4;
+}
+
+.padded-row {
+  margin-bottom: 22px;
 }
 
 ul {
@@ -80,6 +92,10 @@ ul {
 li {
   padding-left: 1em;
   margin-bottom: 0.6em;
+}
+
+video {
+  object-fit: cover;
 }
 
 /*========== MODAL ==========*/
@@ -147,6 +163,10 @@ li {
 .zoomable {
   cursor: zoom-in;
   transition: transform 0.2s ease-in-out;
+
+  img {
+    display: block; // Remove unnecessary white space at bottom
+  }
 }
 
 .zoomable:hover,
@@ -205,6 +225,10 @@ button {
   .gallery-container {
     column-gap: 16px;
     row-gap: 16px;
+  }
+
+  .padded-row {
+    margin-bottom: 16px;
   }
 }
 
