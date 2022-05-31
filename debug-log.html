@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debug.Log - Ash Turner</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/project.css" />
+
+    <link rel="icon" type="image/png" href="images/star.png" />
+  </head>
+  <body>
+    <div id="main-page">
+      <a href="index.html" class="back underline underline-perm pink"
+        >Back to home</a
+      >
+      <h1>Debug.Log</h1>
+      <div class="project-subtitle-no-space">Made with: Unity (C#)</div>
+      <div class="project-subtitle">Roles: Programmer, Game Designer</div>
+      <div class="main-image">
+        <iframe
+          title="vimeo-player"
+          src="https://player.vimeo.com/video/207945470?h=896bbf40bc"
+          width="640"
+          height="360"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="small-block-space">
+        Debug.Log_ is a cooperative hold-out “horde-style” game where two
+        players fight off increasing waves of enemies for an allotted amount of
+        time. An individual scoring system establishes competition, while the
+        lose condition being tied to either player's death enforces a strict
+        partnership. Communication and coordination are key to survival.
+      </p>
+      <p>
+        This game was made in collaboration with
+        <a
+          href="https://isaacbuckley.com/"
+          rel="noreferrer"
+          target="_blank"
+          class="blue"
+          >Isaac Buckley</a
+        >,
+        <a
+          href="https://www.artstation.com/dyelon/"
+          rel="noreferrer"
+          target="_blank"
+          class="blue"
+          >Dylan Burrell</a
+        >, and Ben Price.
+      </p>
+      <h2>Gallery</h2>
+      <div class="gallery-container large-block-space">
+        <button class="zoomable">
+          <img
+            src="images/debug-1.png"
+            alt="View full size version of debug.log starting screen"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-2.png"
+            alt="View full size version of debug.log screenshot of intro text"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-3.png"
+            alt="View full size version of a screenshot of bold, red warning text"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-4.png"
+            alt="View full size version of gameplay during a large group of enemies"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-5.png"
+            alt="View full size version of gameplay with a couple of enemies"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-6.png"
+            alt="View full size version of gameplay with a medium amount of large enemies"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-7.png"
+            alt="View full size version of gameplay with screen glitching"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-8.png"
+            alt="View full size version of screen glitching at end of game"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/debug-9.png"
+            alt="View full size version of ending screen with scores, with the text 'Safe to Eject'"
+          />
+        </button>
+        <button class="zoomable gi-full">
+          <img
+            src="images/debug-hero.png"
+            alt="View full size version of Debug.Log arcade cabinet"
+          />
+        </button>
+      </div>
+      <a
+        href="#"
+        class="back pink underline underline-perm small-block-space"
+        onclick="scrollToTop()"
+        tabindex="0"
+      >
+        Back to top
+      </a>
+    </div>
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-live="assertive"
+      aria-modal="true"
+      aria-label="Lightbox of project images"
+      aria-describedby="modal-description"
+    >
+      <p id="modal-description" class="screenreader-text">
+        Use arrow keys or the arrow buttons to proceed to the next or last image
+        in the lightbox. To exit the lightbox, press escape or click the close
+        button.
+      </p>
+      <button class="close" aria-label="Close">&times;</button>
+      <div class="slide">
+        <img
+          src="images/debug-1.png"
+          alt="Starting screen with the text, 'debug.Log_' and 'Press A to execute method'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-2.png"
+          alt="Screenshot of intro text that reads 'Manual purge REQUIRED. Caution: Entry plug override UNRESPONSIVE. 100 seconds until AUTOMATIC UNPLUG. SURVIVE until proper ejection to maintain psychological cohesion. Full corruption integrity may cause death outside of simulation_'. Underneath is the text, 'Press A to debrief manual override'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-3.png"
+          alt="Screenshot of bold, red warning text reading, 'Warning: Data Corruption Found' in all caps"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-4.png"
+          alt="Gameplay with two players surrounded by a large group of black, pixelated enemies with spider legs. The scores at the top read 'P1: 020' and 'P2: 00'. At the bottom is the time countdown, reading, 'Automatic Unplug: 074'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-5.png"
+          alt="Gameplay with two players at opposite ends of the screen with a couple of enemies between them. The scores at the top read 'P1: 020' and 'P2: 00'. At the bottom is the time countdown, reading, 'Automatic Unplug: 083'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-6.png"
+          alt="Gameplay two players at opposite ends of the screen with a medium amount of large enemies and spider-type enemies between them. The scores at the top read 'P1: 070' and 'P2: 010'. At the bottom is the time countdown, reading, 'Automatic Unplug: 066'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-7.png"
+          alt="Screen glitching with rainbow colors, with black silhouettes of enemies over top. The scores at the top of the screen read 'P1: 530' and 'P2: 530'. At the bottom is the time countdown, reading, 'Automatic Unplug: 004'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-8.png"
+          alt="Screen glitching with blue colors at the end of the game. The scores at the top of the screen read 'P1: 440' and 'P2: 570'. At the bottom is the time countdown, reading, 'Automatic Unplug: 000'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-9.png"
+          alt="Ending screen with scores 550 for player one and 530 for player two, with the text 'Safe to Eject' in the center. Below is the text, 'Manual purge successful; Safely ejecting software. Please wait_'. At the bottom of the screen is the text 'Press A to troubleshoot'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/debug-hero.png"
+          alt="Arcade cabinet with the game Debug.Log on the screen. The cabinet has two arcade sticks with buttons and headphones, and two stools sitting in front."
+        />
+      </div>
+
+      <button class="left-arrow" aria-label="Previous image">
+        <span>❮</span>
+      </button>
+      <button class="right-arrow" aria-label="Next image">
+        <span>❯</span>
+      </button>
+    </div>
+  </body>
+
+  <script src="project.js"></script>
+</html>
