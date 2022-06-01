@@ -82,6 +82,30 @@ body {
       display: block;
     }
   }
+
+  &.custom-grid-david-1 {
+    grid-template-columns: 1.39180862631fr 1.47862918752fr;
+
+    img {
+      display: block;
+    }
+  }
+
+  &.custom-grid-david-2 {
+    grid-template-columns: 3.6fr 1.33349168646fr;
+
+    img {
+      display: block;
+    }
+  }
+
+  &.custom-grid-david-3 {
+    grid-template-columns: 0.56221889055fr 1.51838671412fr 0.56221889055fr;
+
+    img {
+      display: block;
+    }
+  }
 }
 
 // Grid item with full width

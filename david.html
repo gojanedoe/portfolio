@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In David's Absence - Ash Turner</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/project.css" />
+
+    <link rel="icon" type="image/png" href="images/star.png" />
+  </head>
+  <body>
+    <div id="main-page">
+      <a href="index.html" class="back underline underline-perm pink"
+        >Back to home</a
+      >
+      <h1 class="large-block-space">In David's Absence</h1>
+      <!-- <div class="project-subtitle">Collaborator: Jacob Nemec</div> -->
+
+      <button class="main-image zoomable">
+        <img
+          src="images/david-hero.jpg"
+          alt="View full size version of dimly lit room installation with a desk, chair and bookshelf"
+        />
+      </button>
+
+      <p class="small-block-space">
+        In David's Absence is an interactive installation where the audience
+        investigates the disappearance of their acquaintance, David. Exploring
+        past relationships and the artifacts left from them, this piece allows
+        viewers to search through physical items and digital traces of the
+        missing David to discover his history and whereabouts.
+      </p>
+      <p class="small-block-space">
+        This room hides hints of his life and disappearance that document the
+        end of his relationship and the subsequent isolation from friends and
+        family. Items include artifacts from his last relationship, a
+        password-protected laptop, a lockbox on his bookshelf, and an email
+        address and password.
+      </p>
+      <p class="medium-block-space">
+        During their exploration of the room, viewers also have the option to
+        text a third-party character, Jeremy, if they need help or want to press
+        for more information.
+      </p>
+      <p>
+        The project was created in collaboration with
+        <a
+          href="https://jacobnemec.com/"
+          rel="noreferrer"
+          target="_blank"
+          class="blue inline-link"
+          >Jacob Nemec</a
+        >.
+      </p>
+      <h2>Artifacts</h2>
+      <div class="gallery-container custom-grid-david-1 padded-row">
+        <button class="zoomable">
+          <img
+            src="images/david-1.png"
+            alt="View full size version of paper items laid out, including post-its and writing"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/david-2.png"
+            alt="View full size version of hobby items and books laid out"
+          />
+        </button>
+      </div>
+      <div class="gallery-container custom-grid-david-2 padded-row">
+        <button class="zoomable">
+          <img
+            src="images/david-3.png"
+            alt=" View full size version of email"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/david-4.jpg"
+            alt="View full size version of half-open letter"
+          />
+        </button>
+      </div>
+      <div class="gallery-container custom-grid-david-3 large-block-space">
+        <button class="zoomable">
+          <img
+            src="images/david-5.png"
+            alt="View full size version of text message chat"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/david-6.png"
+            alt="View full size version of laid-out books, post-its, letters and lock box"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/david-7.png"
+            alt="View full size version of text message chat"
+          />
+        </button>
+      </div>
+      <h2>Installation</h2>
+      <div class="gallery-container grid-2 large-block-space">
+        <button class="zoomable">
+          <img
+            src="images/david-8.jpg"
+            alt="View full size version of dark desk illuminated by a lamp"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/david-9.JPG"
+            alt="View full size version of sticky notes on a concrete wall"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/david-10.JPG"
+            alt="View full size version of bookshelf with photo on top"
+          />
+        </button>
+        <button class="zoomable">
+          <img
+            src="images/david-11.JPG"
+            alt="View full size version of books sitting on the floor next to a bookshelf"
+          />
+        </button>
+      </div>
+
+      <a
+        href="#"
+        class="back pink underline underline-perm small-block-space"
+        onclick="scrollToTop()"
+        tabindex="0"
+      >
+        Back to top
+      </a>
+    </div>
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-live="assertive"
+      aria-modal="true"
+      aria-label="Lightbox of project images"
+      aria-describedby="modal-description"
+    >
+      <p id="modal-description" class="screenreader-text">
+        Use arrow keys or the arrow buttons to proceed to the next or last image
+        in the lightbox. To exit the lightbox, press escape or click the close
+        button.
+      </p>
+      <button class="close" aria-label="Close">&times;</button>
+      <div class="slide">
+        <img
+          src="images/david-hero.jpg"
+          alt="Dimly lit room installation with a desk, chair and bookshelf. The desk is messy and sits to the left-hand-side, lit with a single lamp. The walls are concrete and have post-it notes and posters. Trash is peppered across the ground, and a bookshelf stacked with books, toys and photos sits in the back right corner"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-1.png"
+          alt="Bird's-eye view of post-its and crumpled paper laid out and facing up. A yellow post-it reads a gmail name and password, with the text 'You're such a dork! (but I love you) scribbled in the corner.' Another note reads, 'Try to talk to Sarah', and another one contains a 3 bullet to-do list"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-2.png"
+          alt="Bird's-eye view of items laid out and facing up. Items include a pink monkey, various mystery and sci-fi books, two framed photos of a guy with his friends, a rock collection, a toy robot, and a hand-held video camera"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-3.png"
+          alt="Email from Jeremy Goldenberg. Name, email, and phone number is redacted, but otherwise the text reads 'I have a huge favor to ask you. I need you to go check on my friend David. I think you met him once at my house. I can't go over there myself but his mom contacted me and said that she hasn't heard from him in a few days. If you could go check his place out at 1:00pm in Brown tomorrow (Sunday, February 26th), let me know. And I lost your phone number, could you send me a text at (redacted)? Also, bring your phone with you. I want to be able to text you if you need anything. Thanks a lot, Jer'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-4.jpg"
+          alt="Half-open letter with the text 'from Sarah' written on the front around a drawn, large heart"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-5.png"
+          alt="Text message chat that starts, 'Do you know the number code for the locked black box?' A reply says, 'Huh, no. It's probably somewhere in his room or on his computer, he always writes down all his pass codes on notes. Actually think he has a sticky note application on his laptop it might be there'. A subsequent reply reads, 'Does he like poetry? And found the lock box code!' A reply after that reads, 'Awesome and Yeah, he sometimes talks about writing it, never showed me any though'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-6.png"
+          alt="Bird's-eye view of laid-out books, post-its, letters and lock box. A stack of letters has a closed note on top with a drawn heart and the name 'David' written on the front. Post-its with inspirational quotes are laid out, as well as sci-fi books with post-its on their covers that contain positive notes about each book"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-7.png"
+          alt="Text message chat starts, 'Cant believe you keep tryna shove this campy sci fi crap down his throat. Jer, you are so pretentious.' A reply says, 'I mean he liked it before we met... I don't know. Did it seem like I forced it on him?' The reply reads, 'Davids dead, Jer', with the subsequent reply, 'What? Oh my god'. After that, a text reads, 'Jk LOL jer you stupid fuck'. The next reply states, 'Oh my god don't do that man. Did you at least find why he's been so distant?'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-8.jpg"
+          alt="Dark desk dimly-lit by a single lamp. The desk contains a framed photo, tissues, a lockbox, sticky notes, and an open laptop."
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-9.JPG"
+          alt="Sticky notes on a concrete wall. The top reads, 'Keep Moving forward!' The bottom left lists 'Finish Work. Get card activated. Call mom.' The bottom right note lists, 'Write it out. Do something I enjoy. Keep your distance. Leave the house'"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-10.JPG"
+          alt="Top-half of a bookshelf. A framed photo of people dressed up and posing sits on top. On the shelf are stacked sci-fi books, a toy robot and rubber ducky, a couple of sticky notes and a handheld video camera"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/david-11.JPG"
+          alt="Bottom-half of a bookshelf. Next to it on the floor is a stack of books and a box of a model Star Trek spaceship. On the shelf are books about space, games and theatrical design. On the bottom shelf is a lockbox"
+        />
+      </div>
+
+      <button class="left-arrow" aria-label="Previous image">
+        <span>❮</span>
+      </button>
+      <button class="right-arrow" aria-label="Next image">
+        <span>❯</span>
+      </button>
+    </div>
+  </body>
+
+  <script src="project.js"></script>
+</html>

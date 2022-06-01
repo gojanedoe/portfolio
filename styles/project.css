@@ -85,6 +85,33 @@ body {
   display: block;
 }
 
+.gallery-container.custom-grid-david-1 {
+  -ms-grid-columns: 1.39180862631fr 1.47862918752fr;
+      grid-template-columns: 1.39180862631fr 1.47862918752fr;
+}
+
+.gallery-container.custom-grid-david-1 img {
+  display: block;
+}
+
+.gallery-container.custom-grid-david-2 {
+  -ms-grid-columns: 3.6fr 1.33349168646fr;
+      grid-template-columns: 3.6fr 1.33349168646fr;
+}
+
+.gallery-container.custom-grid-david-2 img {
+  display: block;
+}
+
+.gallery-container.custom-grid-david-3 {
+  -ms-grid-columns: 0.56221889055fr 1.51838671412fr 0.56221889055fr;
+      grid-template-columns: 0.56221889055fr 1.51838671412fr 0.56221889055fr;
+}
+
+.gallery-container.custom-grid-david-3 img {
+  display: block;
+}
+
 .gi-full {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
