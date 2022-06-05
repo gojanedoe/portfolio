@@ -2,20 +2,27 @@ const projects = document.getElementsByClassName("filter-option");
 
 // Show/hide projects based on current filter
 let filterProjects = (event) => {
-  let chosenFilter = event.target.parentElement.parentElement.dataset.filter; // clickable element is nested twice == reason for the two parentElement props
+  let chosenFilter =
+    event === "start"
+      ? "code"
+      : event.target.parentElement.parentElement.dataset.filter; // clickable element is nested twice == reason for the two parentElement props
+
   for (const project of projects) {
     project.dataset.filter.includes(chosenFilter)
       ? project.classList.remove("hidden")
       : project.classList.add("hidden");
   }
 
-  // Highlight selected option
-  let selectedOption = document.getElementsByClassName("selected");
-  selectedOption[0].className = selectedOption[0].className.replace(
-    " selected",
-    ""
-  );
-  event.target.parentElement.className += " selected";
+  if (event !== "start") {
+    // Highlight selected option
+    let selectedOption = document.getElementsByClassName("selected");
+    selectedOption[0].className = selectedOption[0].className.replace(
+      " selected",
+      ""
+    );
+
+    event.target.parentElement.className += " selected";
+  }
 };
 
 // Add filterProjects event to each option
@@ -28,14 +35,6 @@ filterOptions.forEach((filterOption) => {
 // Add stars
 const createStars = () => {
   for (let i = 0; i < 30; i++) {
-    /*
-    left: 280px;
-    right: 280px;
-    top: 200px;
-    bottom: 40px;
-    */
-    // if I don't want stars behind text, subtract element's height and width from areas used for randomness
-
     const colors = ["pink", "red", "yellow", "green", "blue"];
 
     let star = document.createElement("div");
@@ -67,4 +66,4 @@ const toggleRainbow = (event) => {
     : event.target.classList.add("paused");
 };
 
-// window.onload = createStars;
+window.onload = filterProjects("start");
