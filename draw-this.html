@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrap Yard - Ash Turner</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/project.css" />
+
+    <link rel="icon" type="image/png" href="images/star.png" />
+  </head>
+  <body>
+    <div id="main-page">
+      <a href="index.html" class="back underline underline-perm pink"
+        >Back to home</a
+      >
+      <h1>Draw This!</h1>
+      <div class="project-subtitle">
+        Made with: React.js, Bootstrap, Jest, Wikimedia Commons API
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse,_S%C3%B8r-Tr%C3%B8ndelag,_Norway.jpg -->
+      <button class="main-image zoomable">
+        <img
+          src="images/drawthis-hero.png"
+          alt="View full size version of app screenshot with a lighthouse photo"
+        />
+      </button>
+      <div class="project-link">
+        Live project:
+        <a
+          href="http://wandering.click/"
+          rel="noreferrer"
+          target="_blank"
+          class="blue"
+          ><span class="underline"
+            ><span class="underline-mask med-animation">
+              wandering.click</span
+            ></span
+          ><span class="screenreader-text"> (Link opens in a new tab)</span></a
+        >
+      </div>
+      <div class="project-link medium-block-space">
+        Code:
+        <a
+          href="https://github.com/gojanedoe/drawing-app"
+          rel="noreferrer"
+          target="_blank"
+          class="blue"
+          ><span class="underline"
+            ><span class="underline-mask med-animation">GitHub repo</span></span
+          ><span class="screenreader-text"> (Link opens in a new tab)</span></a
+        >
+      </div>
+      <p class="small-block-space">
+        Draw This is a front-end web application that generates random,
+        royalty-free photos fetched from Wikimedia Commons' API. Users can use
+        the website for timed drawing practice, and can choose from three image
+        categories: people, architecture, or landscapes.
+      </p>
+      <p>
+        The app is made with React.js, React Router, Bootstrap, and Jest, with
+        the API queries originally built and tested in Postman.
+      </p>
+      <h2>Features</h2>
+      <ul>
+        <li>Form to choose which subject to draw</li>
+        <li>Pauseable timer</li>
+        <li>Pop-up tooltip with each image's info, fetched from an API</li>
+        <li>Durstenfeld algorithm for randomly shuffling the images</li>
+        <li>
+          Data cleaning with regex removes HTML tags from fetched API data
+        </li>
+      </ul>
+      <h2>Gallery</h2>
+      <div class="gallery-container large-block-space">
+        <button class="zoomable">
+          <img
+            src="images/drawthis-1.png"
+            alt="View full size version of screenshot of the introductory page of the app"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse,_S%C3%B8r-Tr%C3%B8ndelag,_Norway.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-2.png"
+            alt="View full size version of app screenshot with a lighthouse photo"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:20180127_FIS_NC_WC_Seefeld_Sophie_Caldwell_850_1151.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-3.png"
+            alt="View full size version of app screenshot with photo of skier"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Anfiteatro_de_Pula,_Croacia,_2017-04-17,_DD_13-18_HDR_PAN.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-4.png"
+            alt="View full size version of app screenshot with photo of Colosseum"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Abfertigen_einer_Meldung_durch_Brieftauben_-_CH-BAR_-_3240471_-_restoration.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-5.png"
+            alt="View full size version of app screenshot with black-and-white photograph of soldiers"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Buddhist_monks_cleaning_the_yard_at_Wat_Xieng_Thong_temple.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-6.png"
+            alt="View full size version of app screenshot with a Buddhist temple photograph"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Boys_playing_street_football_in_Egypt.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-7.png"
+            alt="View full size version of app screenshot with an image of boys playing soccer"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:2019_-_Parc_national_des_Pyrenees_-_refuge_des_Espuguettes.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-8.png"
+            alt="View full size version of app screenshot with a photo of a house overlooking a mountain range"
+          />
+        </button>
+        <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Banaue_Philippines_Ifugao-Tribesman-01.jpg -->
+        <button class="zoomable">
+          <img
+            src="images/drawthis-9.png"
+            alt="View full size version of app screenshot with an image of a crouching, older Filipino man "
+          />
+        </button>
+      </div>
+
+      <a
+        href="#"
+        class="back pink underline underline-perm small-block-space"
+        onclick="scrollToTop()"
+        tabindex="0"
+      >
+        Back to top
+      </a>
+    </div>
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-live="assertive"
+      aria-modal="true"
+      aria-label="Lightbox of project images"
+      aria-describedby="modal-description"
+    >
+      <p id="modal-description" class="screenreader-text">
+        Use arrow keys or the arrow buttons to proceed to the next or last image
+        in the lightbox. To exit the lightbox, press escape or click the close
+        button.
+      </p>
+      <button class="close" aria-label="Close">&times;</button>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse,_S%C3%B8r-Tr%C3%B8ndelag,_Norway.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-hero.png"
+          alt="View full size version of app screenshot with a lighthouse photo"
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="images/drawthis-1.png"
+          alt="View full size version of screenshot of the introductory page of the app"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse,_S%C3%B8r-Tr%C3%B8ndelag,_Norway.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-2.png"
+          alt="View full size version of app screenshot with a lighthouse photo"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:20180127_FIS_NC_WC_Seefeld_Sophie_Caldwell_850_1151.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-3.png"
+          alt="View full size version of app screenshot with photo of skier"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Anfiteatro_de_Pula,_Croacia,_2017-04-17,_DD_13-18_HDR_PAN.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-4.png"
+          alt="View full size version of app screenshot with photo of Colosseum"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Abfertigen_einer_Meldung_durch_Brieftauben_-_CH-BAR_-_3240471_-_restoration.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-5.png"
+          alt="View full size version of app screenshot with black-and-white photograph of soldiers"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Buddhist_monks_cleaning_the_yard_at_Wat_Xieng_Thong_temple.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-6.png"
+          alt="View full size version of app screenshot with a Buddhist temple photograph"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Boys_playing_street_football_in_Egypt.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-7.png"
+          alt="View full size version of app screenshot with an image of boys playing soccer"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:2019_-_Parc_national_des_Pyrenees_-_refuge_des_Espuguettes.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-8.png"
+          alt="View full size version of app screenshot with a photo of a house overlooking a mountain range"
+        />
+      </div>
+      <!-- Link to below image: https://commons.wikimedia.org/wiki/File:Banaue_Philippines_Ifugao-Tribesman-01.jpg -->
+      <div class="slide">
+        <img
+          src="images/drawthis-9.png"
+          alt="View full size version of app screenshot with an image of a crouching, older Filipino man "
+        />
+      </div>
+
+      <button class="left-arrow" aria-label="Previous image">
+        <span>❮</span>
+      </button>
+      <button class="right-arrow" aria-label="Next image">
+        <span>❯</span>
+      </button>
+    </div>
+  </body>
+
+  <script src="project.js"></script>
+</html>
