@@ -232,6 +232,13 @@ video {
           transform: scale(1.022);
 }
 
+.main-image.zoomable:hover,
+.main-image.zoomable:active,
+.main-image.zoomable:focus {
+  -webkit-transform: scale(1.011);
+          transform: scale(1.011);
+}
+
 .left-arrow,
 .right-arrow {
   display: -webkit-box;

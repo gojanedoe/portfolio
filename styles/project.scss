@@ -220,6 +220,12 @@ video {
   transform: scale(1.022);
 }
 
+.main-image.zoomable:hover,
+.main-image.zoomable:active,
+.main-image.zoomable:focus {
+  transform: scale(1.011);
+}
+
 .left-arrow,
 .right-arrow {
   display: flex;
