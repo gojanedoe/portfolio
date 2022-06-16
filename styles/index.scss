@@ -225,9 +225,13 @@ a {
 }
 
 footer {
-  a {
-    display: inline-block;
-    margin-bottom: $small-space;
+  margin-bottom: $large-space;
+
+  div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 22px;
+    row-gap: $small-space;
   }
 }
 
@@ -674,6 +678,12 @@ a:focus .underline-mask,
 
   .projects-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    div {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   .star {

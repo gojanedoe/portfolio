@@ -194,9 +194,18 @@ a[target="_blank"]::after {
   overflow: hidden;
 }
 
-footer a {
-  display: inline-block;
-  margin-bottom: 18px;
+footer {
+  margin-bottom: 62px;
+}
+
+footer div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-column-gap: 22px;
+          column-gap: 22px;
+  row-gap: 18px;
 }
 
 a:focus .underline-perm {
@@ -701,6 +710,10 @@ a:focus .underline-mask,
     margin-top: 16%;
   }
   .projects-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  footer div {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
