@@ -104,10 +104,13 @@ img {
   max-width: 100%;
 }
 
-/*========== LINKS ==========*/
+/*========== LINKS & BUTTONS ==========*/
 
-nav a {
+.filters-list button {
   margin-right: 77px;
+
+  background-color: $background-color;
+  cursor: pointer;
 }
 
 a {
@@ -247,18 +250,15 @@ a:focus .underline-perm {
   }
 }
 
-// .selected:hover
-//,a:focus .selected
-// {
-//   background-position: 2px 1.5em;
-// }
-
 a:hover .underline-mask,
 a:active .underline-mask,
 a:focus .underline-mask,
 .underline:active .underline-mask,
 .underline:focus .underline-mask,
-.selected .underline-mask {
+.selected .underline-mask,
+.filters-list button:hover .underline-mask,
+.filters-list button:active .underline-mask,
+.filters-list button:focus .underline-mask {
   background-size: 0 100%;
 }
 
@@ -717,7 +717,7 @@ a:focus .underline-mask,
     top: 20%;
   }
 
-  nav a {
+  .filters-list button {
     margin-right: 42px;
   }
 }

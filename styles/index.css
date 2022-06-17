@@ -77,9 +77,11 @@ img {
   max-width: 100%;
 }
 
-/*========== LINKS ==========*/
-nav a {
+/*========== LINKS & BUTTONS ==========*/
+.filters-list button {
   margin-right: 77px;
+  background-color: #080808;
+  cursor: pointer;
 }
 
 a {
@@ -221,7 +223,10 @@ a:active .underline-mask,
 a:focus .underline-mask,
 .underline:active .underline-mask,
 .underline:focus .underline-mask,
-.selected .underline-mask {
+.selected .underline-mask,
+.filters-list button:hover .underline-mask,
+.filters-list button:active .underline-mask,
+.filters-list button:focus .underline-mask {
   background-size: 0 100%;
 }
 
@@ -746,7 +751,7 @@ a:focus .underline-mask,
   .star:nth-child(3) {
     top: 20%;
   }
-  nav a {
+  .filters-list button {
     margin-right: 42px;
   }
 }

@@ -27,7 +27,7 @@ let filterProjects = (event) => {
 
 // Add filterProjects event to each option
 const filterList = document.getElementsByClassName("filters-list");
-const filterOptions = filterList[0].querySelectorAll("a");
+const filterOptions = filterList[0].querySelectorAll("button");
 filterOptions.forEach((filterOption) => {
   filterOption.addEventListener("click", filterProjects);
 });
