@@ -447,7 +447,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   40% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   60% {
     color: #0dc941;
@@ -468,7 +468,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   40% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   60% {
     color: #0dc941;
@@ -491,7 +491,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   40% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   60% {
     color: #0dc941;
@@ -514,7 +514,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   40% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   60% {
     color: #0dc941;
@@ -532,7 +532,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   20% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   40% {
     color: #0dc941;
@@ -553,7 +553,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   20% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   40% {
     color: #0dc941;
@@ -571,7 +571,7 @@ a:focus .underline-mask,
 
 @-webkit-keyframes changeColorFromYellow {
   0% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   20% {
     color: #0dc941;
@@ -586,13 +586,13 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   100% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
 }
 
 @keyframes changeColorFromYellow {
   0% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   20% {
     color: #0dc941;
@@ -607,7 +607,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   100% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
 }
 
@@ -625,7 +625,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   80% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   100% {
     color: #0dc941;
@@ -646,7 +646,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   80% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   100% {
     color: #0dc941;
@@ -664,7 +664,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   60% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   80% {
     color: #0dc941;
@@ -685,7 +685,7 @@ a:focus .underline-mask,
     color: #c90d0d;
   }
   60% {
-    color: #ffd84d;
+    color: #c99f0d;
   }
   80% {
     color: #0dc941;
