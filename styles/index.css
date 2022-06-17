@@ -30,8 +30,6 @@ html {
 
 body {
   background-color: #080808;
-  -webkit-transition: margin 1s ease-in-out;
-  transition: margin 1s ease-in-out;
   margin-left: 280px;
   margin-right: 280px;
   margin-top: 200px;
@@ -173,18 +171,18 @@ a[target="_blank"]::after {
 }
 
 .short-animation {
-  -webkit-transition: background-size 0.4s ease;
-  transition: background-size 0.4s ease;
+  -webkit-transition: background-size 0.3s linear;
+  transition: background-size 0.3s linear;
 }
 
 .med-animation {
-  -webkit-transition: background-size 0.7s ease;
-  transition: background-size 0.7s ease;
+  -webkit-transition: background-size 0.5s linear;
+  transition: background-size 0.5s linear;
 }
 
 .long-animation {
-  -webkit-transition: background-size 1.2s ease;
-  transition: background-size 1.2s ease;
+  -webkit-transition: background-size 0.9s linear;
+  transition: background-size 0.9s linear;
 }
 
 .screenreader-text {

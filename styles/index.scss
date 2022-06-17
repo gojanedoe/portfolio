@@ -56,8 +56,6 @@ body {
   background-color: $background-color;
   // margin: 280px 5% 4% 5%;
 
-  transition: margin 1s ease-in-out;
-
   margin: {
     left: 280px;
     right: 280px;
@@ -209,13 +207,13 @@ a {
 }
 
 .short-animation {
-  transition: background-size 0.4s ease;
+  transition: background-size 0.3s linear; //cubic-bezier(.14,.07,.74,.93)
 }
 .med-animation {
-  transition: background-size 0.7s ease;
+  transition: background-size 0.5s linear;
 }
 .long-animation {
-  transition: background-size 1.2s ease;
+  transition: background-size 0.9s linear;
 }
 
 .screenreader-text {
