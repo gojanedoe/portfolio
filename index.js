@@ -2,10 +2,15 @@ const projects = document.getElementsByClassName("filter-option");
 
 // Show/hide projects based on current filter
 let filterProjects = (event) => {
-  let chosenFilter =
-    event === "start"
-      ? "code"
-      : event.target.parentElement.parentElement.dataset.filter; // clickable element is nested twice == reason for the two parentElement props
+  let chosenFilter;
+
+  if (event === "start") {
+    chosenFilter = "code";
+  } else if (event.target.tagName == "SPAN") {
+    chosenFilter = event.target.parentElement.parentElement.dataset.filter; // clickable element is nested twice, but has higher z-index making it the target == reason for the two parentElement props
+  } else if ((event.target.tagName = "BUTTON")) {
+    chosenFilter = event.target.dataset.filter;
+  }
 
   for (const project of projects) {
     project.dataset.filter.includes(chosenFilter)
@@ -13,15 +18,17 @@ let filterProjects = (event) => {
       : project.classList.add("hidden");
   }
 
+  // Highlight selected option
   if (event !== "start") {
-    // Highlight selected option
     let selectedOption = document.getElementsByClassName("selected");
     selectedOption[0].className = selectedOption[0].className.replace(
       " selected",
       ""
     );
 
-    event.target.parentElement.className += " selected";
+    event.target.tagName === "SPAN"
+      ? (event.target.parentElement.className += " selected")
+      : (event.target.className += " selected");
   }
 };
 
