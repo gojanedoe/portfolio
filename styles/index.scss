@@ -102,6 +102,10 @@ img {
   max-width: 100%;
 }
 
+nav {
+  line-height: 2.1em;
+}
+
 /*========== LINKS & BUTTONS ==========*/
 
 .filters-list button {
@@ -705,14 +709,15 @@ a:focus .underline-mask,
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 810px) {
   .projects-container {
     grid-template-columns: 1fr;
     row-gap: 52px;
   }
 
   .star:nth-child(3) {
-    top: 20%;
+    left: 54%;
+    top: 10%;
   }
 
   .filters-list button {
