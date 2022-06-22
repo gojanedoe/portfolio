@@ -40,6 +40,8 @@ const openModal = (e) => {
   modalImages[currentSlide].style.display = "flex";
   modal.style.display = "flex";
 
+  updateSlideNum(currentSlide);
+
   // Setup focus on whole modal
   changeFocus(0);
 };
@@ -84,7 +86,7 @@ const releaseModalFocus = () => {
 
 // Change slides
 const changeSlide = (n) => {
-  // close last current slide image
+  // Close last current slide image
   modalImages[currentSlide].style.display = "none";
 
   // Change slide
@@ -99,7 +101,29 @@ const changeSlide = (n) => {
   }
 
   modalImages[currentSlide].style.display = "flex";
+
+  updateSlideNum(currentSlide);
 };
+
+const updateSlideNum = (n) => {
+  // Error handle
+  if (slideNum == null) {
+    console.log("Error handling: Missing slide number");
+
+    // Create element on modal
+    slideNum = document.createElement("p");
+    slideNum.id = "slide-num";
+    slideNum.ariaLive = "polite";
+    slideNum.className = "screenreader-text";
+    modal.appendChild(slideNum);
+  }
+
+  // Update slide number
+  slideNum.innerText = `Slide ${n + 1} of ${modalImages.length}`;
+};
+
+const nonModalContent = document.getElementById("main-page");
+let slideNum = document.getElementById("slide-num");
 
 // Event Listeners
 const thumbnailButtons = Object.values(
@@ -124,5 +148,3 @@ close.addEventListener("click", closeModal);
 
 // Elements that can be tabbed through
 const focusableElements = [close, leftArrow, rightArrow];
-
-const nonModalContent = document.getElementById("main-page");

@@ -133,9 +133,20 @@
       </a>
     </div>
 
-    <div class="modal" role="dialog">
-      <!--Do I need tabindex="0" for modal accessibility?-->
-      <button class="close">&times;</button>
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Slideshow of project images"
+      aria-describedby="modal-description"
+    >
+      <p id="modal-description" class="screenreader-text">
+        Use arrow keys or the arrow buttons to proceed to the next or last image
+        in the slideshow. To exit the slideshow, press escape or click the close
+        button.
+      </p>
+      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
+      <button class="close" aria-label="Close">&times;</button>
       <div class="slide">
         <img
           src="images/helloworld-1.jpg"
@@ -214,8 +225,12 @@
           alt="Column of glitched white lines of overlapping, unreadable text on a black background."
         />
       </div>
-      <button class="left-arrow"><span>❮</span></button>
-      <button class="right-arrow"><span>❯</span></button>
+      <button class="left-arrow" aria-label="Previous image">
+        <span>&#x276E;</span>
+      </button>
+      <button class="right-arrow" aria-label="Next image">
+        <span>&#x276F;</span>
+      </button>
     </div>
   </body>
 

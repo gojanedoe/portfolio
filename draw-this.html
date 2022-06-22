@@ -151,16 +151,16 @@
     <div
       class="modal"
       role="dialog"
-      aria-live="assertive"
       aria-modal="true"
-      aria-label="Lightbox of project images"
+      aria-label="Slideshow of project images"
       aria-describedby="modal-description"
     >
       <p id="modal-description" class="screenreader-text">
         Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the lightbox. To exit the lightbox, press escape or click the close
+        in the slideshow. To exit the slideshow, press escape or click the close
         button.
       </p>
+      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
       <button class="close" aria-label="Close">&times;</button>
       <!-- Link to below image: https://commons.wikimedia.org/wiki/File:2016-11-13_01_Kjeungskj%C3%A6r_Lighthouse,_S%C3%B8r-Tr%C3%B8ndelag,_Norway.jpg -->
       <div class="slide">
@@ -233,10 +233,10 @@
       </div>
 
       <button class="left-arrow" aria-label="Previous image">
-        <span>❮</span>
+        <span>&#x276E;</span>
       </button>
       <button class="right-arrow" aria-label="Next image">
-        <span>❯</span>
+        <span>&#x276F;</span>
       </button>
     </div>
   </body>
