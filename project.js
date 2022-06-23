@@ -26,12 +26,12 @@ const handleModalKeys = (event) => {
 };
 
 const openModal = (e) => {
-  preModalFocus = e.target;
   document.body.style.overflow = "hidden"; // prevents background scrolling
   nonModalContent.setAttribute("aria-hidden", "true");
 
   let clickedThumbnail =
     e.target.tagName == "BUTTON" ? e.target : e.target.parentElement;
+  preModalFocus = clickedThumbnail;
 
   // Find index of image
   currentSlide = thumbnailButtons.indexOf(clickedThumbnail);
@@ -39,6 +39,7 @@ const openModal = (e) => {
   // Show correct image
   modalImages[currentSlide].style.display = "flex";
   modal.style.display = "flex";
+  // modalContainer.style.display = "block";
 
   updateSlideNum(currentSlide);
 
@@ -49,6 +50,8 @@ const openModal = (e) => {
 const closeModal = () => {
   document.body.style.overflow = "auto";
   modal.style.display = "none";
+  // modalContainer.style.display = "none";
+
   modalImages[currentSlide].style.display = "none";
   nonModalContent.setAttribute("aria-hidden", "false");
 
@@ -59,8 +62,10 @@ const closeModal = () => {
 const changeFocus = (n) => {
   if (n === 0) {
     currentFocus = -1;
-    modal.tabIndex = -1; // also: setAttribute("tabindex", "-1");
+    // modal.tabIndex = -1;
+    document.activeElement.blur();
     modal.focus();
+    // focusableElements[0].focus();
     return;
   } else if (n === 1) {
     // Go to next focusable element
@@ -81,6 +86,9 @@ const changeFocus = (n) => {
 };
 
 const releaseModalFocus = () => {
+  console.log("Last active: ", document.activeElement);
+  document.activeElement.blur();
+  console.log("Pre modal focus: ", preModalFocus);
   preModalFocus.focus();
 };
 
@@ -113,7 +121,7 @@ const updateSlideNum = (n) => {
     // Create element on modal
     slideNum = document.createElement("p");
     slideNum.id = "slide-num";
-    slideNum.ariaLive = "polite";
+    slideNum.ariaLive = "assertive";
     slideNum.className = "screenreader-text";
     modal.appendChild(slideNum);
   }
@@ -135,6 +143,8 @@ thumbnailButtons.forEach((button) => {
 
 const modal = document.getElementsByClassName("modal")[0];
 modal.addEventListener("keydown", handleModalKeys);
+// TEST
+const modalContainer = document.getElementById("modal-container");
 
 const modalImages = document.getElementsByClassName("slide");
 

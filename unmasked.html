@@ -125,68 +125,76 @@
       </a>
     </div>
 
+    <!-- Close button moved up, add "dialog" to "Close" label -->
+    <!-- Rearranged order of first few elements -->
+    <!-- Nes everything in class modal and role document -->
+    <!-- Add tabindex="-1" to dialog -->
+    <!-- Change aria-live to assertive -->
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/unmasked-hero.jpg"
-          alt="Text reading 'The Unmasked' with six decorated animal masks underneath it. Masks from left to right are of an otter, horse, wolf, snake, rabbit, and raven"
-        />
+      <div role="document" class="modal" tabindex="-1">
+        <!-- tabindex="-1" below -->
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/unmasked-hero.jpg"
+            alt="Text reading 'The Unmasked' with six decorated animal masks underneath it. Masks from left to right are of an otter, horse, wolf, snake, rabbit, and raven"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/unmasked-1.jpg"
+            alt="Characters in black cloaks stand in different areas of a dimly lit room. The character in the center wears a wolf mask. Behind the wolf stands a lit brazier, as well as a table with a decorated cloth and book lying across it"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/unmasked-2.jpg"
+            alt="Two cloaked characters talk to one another, with one wearing an otter mask and the other turned away. A dialog box for the masked otter sits at the bottom, reading 'I have always wanted to be a part of this tradition. I've never seen it in person before.' Two dialog options sit to the right, reading 'Are you nervous?' and 'Why are you interested in this?'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/unmasked-3.jpg"
+            alt="A cloaked character with a wolf mask stands in front of a table with a book perched on top of it. A dialog box at the bottom includes a snippet of the books text, reading, '...and take from me, blue like the source of light and life.'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/unmasked-4.jpg"
+            alt="Two cloaked characters talk to one another, with one wearing a wolf mask and the other turned away. A dialog box for the masked horse sits at the bottom, reading 'I heard the spirit is meant to posess one of here, tonight...'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/unmasked-5.jpg"
+            alt="Two cloaked characters talk to one another, with one wearing a wolf mask and the other turned away. A dialog box for the masked raven sits at the bottom, reading 'Most follow the spirit blindly, but I am here for my eyes to be opened. I am here to know more.' Four option buttons sit to the right, reading 'Do you know much of this ritual?', 'Have you performed this ceremony before?', 'Reveal Myself', and 'End Conversation'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/unmasked-6.jpg"
+            alt="Text box next to a night sky reads, 'The Spirit guides with a knowledgeable presence. The belief that wisdom is what is made of the provided. Wisdom is what gives insight into life. And the one who gained could not stop at just that. For the one that seeks out more than is had will grow and gain power, But misplace that which is already in possession. To learn and grow is the path laid down for us, But to cheat that path will leave us lost. Think on the knowledge that surrounds you. Does it guide you? Connect you?' A button with the words 'Start anew' sits below the text"
+          />
+        </div>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
       </div>
-      <div class="slide">
-        <img
-          src="images/unmasked-1.jpg"
-          alt="Characters in black cloaks stand in different areas of a dimly lit room. The character in the center wears a wolf mask. Behind the wolf stands a lit brazier, as well as a table with a decorated cloth and book lying across it"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/unmasked-2.jpg"
-          alt="Two cloaked characters talk to one another, with one wearing an otter mask and the other turned away. A dialog box for the masked otter sits at the bottom, reading 'I have always wanted to be a part of this tradition. I've never seen it in person before.' Two dialog options sit to the right, reading 'Are you nervous?' and 'Why are you interested in this?'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/unmasked-3.jpg"
-          alt="A cloaked character with a wolf mask stands in front of a table with a book perched on top of it. A dialog box at the bottom includes a snippet of the books text, reading, '...and take from me, blue like the source of light and life.'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/unmasked-4.jpg"
-          alt="Two cloaked characters talk to one another, with one wearing a wolf mask and the other turned away. A dialog box for the masked horse sits at the bottom, reading 'I heard the spirit is meant to posess one of here, tonight...'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/unmasked-5.jpg"
-          alt="Two cloaked characters talk to one another, with one wearing a wolf mask and the other turned away. A dialog box for the masked raven sits at the bottom, reading 'Most follow the spirit blindly, but I am here for my eyes to be opened. I am here to know more.' Four option buttons sit to the right, reading 'Do you know much of this ritual?', 'Have you performed this ceremony before?', 'Reveal Myself', and 'End Conversation'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/unmasked-6.jpg"
-          alt="Text box next to a night sky reads, 'The Spirit guides with a knowledgeable presence. The belief that wisdom is what is made of the provided. Wisdom is what gives insight into life. And the one who gained could not stop at just that. For the one that seeks out more than is had will grow and gain power, But misplace that which is already in possession. To learn and grow is the path laid down for us, But to cheat that path will leave us lost. Think on the knowledge that surrounds you. Does it guide you? Connect you?' A button with the words 'Start anew' sits below the text"
-        />
-      </div>
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
     </div>
   </body>
 

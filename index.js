@@ -1,15 +1,23 @@
 const projects = document.getElementsByClassName("filter-option");
+const filterButtons =
+  document.getElementsByClassName("filters-list")[0].children;
+const filterAnnounce = document.getElementById("filter-announce");
+let firstFilterClick = true;
 
 // Show/hide projects based on current filter
 let filterProjects = (event) => {
   let chosenFilter;
+  let chosenButton = null;
 
+  // Get filter depending on which element triggered
   if (event === "start") {
     chosenFilter = "code";
   } else if (event.target.tagName == "SPAN") {
-    chosenFilter = event.target.parentElement.parentElement.dataset.filter; // clickable element is nested twice, but has higher z-index making it the target == reason for the two parentElement props
+    chosenButton = event.target.parentElement.parentElement;
+    chosenFilter = chosenButton.dataset.filter; // clickable element is nested twice, but has higher z-index making it the target == reason for the two parentElement props
   } else if ((event.target.tagName = "BUTTON")) {
-    chosenFilter = event.target.dataset.filter;
+    chosenButton = event.target;
+    chosenFilter = chosenButton.dataset.filter;
   }
 
   for (const project of projects) {
@@ -18,8 +26,8 @@ let filterProjects = (event) => {
       : project.classList.add("hidden");
   }
 
-  // Highlight selected option
   if (event !== "start") {
+    // Highlight selected option
     let selectedOption = document.getElementsByClassName("selected");
     selectedOption[0].className = selectedOption[0].className.replace(
       " selected",
@@ -29,6 +37,39 @@ let filterProjects = (event) => {
     event.target.tagName === "SPAN"
       ? (event.target.parentElement.className += " selected")
       : (event.target.className += " selected");
+
+    // Turn on aria live
+    if (firstFilterClick) {
+      filterAnnounce.setAttribute("aria-live", "polite");
+      firstFilterClick = false;
+    }
+  }
+
+  // Accessibility
+  // Announce filter with aria-live paragraph
+  let announceText = chosenFilter;
+  switch (chosenFilter) {
+    case "code":
+      announceText = "coding";
+      break;
+    case "game":
+      announceText = "game and play";
+      break;
+    case "art":
+      announceText = "visual design";
+      break;
+  }
+  filterAnnounce.innerText = `Now showing ${announceText} projects`;
+
+  // Change aria-current
+  if (chosenButton) {
+    for (const button of filterButtons) {
+      if (button == chosenButton) {
+        button.setAttribute("aria-current", "true");
+      } else {
+        button.setAttribute("aria-current", "false");
+      }
+    }
   }
 };
 

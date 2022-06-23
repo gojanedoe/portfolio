@@ -87,12 +87,13 @@
         my toes into any sort of code.
       </p>
       <p class="small-block-space">To check out my work, click below:</p>
-      <nav class="filters-list large-block-space">
+      <nav class="filters-list large-block-space" aria-controls="projects">
         <button
           href="#/"
           class="pink"
           data-filter="code"
-          aria-label="Filter projects by: Code"
+          aria-label="Filter work by: Code"
+          aria-current="true"
         >
           <span class="underline selected"
             ><span class="underline-mask short-animation">Code</span></span
@@ -102,7 +103,8 @@
           href="#/"
           class="yellow"
           data-filter="game"
-          aria-label="Filter projects by: Games and Play"
+          aria-label="Filter work by: Games and Play"
+          aria-current="false"
         >
           <span class="underline"
             ><span class="underline-mask med-animation"
@@ -114,23 +116,22 @@
           href="#/"
           class="blue"
           data-filter="art"
-          aria-label="Filter projects by: Art"
+          aria-label="Filter work by: Visuals"
+          aria-current="false"
         >
           <span class="underline"
-            ><span class="underline-mask short-animation">Art</span></span
+            ><span class="underline-mask short-animation">Visuals</span></span
           >
         </button>
-        <!-- <div id="announce" aria-live="polite">Now showing games and play projects below</div> -->
+        <!-- Now showing games and play projects below -->
+        <!-- Currently filtered to games and play projects -->
       </nav>
+      <p id="filter-announce" class="screenreader-text" aria-live="off"></p>
 
-      <div class="projects-container large-block-space">
+      <div id="projects" class="projects-container large-block-space">
         <div class="filter-option" data-filter="code">
           <a href="./draw-this.html">
-            <img
-              src="./images/landing-drawthis.png"
-              alt="Lighthouse with arrow and pause buttons below"
-              width="250px"
-            />
+            <img src="./images/landing-drawthis.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask long-animation">
                 Draw This!
@@ -139,13 +140,9 @@
             >
           </a>
         </div>
-        <div class="filter-option" data-filter="game">
+        <div class="filter-option" data-filter="game art">
           <a href="scrap-yard.html">
-            <img
-              src="./images/landing-scrapyard.png"
-              alt="Text stating 'Scrap Yard: Innovators of Recycling' above graphics for a fake five-dollar bill and single game die"
-              width="250px"
-            />
+            <img src="./images/landing-scrapyard.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask long-animation">
                 Scrap Yard
@@ -156,11 +153,7 @@
         </div>
         <div class="filter-option" data-filter="code art">
           <a href="wander.html">
-            <img
-              src="./images/landing-wander.png"
-              alt="ASCII art of flowers growing"
-              width="250px"
-            />
+            <img src="./images/landing-wander.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask med-animation">
                 Wander
@@ -169,13 +162,9 @@
             >
           </a>
         </div>
-        <div class="filter-option" data-filter="code">
+        <div class="filter-option" data-filter="code art">
           <a href="./ambrosia.html">
-            <img
-              src="./images/landing-ambrosia-alt.png"
-              alt="Cup with pudding and cherry next to a heart"
-              width="250px"
-            />
+            <img src="./images/landing-ambrosia-alt.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask med-animation">
                 Ambrosia
@@ -184,13 +173,9 @@
             >
           </a>
         </div>
-        <div class="filter-option" data-filter="code art">
+        <div class="filter-option" data-filter="code">
           <a href="hello.html">
-            <img
-              src="./images/landing-helloworld.png"
-              alt="Abstract speckled graphics"
-              width="250px"
-            />
+            <img src="./images/landing-helloworld.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask med-animation">
                 Hello
@@ -202,11 +187,7 @@
 
         <div class="filter-option" data-filter="game">
           <a href="./unmasked.html">
-            <img
-              src="./images/landing-unmasked.png"
-              alt="White animal masks in a horizontal row, including an otter, horse, wolf, reptile, rabbit, and owl"
-              width="250px"
-            />
+            <img src="./images/landing-unmasked.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask long-animation">
                 The Unmasked
@@ -232,11 +213,7 @@
         </div> -->
         <div class="filter-option" data-filter="code game">
           <a href="./debug-log.html">
-            <img
-              src="./images/landing-debug.png"
-              alt="Text states 'debug.Log_' in bold above the text 'Press A to execute method'"
-              width="250px"
-            />
+            <img src="./images/landing-debug.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask med-animation">
                 Debug.Log
@@ -245,13 +222,9 @@
             >
           </a>
         </div>
-        <div class="filter-option" data-filter="game art">
+        <div class="filter-option" data-filter="game">
           <a href="./david.html">
-            <img
-              src="./images/landing-david.png"
-              alt="Postcard with a heart and 'David' written on the front, layered on top of graph paper with illegible writing"
-              width="250px"
-            />
+            <img src="./images/landing-david.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask long-animation">
                 In David's Absence
@@ -262,11 +235,7 @@
         </div>
         <div class="filter-option" data-filter="game">
           <a href="./storylines.html">
-            <img
-              src="./images/landing-storylines.png"
-              alt="Design of bird on a mountaintop, with the word 'Storylines' on the right-hand side"
-              width="250px"
-            />
+            <img src="./images/landing-storylines.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask long-animation">
                 Storylines
@@ -277,11 +246,7 @@
         </div>
         <div class="filter-option" data-filter="art">
           <a href="./home.html">
-            <img
-              src="./images/landing-home-alt.png"
-              alt="Graphic outline of an open laptop with the world 'HOME' on the screen. Below the laptop is the text, 'Press any key to continue _'"
-              width="250px"
-            />
+            <img src="./images/landing-home-alt.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask med-animation">
                 Home
@@ -292,11 +257,7 @@
         </div>
         <div class="filter-option" data-filter="code game">
           <a href="./interplay.html">
-            <img
-              src="./images/landing-interplay.png"
-              alt="White circle with abstract shape cut out of the middle"
-              width="250px"
-            />
+            <img src="./images/landing-interplay.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask long-animation">
                 Interplay
@@ -307,11 +268,7 @@
         </div>
         <div class="filter-option" data-filter="code game">
           <a href="./return.html">
-            <img
-              src="./images/landing-return.png"
-              alt="The word Return in all capital letters"
-              width="250px"
-            />
+            <img src="./images/landing-return.png" alt="" width="250px" />
             <span class="underline">
               <span class="underline-mask med-animation">
                 Return
@@ -344,7 +301,6 @@
         </p>
 
         <div>
-          <!-- <div> -->
           <a
             href="mailto:ashturner00@gmail.com"
             class="red"
@@ -352,8 +308,6 @@
             target="_blank"
             ><span class="underline underline-perm">Email</span></a
           >
-          <!-- </div>
-        <div> -->
           <a
             href="https://github.com/gojanedoe"
             class="yellow"
@@ -364,8 +318,6 @@
               (Link opens in a new tab)</span
             ></a
           >
-          <!-- </div>
-        <div> -->
           <a
             href="https://codepen.io/gojanedoe"
             class="green"
@@ -376,16 +328,16 @@
               (Link opens in a new tab)</span
             ></a
           >
-          <!-- </div>
-        <div> -->
           <a
             href="https://www.linkedin.com/in/ash-turner-00/"
             class="blue"
             rel="noreferrer"
             target="_blank"
-            ><span class="underline underline-perm">LinkedIn</span></a
+            ><span class="underline underline-perm">LinkedIn</span
+            ><span class="screenreader-text">
+              (Link opens in a new tab)</span
+            ></a
           >
-          <!-- </div> -->
         </div>
       </footer>
     </div>
