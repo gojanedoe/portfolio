@@ -89,56 +89,58 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/interplay-1.jpg"
-          alt="Bird's-eye view of two people standing under projected light, inside a red circle. A third person stands off to the side under the projection"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/interplay-2.jpg"
-          alt="Two people's legs blurred in a running motion. They are running around the projected circle on the floor"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/interplay-4.jpg"
-          alt="A person uses the trackpad of a laptop to control a large green circle on the screen. Inside the circle are two black sillhouettes of people from a bird's-eye view"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/interplay-3.jpg"
-          alt="A projector on a stand hangs over a railing, pointing downwards. Strings are attached to the rail, from which a kinect sensor hangs below the projector"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/interplay-5.jpg"
-          alt="A smiling guy uses a mouse to interact with a laptop. On the laptop's screen is a small red circle, with black silhouettes of people underneath the circle"
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/interplay-1.jpg"
+            alt="Bird's-eye view of two people standing under projected light, inside a red circle. A third person stands off to the side under the projection"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/interplay-2.jpg"
+            alt="Two people's legs blurred in a running motion. They are running around the projected circle on the floor"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/interplay-4.jpg"
+            alt="A person uses the trackpad of a laptop to control a large green circle on the screen. Inside the circle are two black sillhouettes of people from a bird's-eye view"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/interplay-3.jpg"
+            alt="A projector on a stand hangs over a railing, pointing downwards. Strings are attached to the rail, from which a kinect sensor hangs below the projector"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/interplay-5.jpg"
+            alt="A smiling guy uses a mouse to interact with a laptop. On the laptop's screen is a small red circle, with black silhouettes of people underneath the circle"
+          />
+        </div>
 
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
+      </div>
     </div>
   </body>
 

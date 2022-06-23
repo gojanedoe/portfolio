@@ -177,64 +177,66 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img src="images/scrapyard-hero.jpg" />
-      </div>
-      <div class="slide">
-        <img src="images/scrapyard-1.png" />
-      </div>
-      <div class="slide">
-        <img src="images/scrapyard-2.png" />
-      </div>
-      <div class="slide">
-        <img src="images/scrapyard-3.png" />
-      </div>
-      <div class="slide">
-        <img src="images/scrapyard-4.jpg" />
-      </div>
-      <div class="slide">
-        <img
-          src="images/scrapyard-5.png"
-          alt="Game board with one line of empty squares on the outer edge"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/scrapyard-6.png"
-          alt="View full size version of semi-empty squares on a graphic of a white game board"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/scrapyard-7.png"
-          alt="View full size version of semi-empty squares on a graphic of a teal game board"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/scrapyard-8.png"
-          alt="View full size version of a black version of the Scrap Yard game board"
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img src="images/scrapyard-hero.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/scrapyard-1.png" />
+        </div>
+        <div class="slide">
+          <img src="images/scrapyard-2.png" />
+        </div>
+        <div class="slide">
+          <img src="images/scrapyard-3.png" />
+        </div>
+        <div class="slide">
+          <img src="images/scrapyard-4.jpg" />
+        </div>
+        <div class="slide">
+          <img
+            src="images/scrapyard-5.png"
+            alt="Game board with one line of empty squares on the outer edge"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/scrapyard-6.png"
+            alt="View full size version of semi-empty squares on a graphic of a white game board"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/scrapyard-7.png"
+            alt="View full size version of semi-empty squares on a graphic of a teal game board"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/scrapyard-8.png"
+            alt="View full size version of a black version of the Scrap Yard game board"
+          />
+        </div>
 
-      <div class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </div>
-      <div class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
       </div>
     </div>
   </body>

@@ -142,98 +142,100 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/david-hero.jpg"
-          alt="Dimly lit room installation with a desk, chair and bookshelf. The desk is messy and sits to the left-hand-side, lit with a single lamp. The walls are concrete and have post-it notes and posters. Trash is peppered across the ground, and a bookshelf stacked with books, toys and photos sits in the back right corner"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-1.png"
-          alt="Bird's-eye view of post-its and crumpled paper laid out and facing up. A yellow post-it reads a gmail name and password, with the text 'You're such a dork! (but I love you) scribbled in the corner.' Another note reads, 'Try to talk to Sarah', and another one contains a 3 bullet to-do list"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-2.png"
-          alt="Bird's-eye view of items laid out and facing up. Items include a pink monkey, various mystery and sci-fi books, two framed photos of a guy with his friends, a rock collection, a toy robot, and a hand-held video camera"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-3.png"
-          alt="Email from Jeremy Goldenberg. Name, email, and phone number is redacted, but otherwise the text reads 'I have a huge favor to ask you. I need you to go check on my friend David. I think you met him once at my house. I can't go over there myself but his mom contacted me and said that she hasn't heard from him in a few days. If you could go check his place out at 1:00pm in Brown tomorrow (Sunday, February 26th), let me know. And I lost your phone number, could you send me a text at (redacted)? Also, bring your phone with you. I want to be able to text you if you need anything. Thanks a lot, Jer'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-4.jpg"
-          alt="Half-open letter with the text 'from Sarah' written on the front around a drawn, large heart"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-5.png"
-          alt="Text message chat that starts, 'Do you know the number code for the locked black box?' A reply says, 'Huh, no. It's probably somewhere in his room or on his computer, he always writes down all his pass codes on notes. Actually think he has a sticky note application on his laptop it might be there'. A subsequent reply reads, 'Does he like poetry? And found the lock box code!' A reply after that reads, 'Awesome and Yeah, he sometimes talks about writing it, never showed me any though'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-6.png"
-          alt="Bird's-eye view of laid-out books, post-its, letters and lock box. A stack of letters has a closed note on top with a drawn heart and the name 'David' written on the front. Post-its with inspirational quotes are laid out, as well as sci-fi books with post-its on their covers that contain positive notes about each book"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-7.png"
-          alt="Text message chat starts, 'Cant believe you keep tryna shove this campy sci fi crap down his throat. Jer, you are so pretentious.' A reply says, 'I mean he liked it before we met... I don't know. Did it seem like I forced it on him?' The reply reads, 'Davids dead, Jer', with the subsequent reply, 'What? Oh my god'. After that, a text reads, 'Jk LOL jer you stupid fuck'. The next reply states, 'Oh my god don't do that man. Did you at least find why he's been so distant?'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-8.jpg"
-          alt="Dark desk dimly-lit by a single lamp. The desk contains a framed photo, tissues, a lockbox, sticky notes, and an open laptop."
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-9.JPG"
-          alt="Sticky notes on a concrete wall. The top reads, 'Keep Moving forward!' The bottom left lists 'Finish Work. Get card activated. Call mom.' The bottom right note lists, 'Write it out. Do something I enjoy. Keep your distance. Leave the house'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-10.JPG"
-          alt="Top-half of a bookshelf. A framed photo of people dressed up and posing sits on top. On the shelf are stacked sci-fi books, a toy robot and rubber ducky, a couple of sticky notes and a handheld video camera"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/david-11.JPG"
-          alt="Bottom-half of a bookshelf. Next to it on the floor is a stack of books and a box of a model Star Trek spaceship. On the shelf are books about space, games and theatrical design. On the bottom shelf is a lockbox"
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/david-hero.jpg"
+            alt="Dimly lit room installation with a desk, chair and bookshelf. The desk is messy and sits to the left-hand-side, lit with a single lamp. The walls are concrete and have post-it notes and posters. Trash is peppered across the ground, and a bookshelf stacked with books, toys and photos sits in the back right corner"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-1.png"
+            alt="Bird's-eye view of post-its and crumpled paper laid out and facing up. A yellow post-it reads a gmail name and password, with the text 'You're such a dork! (but I love you) scribbled in the corner.' Another note reads, 'Try to talk to Sarah', and another one contains a 3 bullet to-do list"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-2.png"
+            alt="Bird's-eye view of items laid out and facing up. Items include a pink monkey, various mystery and sci-fi books, two framed photos of a guy with his friends, a rock collection, a toy robot, and a hand-held video camera"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-3.png"
+            alt="Email from Jeremy Goldenberg. Name, email, and phone number is redacted, but otherwise the text reads 'I have a huge favor to ask you. I need you to go check on my friend David. I think you met him once at my house. I can't go over there myself but his mom contacted me and said that she hasn't heard from him in a few days. If you could go check his place out at 1:00pm in Brown tomorrow (Sunday, February 26th), let me know. And I lost your phone number, could you send me a text at (redacted)? Also, bring your phone with you. I want to be able to text you if you need anything. Thanks a lot, Jer'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-4.jpg"
+            alt="Half-open letter with the text 'from Sarah' written on the front around a drawn, large heart"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-5.png"
+            alt="Text message chat that starts, 'Do you know the number code for the locked black box?' A reply says, 'Huh, no. It's probably somewhere in his room or on his computer, he always writes down all his pass codes on notes. Actually think he has a sticky note application on his laptop it might be there'. A subsequent reply reads, 'Does he like poetry? And found the lock box code!' A reply after that reads, 'Awesome and Yeah, he sometimes talks about writing it, never showed me any though'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-6.png"
+            alt="Bird's-eye view of laid-out books, post-its, letters and lock box. A stack of letters has a closed note on top with a drawn heart and the name 'David' written on the front. Post-its with inspirational quotes are laid out, as well as sci-fi books with post-its on their covers that contain positive notes about each book"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-7.png"
+            alt="Text message chat starts, 'Cant believe you keep tryna shove this campy sci fi crap down his throat. Jer, you are so pretentious.' A reply says, 'I mean he liked it before we met... I don't know. Did it seem like I forced it on him?' The reply reads, 'Davids dead, Jer', with the subsequent reply, 'What? Oh my god'. After that, a text reads, 'Jk LOL jer you stupid fuck'. The next reply states, 'Oh my god don't do that man. Did you at least find why he's been so distant?'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-8.jpg"
+            alt="Dark desk dimly-lit by a single lamp. The desk contains a framed photo, tissues, a lockbox, sticky notes, and an open laptop."
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-9.JPG"
+            alt="Sticky notes on a concrete wall. The top reads, 'Keep Moving forward!' The bottom left lists 'Finish Work. Get card activated. Call mom.' The bottom right note lists, 'Write it out. Do something I enjoy. Keep your distance. Leave the house'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-10.JPG"
+            alt="Top-half of a bookshelf. A framed photo of people dressed up and posing sits on top. On the shelf are stacked sci-fi books, a toy robot and rubber ducky, a couple of sticky notes and a handheld video camera"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/david-11.JPG"
+            alt="Bottom-half of a bookshelf. Next to it on the floor is a stack of books and a box of a model Star Trek spaceship. On the shelf are books about space, games and theatrical design. On the bottom shelf is a lockbox"
+          />
+        </div>
 
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
+      </div>
     </div>
   </body>
 

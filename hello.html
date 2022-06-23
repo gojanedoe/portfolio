@@ -134,103 +134,105 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/helloworld-1.jpg"
-          alt="Text that reads 'those, the social web_ i divulge as much as i am comfortable with, though //this sense of privacy is misleading ( → censorship, privacy), misconceived, wrong, not. suitable, it’s just an ideal perception of a person.not even real. this is not a reflection of your physical self. this is not representative of of of of, i assume that those will continue their captivation of self-expression'"
-        />
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/helloworld-1.jpg"
+            alt="Text that reads 'those, the social web_ i divulge as much as i am comfortable with, though //this sense of privacy is misleading ( → censorship, privacy), misconceived, wrong, not. suitable, it’s just an ideal perception of a person.not even real. this is not a reflection of your physical self. this is not representative of of of of, i assume that those will continue their captivation of self-expression'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-2.jpg"
+            alt="Grid of glitched and pixelated, black-and-white headshot photos. A pop-up for downloading a file titled 'me.zip' is in front of the grid"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-3.jpg"
+            alt="Pixelated and glitched news-style website"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-4.jpg"
+            alt="Abstract, colorful pixelation. A galaxy with a neon green, uneven circle"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-5.jpg"
+            alt="Abstract, colorful pixelation of a map with two, tiny neon green squares overlayed on it"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-6.jpg"
+            alt="Text in front of a graphic black-and-white patterned background. The text reads 'the user//protocol address to track and see themselves# and there is also an internet identity, a social identity //a fake identity? a construct of myself that i use to present to others -- the changing name, ppppseudonyms with varying degrees of information under the same protocol address and yet|'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-7.jpg"
+            alt="Text reads 'is this where ideas go to live forever?  _long_ after they have been abandoned by the living. these permanent concepts ( → permanent memory). static lest someone is there to extract meaning. .a tree falls in a forest'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-8.jpg"
+            alt="Text reads 'this is the starkness that governs our directions__ but where do. they. we. I go? the paths in the code lead to: _go to the left. _go to the right. (but these options are easily manipulated). the paths of the user are: _do nothing. _do something else. two of these paths are coded. the other two hinges upon an autonomous user. therein lies a code to the brain that i cannot see, and there even more nuanced pathways that i cannot see. theoretically, these structures provide//control//are we allowed suggestion or restriction?'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-9.jpg"
+            alt="Text reads 'the sheer wealth of inforinforinforinformation makes it difficult to access memory and in in in consideration of ego protection, such as repression, that i do not possess such as you and you a./and //you and //you - - i do not forget the witnessing of pain and the ##empathy of those who rage against solitude so i am left to wit.her and contempla/te the deterioration of my own self'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-10.jpg"
+            alt="Colorful, glitchy and pixelated abstract graphic of a flower and synapses blooming. In the top left are the words 'hello, world'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-11.jpg"
+            alt="Text in a box reads 'the programming is deceptive in its freedom//like open air, as if anyone can contribute but there are clear rrrrestrictions // for instance. at its base, we are governed by two actions: ON + OFF'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-12.jpg"
+            alt="Text reads '“Structural hierarchies help make websites accessible to search engines and users.” - Ellen Lupton. HIERARCHIES: .Structure .Institutions .Organization-- no/tt/te_ the organization of information to provide accessibility.'. A column of text below repeats the phrsase 'do programmers_designers have control over this interaction//'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/helloworld-13.jpg"
+            alt="Column of glitched white lines of overlapping, unreadable text on a black background."
+          />
+        </div>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
       </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-2.jpg"
-          alt="Grid of glitched and pixelated, black-and-white headshot photos. A pop-up for downloading a file titled 'me.zip' is in front of the grid"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-3.jpg"
-          alt="Pixelated and glitched news-style website"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-4.jpg"
-          alt="Abstract, colorful pixelation. A galaxy with a neon green, uneven circle"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-5.jpg"
-          alt="Abstract, colorful pixelation of a map with two, tiny neon green squares overlayed on it"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-6.jpg"
-          alt="Text in front of a graphic black-and-white patterned background. The text reads 'the user//protocol address to track and see themselves# and there is also an internet identity, a social identity //a fake identity? a construct of myself that i use to present to others -- the changing name, ppppseudonyms with varying degrees of information under the same protocol address and yet|'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-7.jpg"
-          alt="Text reads 'is this where ideas go to live forever?  _long_ after they have been abandoned by the living. these permanent concepts ( → permanent memory). static lest someone is there to extract meaning. .a tree falls in a forest'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-8.jpg"
-          alt="Text reads 'this is the starkness that governs our directions__ but where do. they. we. I go? the paths in the code lead to: _go to the left. _go to the right. (but these options are easily manipulated). the paths of the user are: _do nothing. _do something else. two of these paths are coded. the other two hinges upon an autonomous user. therein lies a code to the brain that i cannot see, and there even more nuanced pathways that i cannot see. theoretically, these structures provide//control//are we allowed suggestion or restriction?'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-9.jpg"
-          alt="Text reads 'the sheer wealth of inforinforinforinformation makes it difficult to access memory and in in in consideration of ego protection, such as repression, that i do not possess such as you and you a./and //you and //you - - i do not forget the witnessing of pain and the ##empathy of those who rage against solitude so i am left to wit.her and contempla/te the deterioration of my own self'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-10.jpg"
-          alt="Colorful, glitchy and pixelated abstract graphic of a flower and synapses blooming. In the top left are the words 'hello, world'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-11.jpg"
-          alt="Text in a box reads 'the programming is deceptive in its freedom//like open air, as if anyone can contribute but there are clear rrrrestrictions // for instance. at its base, we are governed by two actions: ON + OFF'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-12.jpg"
-          alt="Text reads '“Structural hierarchies help make websites accessible to search engines and users.” - Ellen Lupton. HIERARCHIES: .Structure .Institutions .Organization-- no/tt/te_ the organization of information to provide accessibility.'. A column of text below repeats the phrsase 'do programmers_designers have control over this interaction//'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/helloworld-13.jpg"
-          alt="Column of glitched white lines of overlapping, unreadable text on a black background."
-        />
-      </div>
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
     </div>
   </body>
 

@@ -126,86 +126,88 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/debug-1.png"
-          alt="Starting screen with the text, 'debug.Log_' and 'Press A to execute method'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-2.png"
-          alt="Screenshot of intro text that reads 'Manual purge REQUIRED. Caution: Entry plug override UNRESPONSIVE. 100 seconds until AUTOMATIC UNPLUG. SURVIVE until proper ejection to maintain psychological cohesion. Full corruption integrity may cause death outside of simulation_'. Underneath is the text, 'Press A to debrief manual override'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-3.png"
-          alt="Screenshot of bold, red warning text reading, 'Warning: Data Corruption Found' in all caps"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-4.png"
-          alt="Gameplay with two players surrounded by a large group of black, pixelated enemies with spider legs. The scores at the top read 'P1: 020' and 'P2: 00'. At the bottom is the time countdown, reading, 'Automatic Unplug: 074'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-5.png"
-          alt="Gameplay with two players at opposite ends of the screen with a couple of enemies between them. The scores at the top read 'P1: 020' and 'P2: 00'. At the bottom is the time countdown, reading, 'Automatic Unplug: 083'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-6.png"
-          alt="Gameplay two players at opposite ends of the screen with a medium amount of large enemies and spider-type enemies between them. The scores at the top read 'P1: 070' and 'P2: 010'. At the bottom is the time countdown, reading, 'Automatic Unplug: 066'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-7.png"
-          alt="Screen glitching with rainbow colors, with black silhouettes of enemies over top. The scores at the top of the screen read 'P1: 530' and 'P2: 530'. At the bottom is the time countdown, reading, 'Automatic Unplug: 004'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-8.png"
-          alt="Screen glitching with blue colors at the end of the game. The scores at the top of the screen read 'P1: 440' and 'P2: 570'. At the bottom is the time countdown, reading, 'Automatic Unplug: 000'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-9.png"
-          alt="Ending screen with scores 550 for player one and 530 for player two, with the text 'Safe to Eject' in the center. Below is the text, 'Manual purge successful; Safely ejecting software. Please wait_'. At the bottom of the screen is the text 'Press A to troubleshoot'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/debug-hero.png"
-          alt="Arcade cabinet with the game Debug.Log on the screen. The cabinet has two arcade sticks with buttons and headphones, and two stools sitting in front."
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/debug-1.png"
+            alt="Starting screen with the text, 'debug.Log_' and 'Press A to execute method'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-2.png"
+            alt="Screenshot of intro text that reads 'Manual purge REQUIRED. Caution: Entry plug override UNRESPONSIVE. 100 seconds until AUTOMATIC UNPLUG. SURVIVE until proper ejection to maintain psychological cohesion. Full corruption integrity may cause death outside of simulation_'. Underneath is the text, 'Press A to debrief manual override'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-3.png"
+            alt="Screenshot of bold, red warning text reading, 'Warning: Data Corruption Found' in all caps"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-4.png"
+            alt="Gameplay with two players surrounded by a large group of black, pixelated enemies with spider legs. The scores at the top read 'P1: 020' and 'P2: 00'. At the bottom is the time countdown, reading, 'Automatic Unplug: 074'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-5.png"
+            alt="Gameplay with two players at opposite ends of the screen with a couple of enemies between them. The scores at the top read 'P1: 020' and 'P2: 00'. At the bottom is the time countdown, reading, 'Automatic Unplug: 083'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-6.png"
+            alt="Gameplay two players at opposite ends of the screen with a medium amount of large enemies and spider-type enemies between them. The scores at the top read 'P1: 070' and 'P2: 010'. At the bottom is the time countdown, reading, 'Automatic Unplug: 066'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-7.png"
+            alt="Screen glitching with rainbow colors, with black silhouettes of enemies over top. The scores at the top of the screen read 'P1: 530' and 'P2: 530'. At the bottom is the time countdown, reading, 'Automatic Unplug: 004'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-8.png"
+            alt="Screen glitching with blue colors at the end of the game. The scores at the top of the screen read 'P1: 440' and 'P2: 570'. At the bottom is the time countdown, reading, 'Automatic Unplug: 000'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-9.png"
+            alt="Ending screen with scores 550 for player one and 530 for player two, with the text 'Safe to Eject' in the center. Below is the text, 'Manual purge successful; Safely ejecting software. Please wait_'. At the bottom of the screen is the text 'Press A to troubleshoot'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/debug-hero.png"
+            alt="Arcade cabinet with the game Debug.Log on the screen. The cabinet has two arcade sticks with buttons and headphones, and two stools sitting in front."
+          />
+        </div>
 
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
+      </div>
     </div>
   </body>
 

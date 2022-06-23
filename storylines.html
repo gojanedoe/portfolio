@@ -146,92 +146,94 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/storylines-1.jpg"
-          alt="Two Android smartphones with game screens open. The screens have a prompt that reads, 'There was a time I felt like a genius...' One phone has a 'Finished' button below the prompt, and the other has the text 'Listening'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-2.png"
-          alt="Smartphone screenshot of game interface. Text at the top states 'What type of storyteller are you?' with options below including 'Adventurer', 'Artist', 'Comedian', 'Listener', 'Philosopher', and 'Trickster'. Below that is the text 'Click to select a player name' and a 'Help' and 'OK' button."
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-3.png"
-          alt="Smartphone screenshot of a question prompt during gameplay. The top has a countdown timer and button for story quests. In the prompt in the middle states, 'There was a time I was wrong...'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-4.png"
-          alt="Smartphone screenshot of a question prompt during gameplay. The top has a countdown timer and button for story quests. In the prompt in the middle states, 'There was a time I was truly myself...'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-5.png"
-          alt="Illustrated constellation of a bird in flight"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-6.png"
-          alt="Two people talking, with one holding a phone with a prompt from the Storylines interface on it"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-7.png"
-          alt="One person talking to another person while they hold their phones up in front of their chests"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-8.png"
-          alt="Two people looking at their phones while facing each other. One of them presses a button on their screen"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-9.png"
-          alt="Two people laughing together while holding their phones"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-10.png"
-          alt="One person telling another a story to another, while pointing upwards. Both have their phones in front of them"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/storylines-11.png"
-          alt="Close-up of two people's hands holding smartphones with the game interface open on them. One screen states, 'New constellation!' with a graphic of a swan constellation underneath the text. The other phone has a list of collected constellations of the user"
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/storylines-1.jpg"
+            alt="Two Android smartphones with game screens open. The screens have a prompt that reads, 'There was a time I felt like a genius...' One phone has a 'Finished' button below the prompt, and the other has the text 'Listening'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-2.png"
+            alt="Smartphone screenshot of game interface. Text at the top states 'What type of storyteller are you?' with options below including 'Adventurer', 'Artist', 'Comedian', 'Listener', 'Philosopher', and 'Trickster'. Below that is the text 'Click to select a player name' and a 'Help' and 'OK' button."
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-3.png"
+            alt="Smartphone screenshot of a question prompt during gameplay. The top has a countdown timer and button for story quests. In the prompt in the middle states, 'There was a time I was wrong...'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-4.png"
+            alt="Smartphone screenshot of a question prompt during gameplay. The top has a countdown timer and button for story quests. In the prompt in the middle states, 'There was a time I was truly myself...'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-5.png"
+            alt="Illustrated constellation of a bird in flight"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-6.png"
+            alt="Two people talking, with one holding a phone with a prompt from the Storylines interface on it"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-7.png"
+            alt="One person talking to another person while they hold their phones up in front of their chests"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-8.png"
+            alt="Two people looking at their phones while facing each other. One of them presses a button on their screen"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-9.png"
+            alt="Two people laughing together while holding their phones"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-10.png"
+            alt="One person telling another a story to another, while pointing upwards. Both have their phones in front of them"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/storylines-11.png"
+            alt="Close-up of two people's hands holding smartphones with the game interface open on them. One screen states, 'New constellation!' with a graphic of a swan constellation underneath the text. The other phone has a list of collected constellations of the user"
+          />
+        </div>
 
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
+      </div>
     </div>
   </body>
 

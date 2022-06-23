@@ -101,50 +101,52 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/ambrosia-hero.png"
-          alt="Colorful grid of graphic illustrations. Across the top of the grid are three cups topped with whipped cream and cherries. Below is a line of text that reads 'Ambrosia'. Underneath that is a heart and the text 'First, Some History'"
-        />
-      </div>
-      <div class="slide vertical">
-        <img
-          src="images/ambrosia-1.png"
-          alt="Screenshot of the ambrosia webpage at a desktop screen size. A grid of illustrations of cups of whipped cream and cherries, and a heart are followed by a section of text explaining the history of the recipe. Below that is the ambrosia recipe itself."
-        />
-      </div>
-      <div class="slide vertical">
-        <img
-          src="images/ambrosia-2.png"
-          alt="Screenshot of the ambrosia webpage at a tablet screen size. A grid of illustrations of cups of whipped cream and cherries, and a heart are followed by a section of text explaining the history of the recipe. Below that is the ambrosia recipe itself."
-        />
-      </div>
-      <div class="slide vertical">
-        <img
-          src="images/ambrosia-3.png"
-          alt="Screenshot of the ambrosia webpage at a mobile screen size. A grid of illustrations of cups of whipped cream and cherries, and a heart are followed by a section of text explaining the history of the recipe. Below that is the ambrosia recipe itself."
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/ambrosia-hero.png"
+            alt="Colorful grid of graphic illustrations. Across the top of the grid are three cups topped with whipped cream and cherries. Below is a line of text that reads 'Ambrosia'. Underneath that is a heart and the text 'First, Some History'"
+          />
+        </div>
+        <div class="slide vertical">
+          <img
+            src="images/ambrosia-1.png"
+            alt="Screenshot of the ambrosia webpage at a desktop screen size. A grid of illustrations of cups of whipped cream and cherries, and a heart are followed by a section of text explaining the history of the recipe. Below that is the ambrosia recipe itself."
+          />
+        </div>
+        <div class="slide vertical">
+          <img
+            src="images/ambrosia-2.png"
+            alt="Screenshot of the ambrosia webpage at a tablet screen size. A grid of illustrations of cups of whipped cream and cherries, and a heart are followed by a section of text explaining the history of the recipe. Below that is the ambrosia recipe itself."
+          />
+        </div>
+        <div class="slide vertical">
+          <img
+            src="images/ambrosia-3.png"
+            alt="Screenshot of the ambrosia webpage at a mobile screen size. A grid of illustrations of cups of whipped cream and cherries, and a heart are followed by a section of text explaining the history of the recipe. Below that is the ambrosia recipe itself."
+          />
+        </div>
 
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
+      </div>
     </div>
   </body>
 

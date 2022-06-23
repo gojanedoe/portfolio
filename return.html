@@ -129,86 +129,88 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/return-1.jpg"
-          alt="Digital illustration of a traveler in a dimly lit, blue-tinted cave. The traveler is wearing a cloak and bag, and carrying a staff"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-2.jpg"
-          alt="Digital illustration of a traveler in a black-and-white, dimly lit and foggy cave. The traveler is holding a lit staff and there are whisps of thicker fog throughout the cave"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-3.jpg"
-          alt="Digital illustration of desert mountains, with a red and orange gradient sunset in the background"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-4.jpg"
-          alt="Digital illustration of desert mountains and sand under a blue sky. A red-cloaked figure is far off to the left walking on the sand, and to the right is a teepee with smoke coming out from the top"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-5.jpg"
-          alt="Screenshot of a character talking to a shaman inside a hut. Both are standing below a hanging lantern. The shaman has a speech bubble of text above him, reading, 'It will let you glimpse into the realm of the dead for a brief moment'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-6.jpg"
-          alt="Screenshot of gameplay in black-and-white. A character stands and holds a lantern next to a flaming totem. Text above the character states, 'Press B to interact with spirit objects in the Spirit Realm.'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-7.jpg"
-          alt="Screenshot of traveler character in a forest. The character holds a lantern and stands on a raised wooden platform"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-8.jpg"
-          alt="Screenshot of traveler character standing outside a large, closed wooden gate in the desert. The character is holding up a lit lantern"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-9.jpg"
-          alt="screenshot of character in black-and-white landscape standing under a large, open wooden gate"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/return-10.jpg"
-          alt="Screenshot of character walking through a rocky landscape. Text in front of them states 'You must be so exhausted'. The air around them is light blue, and large stone pillars behind them jut from the ground"
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/return-1.jpg"
+            alt="Digital illustration of a traveler in a dimly lit, blue-tinted cave. The traveler is wearing a cloak and bag, and carrying a staff"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-2.jpg"
+            alt="Digital illustration of a traveler in a black-and-white, dimly lit and foggy cave. The traveler is holding a lit staff and there are whisps of thicker fog throughout the cave"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-3.jpg"
+            alt="Digital illustration of desert mountains, with a red and orange gradient sunset in the background"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-4.jpg"
+            alt="Digital illustration of desert mountains and sand under a blue sky. A red-cloaked figure is far off to the left walking on the sand, and to the right is a teepee with smoke coming out from the top"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-5.jpg"
+            alt="Screenshot of a character talking to a shaman inside a hut. Both are standing below a hanging lantern. The shaman has a speech bubble of text above him, reading, 'It will let you glimpse into the realm of the dead for a brief moment'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-6.jpg"
+            alt="Screenshot of gameplay in black-and-white. A character stands and holds a lantern next to a flaming totem. Text above the character states, 'Press B to interact with spirit objects in the Spirit Realm.'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-7.jpg"
+            alt="Screenshot of traveler character in a forest. The character holds a lantern and stands on a raised wooden platform"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-8.jpg"
+            alt="Screenshot of traveler character standing outside a large, closed wooden gate in the desert. The character is holding up a lit lantern"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-9.jpg"
+            alt="screenshot of character in black-and-white landscape standing under a large, open wooden gate"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/return-10.jpg"
+            alt="Screenshot of character walking through a rocky landscape. Text in front of them states 'You must be so exhausted'. The air around them is light blue, and large stone pillars behind them jut from the ground"
+          />
+        </div>
 
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
+      </div>
     </div>
   </body>
 

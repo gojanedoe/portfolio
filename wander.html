@@ -191,115 +191,117 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/wander1.png"
-          alt="Screenshot of four ASCII flowers growing with thin stems and leaves"
-        />
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/wander1.png"
+            alt="Screenshot of four ASCII flowers growing with thin stems and leaves"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander2.png"
+            alt="Screenshot of ASCII landscape, with three hills underneath a sun"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander3.png"
+            alt="Screenshot of ASCII lines of grass with text interspersed reading: 'Hardiness maybe came from creeping through branch bundles that we pretended were hideouts' "
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander4.png"
+            alt="Screenshot of ASCII tree with text 'carved' into it, including heart text emoji, face with star eyes text emoji, and the text 'wonderful trees hey there~'. Next to the tree is the text 'knife in hand, into the tree hello you carve', with 'hello' typed into a text input box."
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander5.png"
+            alt="Screenshot of ASCII clouds floating across the browser with the text 'sinking as we sit' above them"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander6.png"
+            alt="Screenshot of a square of ASCII grass"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander7.png"
+            alt="Screenshot of white stars on black background with the text 'dry air and crinkling leaves"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander8.png"
+            alt="Screenshot of three ASCII trees growing out of the ground. Their shadows are blue underlined hyperlinks"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander9.png"
+            alt="Screenshot of white ASCII flowers growing out of lines of grass on a black background"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander10.png"
+            alt="Screenshot of lines of text: 'this ruffled text runs in' and 'their metallic connection comforts in'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander11.png"
+            alt="Screenshot of lines of text: 'our creased access deceives us' and 'the smooth link slithers last'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander12.png"
+            alt="Text document that contains ASCII sketches of white stars on a black background, and white clouds on a gray background"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander13.png"
+            alt="Text document that contains ASCII sketches of hills"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander14.png"
+            alt="Text document that contains ASCII sketches. From top to bottom, it includes growing ASCII flowers, the words 'pigeons peck', 'snowflakes', and 'clouds', and ASCII clouds surrounding the text 'WITH .5 line height'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/wander15.png"
+            alt="Text document that contains ASCII sketches of treetops"
+          />
+        </div>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
       </div>
-      <div class="slide">
-        <img
-          src="images/wander2.png"
-          alt="Screenshot of ASCII landscape, with three hills underneath a sun"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander3.png"
-          alt="Screenshot of ASCII lines of grass with text interspersed reading: 'Hardiness maybe came from creeping through branch bundles that we pretended were hideouts' "
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander4.png"
-          alt="Screenshot of ASCII tree with text 'carved' into it, including heart text emoji, face with star eyes text emoji, and the text 'wonderful trees hey there~'. Next to the tree is the text 'knife in hand, into the tree hello you carve', with 'hello' typed into a text input box."
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander5.png"
-          alt="Screenshot of ASCII clouds floating across the browser with the text 'sinking as we sit' above them"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander6.png"
-          alt="Screenshot of a square of ASCII grass"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander7.png"
-          alt="Screenshot of white stars on black background with the text 'dry air and crinkling leaves"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander8.png"
-          alt="Screenshot of three ASCII trees growing out of the ground. Their shadows are blue underlined hyperlinks"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander9.png"
-          alt="Screenshot of white ASCII flowers growing out of lines of grass on a black background"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander10.png"
-          alt="Screenshot of lines of text: 'this ruffled text runs in' and 'their metallic connection comforts in'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander11.png"
-          alt="Screenshot of lines of text: 'our creased access deceives us' and 'the smooth link slithers last'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander12.png"
-          alt="Text document that contains ASCII sketches of white stars on a black background, and white clouds on a gray background"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander13.png"
-          alt="Text document that contains ASCII sketches of hills"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander14.png"
-          alt="Text document that contains ASCII sketches. From top to bottom, it includes growing ASCII flowers, the words 'pigeons peck', 'snowflakes', and 'clouds', and ASCII clouds surrounding the text 'WITH .5 line height'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/wander15.png"
-          alt="Text document that contains ASCII sketches of treetops"
-        />
-      </div>
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
     </div>
   </body>
 

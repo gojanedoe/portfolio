@@ -176,122 +176,124 @@
     </div>
 
     <div
-      class="modal"
       role="dialog"
       aria-modal="true"
       aria-label="Slideshow of project images"
       aria-describedby="modal-description"
+      id="modal-container"
     >
-      <p id="modal-description" class="screenreader-text">
-        Use arrow keys or the arrow buttons to proceed to the next or last image
-        in the slideshow. To exit the slideshow, press escape or click the close
-        button.
-      </p>
-      <p id="slide-num" aria-live="polite" class="screenreader-text"></p>
-      <button class="close" aria-label="Close">&times;</button>
-      <div class="slide">
-        <img
-          src="images/home-1.png"
-          alt="Blue page with columns of white 0s and 1s in groups of 8. Two groupings, '00100000' and '01101111' are yellow"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-2.png"
-          alt="Page with a line illustration of a laptop in the bottom-right corner. On the laptop screen is the text, 'Home'. Below the laptop is the text, 'Press any key to continue'."
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-3.png"
-          alt="Page with large, pixelated keyboard characters going from the top left to the bottom right. In the bottom left is a block of text that reads, 'Without a laptop freeing me to travel, I would not see nearly as many people, or be exposed to nearly as many new ideas.'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-4.png"
-          alt="Page with columns of text and annotations. Text interspersed underneath the columns reads, 'Cyberspace consists of transactions, relationships, and thought itself.' In the columns, the text talks about how the human mind uses association for organizing and storing thoughts, and how mechanical records could work similarly in the future and allow for a private file system that could be called the 'memex'. Two parts of text in the columns are red, underlined, and linked to cut-off text box annotations, including the phrase, 'Selection by association' which is linked to a definition of hypertext, and 'mechanized private file and library', which is linked to the definition for a computer"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-5.png"
-          alt="Page with text spread out on it with cut-off text boxes. The spread out text at the bottom enters from the right above a red line and reads, 'arrayed like a standing wave in the web of our communications.' The text on the right is above another red line and reads, 'Ours is a world that is both'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-6.png"
-          alt="Page with columns of text and large, pixelated keyboard characters. The columns of text repeat the word 'everywhere', with a red line underhneath the columns that breaks off into red pixels. At the bottom of the page is the text, 'and nowhere'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-7.png"
-          alt="Two-page spread. The left page has 0s and 1s. The right page has 'Home' in large, yellow text, with a line of text below that reads, 'Press any key to continue'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-8.png"
-          alt="Two-page spread. The left page holds three columns of text about how the virtual world allows for freedom of expression, property and identity in a place not confined by matter or sovereignty. The right page has interspersed text reading, 'Cyberspace consists of transactions, relationships, and thought itself'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-9.png"
-          alt="Two-page spread. Across both pages at the bottom is large, yellow, pixelated text that reads, 'Cyber'. On the right page is a block of text that reads, 'Without a laptop freeming me to travel, I would not see nearly as many places, meet nearly as many people, or be exposed to nearly as many new ideas'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-10.png"
-          alt="Two-page spread. The left page has a line illustration of a laptop. The right page has scattered text reading, 'arrayed like a standing wave in the web of our communications'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-11.png"
-          alt="Two-page spread. A red line runs through the middle of both pages. On the left page is the text, 'Ours is a world that is both'. The right page has the word 'everywhere' repeated in columns, filling up the page"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-12.png"
-          alt="Two-page spread. The left page has large, pixelated characters filling up the page and a red line that continues on to the right page and breaks off into pixels. The right page has the text, 'and nowhere'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-13.png"
-          alt="Two-page spread of columns of text with annotations. The text talks about how the human mind uses association for organizing and storing thoughts, and how mechanical records could work similarly in the future and allow for a private file system that could be called the 'memex'. Two parts of the text are red, underlined, and linked to their own text box annotation; the phrase, 'Selection by association' is linked with a line to a definition of hypertext, while 'mechanized private file and library' is linked to the definition for a computer"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-14.png"
-          alt="Two-page spread of text that explains how to code a program that prints 'Hello World' in Java. Overtop the text are large yellow letters reading, 'Science and Creation'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-15.png"
-          alt="Two-page spread. From the left to the right sit large, pixelated characters. The left page has a list of coded variables, while the right has more variables and text that reads, 'but it is not where bodies live'"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="images/home-16.png"
-          alt="Two-page spread of 0s and 1s in columns. Two groupings, '00100000' and '01101111' are yellow. On the right page, large yellow text is laid over top, reading, 'In the Code'"
-        />
-      </div>
+      <div role="document" class="modal" tabindex="-1">
+        <h2 id="slide-num" aria-live="assertive" class="screenreader-text"></h2>
+        <p id="modal-description" class="screenreader-text">
+          Use arrow keys or the arrow buttons to proceed to the next or last
+          image in the slideshow. To exit the slideshow, press escape or click
+          the close button.
+        </p>
+        <button class="close" aria-label="Close dialog">&times;</button>
+        <div class="slide">
+          <img
+            src="images/home-1.png"
+            alt="Blue page with columns of white 0s and 1s in groups of 8. Two groupings, '00100000' and '01101111' are yellow"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-2.png"
+            alt="Page with a line illustration of a laptop in the bottom-right corner. On the laptop screen is the text, 'Home'. Below the laptop is the text, 'Press any key to continue'."
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-3.png"
+            alt="Page with large, pixelated keyboard characters going from the top left to the bottom right. In the bottom left is a block of text that reads, 'Without a laptop freeing me to travel, I would not see nearly as many people, or be exposed to nearly as many new ideas.'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-4.png"
+            alt="Page with columns of text and annotations. Text interspersed underneath the columns reads, 'Cyberspace consists of transactions, relationships, and thought itself.' In the columns, the text talks about how the human mind uses association for organizing and storing thoughts, and how mechanical records could work similarly in the future and allow for a private file system that could be called the 'memex'. Two parts of text in the columns are red, underlined, and linked to cut-off text box annotations, including the phrase, 'Selection by association' which is linked to a definition of hypertext, and 'mechanized private file and library', which is linked to the definition for a computer"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-5.png"
+            alt="Page with text spread out on it with cut-off text boxes. The spread out text at the bottom enters from the right above a red line and reads, 'arrayed like a standing wave in the web of our communications.' The text on the right is above another red line and reads, 'Ours is a world that is both'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-6.png"
+            alt="Page with columns of text and large, pixelated keyboard characters. The columns of text repeat the word 'everywhere', with a red line underhneath the columns that breaks off into red pixels. At the bottom of the page is the text, 'and nowhere'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-7.png"
+            alt="Two-page spread. The left page has 0s and 1s. The right page has 'Home' in large, yellow text, with a line of text below that reads, 'Press any key to continue'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-8.png"
+            alt="Two-page spread. The left page holds three columns of text about how the virtual world allows for freedom of expression, property and identity in a place not confined by matter or sovereignty. The right page has interspersed text reading, 'Cyberspace consists of transactions, relationships, and thought itself'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-9.png"
+            alt="Two-page spread. Across both pages at the bottom is large, yellow, pixelated text that reads, 'Cyber'. On the right page is a block of text that reads, 'Without a laptop freeming me to travel, I would not see nearly as many places, meet nearly as many people, or be exposed to nearly as many new ideas'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-10.png"
+            alt="Two-page spread. The left page has a line illustration of a laptop. The right page has scattered text reading, 'arrayed like a standing wave in the web of our communications'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-11.png"
+            alt="Two-page spread. A red line runs through the middle of both pages. On the left page is the text, 'Ours is a world that is both'. The right page has the word 'everywhere' repeated in columns, filling up the page"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-12.png"
+            alt="Two-page spread. The left page has large, pixelated characters filling up the page and a red line that continues on to the right page and breaks off into pixels. The right page has the text, 'and nowhere'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-13.png"
+            alt="Two-page spread of columns of text with annotations. The text talks about how the human mind uses association for organizing and storing thoughts, and how mechanical records could work similarly in the future and allow for a private file system that could be called the 'memex'. Two parts of the text are red, underlined, and linked to their own text box annotation; the phrase, 'Selection by association' is linked with a line to a definition of hypertext, while 'mechanized private file and library' is linked to the definition for a computer"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-14.png"
+            alt="Two-page spread of text that explains how to code a program that prints 'Hello World' in Java. Overtop the text are large yellow letters reading, 'Science and Creation'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-15.png"
+            alt="Two-page spread. From the left to the right sit large, pixelated characters. The left page has a list of coded variables, while the right has more variables and text that reads, 'but it is not where bodies live'"
+          />
+        </div>
+        <div class="slide">
+          <img
+            src="images/home-16.png"
+            alt="Two-page spread of 0s and 1s in columns. Two groupings, '00100000' and '01101111' are yellow. On the right page, large yellow text is laid over top, reading, 'In the Code'"
+          />
+        </div>
 
-      <button class="left-arrow" aria-label="Previous image">
-        <span>&#x276E;</span>
-      </button>
-      <button class="right-arrow" aria-label="Next image">
-        <span>&#x276F;</span>
-      </button>
+        <button class="left-arrow" aria-label="Previous image">
+          <span>&#x276E;</span>
+        </button>
+        <button class="right-arrow" aria-label="Next image">
+          <span>&#x276F;</span>
+        </button>
+      </div>
     </div>
   </body>
 
