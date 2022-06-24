@@ -1,80 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <!--
-
- xXXXx  xXXXx          xXXx  xXXx             XX     
-  XXX    XXX            XX    XX              XX       
-  XXX    XXX     xXx    XX    XX      xXx     XX     
-  XXXXXXXXXX   xX  xXx  XX    XX    xX   Xx   XX        
-  XXXXXXXXXX  XXXXXXXx  XX    XX   xX     Xx  XX        
-  XXX    XXX  xX        XX    XX   xX     Xx           
-  XXX    XXX   xXxxxX   XX    XX    xX   Xx   xx        
- xXXXx  xXXXx   xXXx   xXXx  xXXx     XxX     XX         
-
--->
+                                                            xXXx       xXXx   
+   xXXXx  xXXXx          xXXx  xXXx             XX        xXXXXXXx   xXXXXXXx 
+    XXX    XXX            XX    XX              XX       xxXXXXXXXx xXXXXXXXxx
+    XXX    XXX     xXx    XX    XX      xXx     XX       xxXXXXXXXXXXXXXXXXXxx
+    XXXXXXXXXX   xX  xXx  XX    XX    xX   Xx   XX         xXXXXXXXXXXXXXXXx   
+    XXXXXXXXXX  XXXXXXXx  XX    XX   xX     Xx  XX           xXXXXXXXXXXXx  
+    XXX    XXX  xX        XX    XX   xX     Xx                 xXXXXXXXx   
+    XXX    XXX   xXxxxX   XX    XX    xX   Xx   xx               xXXXx   
+   xXXXx  xXXXx   xXXx   xXXx  xXXx     XxX     XX                 x
+ 
+  -->
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ash Turner</title>
     <link rel="stylesheet" href="styles/index.css" />
-    <link rel="icon" type="image/png" href="images/favicon-32.ico" />
 
-    <!-- Favicons -->
+    <!-- For IE 9 and below -->
+    <!--[if IE
+      ]><link rel="shortcut icon" href="images/favicon-32.ico"
+    /><![endif]-->
+
+    <!-- Touch Icons - iOS and Android 2.1+ -->
     <link
-      rel="icon"
-      type="image/ico"
-      href="images/favicon-32.ico"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
+      rel="apple-touch-icon"
       type="image/png"
-      href="images/favicon-57.png"
-      sizes="57x57"
+      href="images/favicon-180.png"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-76.png"
-      sizes="76x76"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-96.png"
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-128.png"
-      sizes="128x128"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-144.png"
-      sizes="128x128"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-180s.png"
-      sizes="128x128"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-196.png"
-      sizes="192x192"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="images/favicon-228.png"
-      sizes="228x228"
-    />
+
+    <!-- Firefox, Chrome, Safari, IE 11+ and Opera -->
+    <link rel="icon" type="image/png" href="images/favicon-196.png" />
   </head>
   <body>
     <div class="container">
@@ -87,6 +44,8 @@
         my toes into any sort of code.
       </p>
       <p class="small-block-space">To check out my work, click below:</p>
+
+      <!-- Filters -->
       <nav class="filters-list large-block-space" aria-controls="projects">
         <button
           href="#/"
@@ -123,11 +82,10 @@
             ><span class="underline-mask short-animation">Visuals</span></span
           >
         </button>
-        <!-- Now showing games and play projects below -->
-        <!-- Currently filtered to games and play projects -->
       </nav>
       <p id="filter-announce" class="screenreader-text" aria-live="off"></p>
 
+      <!-- Projects -->
       <div id="projects" class="projects-container large-block-space">
         <div class="filter-option" data-filter="code">
           <a href="./draw-this.html">
@@ -196,21 +154,6 @@
             >
           </a>
         </div>
-        <!-- <div class="filter-option" data-filter="game">
-          <a href="#">
-            <img
-              src="./images/landing-jmm.png"
-              alt="Game board styled as a blueprint of a museum. Board includes rooms titled 'Development', 'Board Room', 'HR', 'Lobby', 'Marketing', 'Collections', 'Exhibit Hall'"
-              width="250px"
-            />
-            <span class="underline">
-              <span class="underline-mask long-animation">
-                Museum Director
-                <span class="project-subtitle">(Board Game)</span></span
-              >
-            </span>
-          </a>
-        </div> -->
         <div class="filter-option" data-filter="code game">
           <a href="./debug-log.html">
             <img src="./images/landing-debug.png" alt="" width="250px" />
@@ -277,22 +220,6 @@
             >
           </a>
         </div>
-
-        <!-- <div class="filter-option" data-filter="art">
-          <a href="#">
-            <img
-              src="./images/landing-codergirl.png"
-              alt="Illustration of a person typing on an open laptop"
-              width="250px"
-            />
-            <span class="underline">
-              <span class="underline-mask long-animation">
-                CoderGirl
-                <span class="project-subtitle">(Print Design)</span></span
-              ></span
-            >
-          </a>
-        </div> -->
       </div>
 
       <footer>
@@ -341,7 +268,8 @@
         </div>
       </footer>
     </div>
-    <!-- style="left: 105px; top: 109px" -->
+
+    <!-- Stars -->
     <div id="star-container">
       <div
         class="pink star paused"
