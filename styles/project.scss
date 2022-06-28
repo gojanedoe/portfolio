@@ -10,12 +10,6 @@ h2 {
   margin-bottom: $medium-space;
 }
 
-// *:focus {
-//   border: 2px dashed $text-color;
-//   padding: 2px 4px;
-//   text-decoration: none !important;
-// }
-
 .project-subtitle {
   font-style: italic;
   margin-top: 10px;
@@ -134,7 +128,6 @@ video {
 
 /*========== MODAL ==========*/
 #modal-container {
-  // display: none;
   z-index: 1;
 }
 
@@ -146,9 +139,6 @@ video {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  // z-index: 1;
-
-  // overflow: auto;
 
   align-items: center;
   justify-content: center;
@@ -177,14 +167,11 @@ video {
   img {
     display: block; // Removes gap below image (for descenders)
     max-height: 100%;
-    // max-height: auto;
-
     padding: 3% 70px;
 
     transition: padding 1s ease-in-out;
   }
 
-  //TODO: Replace text "x" with svg
   .close {
     position: absolute;
     top: 20px;
@@ -241,7 +228,6 @@ video {
   height: 100%;
   align-self: stretch;
   padding: 20px;
-  // background-color: rgba(0, 0, 0, 0.25);
 
   * {
     font-size: 40px;
@@ -312,11 +298,8 @@ button {
   .modal {
     img {
       display: block; // Removes gap below image (for descenders)
-      // max-height: 100%;
       max-height: auto;
       max-width: 100%;
-      // max-height: auto;
-
       padding: 0;
     }
   }

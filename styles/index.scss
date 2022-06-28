@@ -1,21 +1,5 @@
 @import "library";
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Courier+Prime&family=Inconsolata&family=Prosto+One&family=Readex+Pro:wght@300;400&family=Source+Code+Pro:wght@300;400&display=swap");
-@import url("https://use.typekit.net/fcy2fbm.css");
-
-// font-family: 'Courier Prime', monospace;
-// font-family: 'Inconsolata', monospace;
-// font-family: 'Source Code Pro', monospace; --> + lighter 300 weight
-// font-family: 'Readex Pro', sans-serif; --> + lighter 300 weight
-// font-family: 'Anonymous Pro', monospace;
-
-// font-family: courier-std, monospace;
-// font-weight: 400;
-// font-style: normal;
-
-// OPTIONS:
-// font-style: normal; -> normal
-// font-style: italic; -> italic
-// font-weight: 700; -> bold
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Prosto+One&display=swap");
 
 $rainbow-duration: 4s;
 
@@ -26,16 +10,8 @@ $rainbow-duration: 4s;
   border: 0;
   vertical-align: baseline;
   font-size: $main-font-size;
-  // font-weight: normal;
-  // font-style: normal;
   box-sizing: border-box;
 
-  // Font options:
-  // font-family: courier-std, Courier, monospace; // Alternative: "Inconsolata"
-  // font-family: "Incosolata", courier-std, Courier, monospace; // Alternative: "Inconsolata"
-  // font-family: "Source Code Pro", courier-std, Courier, monospace;
-  // font-family: "Readex Pro", sans-serif;
-  // font-weight: 300;
   font-family: "Anonymous Pro", monospace;
 
   color: $text-color;
@@ -43,7 +19,6 @@ $rainbow-duration: 4s;
 }
 
 *::selection {
-  // background-color: #ffe69a; // alt
   background-color: $text-color;
   color: $background-color;
 }
@@ -54,7 +29,6 @@ html {
 
 body {
   background-color: $background-color;
-  // margin: 280px 5% 4% 5%;
 
   margin: {
     left: 280px;
@@ -65,7 +39,7 @@ body {
 }
 
 .container {
-  max-width: 1120px; //TODO --> container
+  max-width: 1120px;
   margin: auto;
 }
 
@@ -87,9 +61,7 @@ body {
 }
 
 .project-subtitle {
-  // font-family: courier-std, Courier, monospace;
   font-style: italic;
-  // font-size: 17px;
 }
 
 p,
@@ -211,7 +183,7 @@ a {
 }
 
 .short-animation {
-  transition: background-size 0.3s linear; //cubic-bezier(.14,.07,.74,.93)
+  transition: background-size 0.3s linear;
 }
 .med-animation {
   transition: background-size 0.5s linear;
@@ -310,7 +282,7 @@ a:focus .underline-mask,
   position: absolute;
 
   z-index: 1;
-  font-family: "Prosto One", "Inconsolata", courier-std, Courier;
+  font-family: "Prosto One", monospace;
   font-size: 28px;
 
   line-height: 0.2em;
@@ -367,7 +339,7 @@ a:focus .underline-mask,
   left: 160px;
   left: 10%;
 
-  top: 108px;
+  top: 83px;
   top: 10%;
 }
 
@@ -383,7 +355,7 @@ a:focus .underline-mask,
   left: 878px;
   left: 52%;
 
-  top: 122px;
+  top: 121px;
   top: 14.5%;
 }
 
@@ -391,7 +363,7 @@ a:focus .underline-mask,
   left: 1194px;
   left: 69%;
 
-  top: 218px;
+  top: 217px;
   top: 26%;
 }
 
@@ -399,7 +371,7 @@ a:focus .underline-mask,
   left: 1564px;
   left: 93%;
 
-  top: 126px;
+  top: 125px;
   top: 15%;
 }
 
@@ -407,7 +379,7 @@ a:focus .underline-mask,
   left: 1254px;
   left: 75%;
 
-  top: 380px;
+  top: 384px;
   top: 46%;
 }
 
@@ -660,6 +632,64 @@ a:focus .underline-mask,
 
 /*========== RESPONSIVENESS ==========*/
 
+@media only screen and (min-height: 868px) and (min-width: 811px) {
+  .star:nth-child(1) {
+    top: 83px;
+  }
+
+  .star:nth-child(2) {
+    top: 142px;
+  }
+
+  .star:nth-child(3) {
+    top: 121px;
+  }
+
+  .star:nth-child(4) {
+    top: 217px;
+  }
+
+  .star:nth-child(5) {
+    top: 125px;
+  }
+
+  .star:nth-child(6) {
+    top: 384px;
+  }
+
+  .star:nth-child(7) {
+    top: 310px;
+  }
+
+  .star:nth-child(8) {
+    top: 516px;
+  }
+
+  .star:nth-child(9) {
+    top: 681px;
+  }
+
+  .star:nth-child(10) {
+    top: 602px;
+  }
+
+  .star:nth-child(11) {
+    top: 975px;
+  }
+
+  .star:nth-child(12) {
+    top: 940px;
+  }
+
+  .star:nth-child(13) {
+    top: 1112px;
+  }
+
+  .star:nth-child(14) {
+    top: 1200px;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   * {
     font-size: 16px;
@@ -709,15 +739,32 @@ a:focus .underline-mask,
   }
 }
 
+@media only screen and (min-width: 811px) and (max-height: 867px) {
+  .star:nth-child(13) {
+    top: 146%;
+  }
+
+  .star:nth-child(14) {
+    top: 150%;
+  }
+}
+
 @media only screen and (max-width: 810px) {
   .projects-container {
     grid-template-columns: 1fr;
     row-gap: 52px;
   }
 
+  .star:nth-child(1) {
+    top: 83px;
+  }
+  .star:nth-child(2) {
+    top: 50px;
+  }
+
   .star:nth-child(3) {
-    left: 54%;
-    top: 10%;
+    left: 56%;
+    top: 83px;
   }
 
   .filters-list button {
