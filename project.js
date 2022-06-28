@@ -86,9 +86,7 @@ const changeFocus = (n) => {
 };
 
 const releaseModalFocus = () => {
-  console.log("Last active: ", document.activeElement);
   document.activeElement.blur();
-  console.log("Pre modal focus: ", preModalFocus);
   preModalFocus.focus();
 };
 
