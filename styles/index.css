@@ -40,6 +40,12 @@ body {
   margin: auto;
 }
 
+.container #intro h1,
+.container #intro p {
+  display: inline-block;
+  font-weight: normal;
+}
+
 .projects-container {
   display: -ms-grid;
   display: grid;
@@ -72,6 +78,12 @@ ul {
 
 img {
   max-width: 100%;
+  background-color: #080808;
+}
+
+.filter-option,
+.filter-option * {
+  background-color: #080808;
 }
 
 nav {

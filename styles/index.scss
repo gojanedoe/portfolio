@@ -41,6 +41,12 @@ body {
 .container {
   max-width: 1120px;
   margin: auto;
+
+  #intro h1,
+  #intro p {
+    display: inline-block;
+    font-weight: normal;
+  }
 }
 
 .projects-container {
@@ -72,6 +78,13 @@ ul {
 
 img {
   max-width: 100%;
+  background-color: $background-color;
+}
+
+// TODO: TEST !!!!!
+.filter-option,
+.filter-option * {
+  background-color: $background-color;
 }
 
 nav {
