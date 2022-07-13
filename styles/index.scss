@@ -78,12 +78,8 @@ ul {
 
 img {
   max-width: 100%;
-  background-color: $background-color;
-}
 
-// TODO: TEST !!!!!
-.filter-option,
-.filter-option * {
+  // May not need if it doesn't fix Firefox white background loading
   background-color: $background-color;
 }
 
